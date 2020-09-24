@@ -1,11 +1,6 @@
 /**
  The `ZipperParser` enables parsing over a grammar using the algorithm described
- in the paper:
-
-     Parsing with Zippers (Functional Pearl)
-         Pierce Darragh and Michael D. Adams
-         ICFP, August 2020
-         DOI: https://doi.org/10.1145/3408990
+ in the paper "Parsing with Zippers" by Darragh and Adams (ICFP 2020).
 
  It's implemented as a class to make management of state and encapsulation of
  helper methods more straightforward, but that's not strictly necessary.
