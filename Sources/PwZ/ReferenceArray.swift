@@ -1,5 +1,3 @@
-import Foundation
-
 /**
  The `ReferenceArray` is a wrapper around the standard `Array` that provides
  reference semantics for mutable array objects.

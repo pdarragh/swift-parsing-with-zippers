@@ -1,8 +1,3 @@
-import SpeedStarCore
-
-import Foundation
-
-
 /// MARK: Basic Types
 
 /// Positions are the indices of tokens within the input string being parsed.
