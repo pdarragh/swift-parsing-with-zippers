@@ -1,18 +1,19 @@
 /**
  The SentinelStruct exists only to produce a singleton from which sentinel
  values for various parsing-related types can be drawn. See the documentation
- for the `Sentinel` singleton values.
-
- The `expression` and `memoizationRecord` fields must be initialized dynamically
- because Swift does not allow mutually recursive references to be instantiated
- at the top level. Actually, that's the whole reason this struct exists... In a
- language like OCaml, these could simply be created at the top level with a
- `let rec`. Sigh.
+ for the `Sentinel` singleton value.
  */
-struct SentinelStruct {
+public struct SentinelStruct {
     fileprivate let integer: Int = -1  // Both Position and Tag will use this value.
     fileprivate let symbol: Symbol = "<s_bottom>"
     fileprivate let token: Token
+    /*
+     The `expression` and `memoizationRecord` fields must be initialized
+     dynamically because Swift does not allow mutually recursive references to
+     be instantiated at the top level. Actually, that's the whole reason this
+     struct exists... In a language like OCaml, these could simply be created at
+     the top level with a `let rec`. Sigh.
+     */
     fileprivate let expression: Expression
     fileprivate let memoizationRecord: MemoizationRecord
 
@@ -23,15 +24,24 @@ struct SentinelStruct {
                                                    parentContexts: [],
                                                    resultExpression: nil)
         self.expression = Expression(memoizationRecord: self.memoizationRecord,
-                                     expressionCase: .Alt([]))
+                                     expressionCase: .Alt(expressions: []))
         self.memoizationRecord.resultExpression = self.expression
     }
 
-    func of(_: Int.Type)               -> Int               { return self.integer }
-    func of(_: Symbol.Type)            -> Symbol            { return self.symbol }
-    func of(_: Token.Type)             -> Token             { return self.token }
-    func of(_: Expression.Type)        -> Expression        { return self.expression }
-    func of(_: MemoizationRecord.Type) -> MemoizationRecord { return self.memoizationRecord }
+    /// Create a sentinel for any `Int` type.
+    public func of(_: Int.Type) -> Int { return self.integer }
+
+    /// Create a sentinel for a `Symbol`.
+    public func of(_: Symbol.Type) -> Symbol { return self.symbol }
+
+    /// Create a sentinel for a `Token`.
+    public func of(_: Token.Type) -> Token { return self.token }
+
+    /// Create a sentinel for an `Expression`.
+    public func of(_: Expression.Type) -> Expression { return self.expression }
+
+    /// Create a sentinel for a `MemoizationRecord`.
+    public func of(_: MemoizationRecord.Type) -> MemoizationRecord { return self.memoizationRecord }
 }
 
 /**
@@ -42,5 +52,13 @@ struct SentinelStruct {
      Sentinel.of(Expression.self)
 
  Note the use of `.self` on the type, which passes the type as a value directly.
+ The `Sentinel.of` method supports the following types:
+
+   - `Position`
+   - `Symbol`
+   - `Tag`
+   - `Token`
+   - `Expression`
+   - `MemoizationRecord`
  */
-let Sentinel = SentinelStruct()
+public let Sentinel = SentinelStruct()

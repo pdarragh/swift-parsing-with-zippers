@@ -78,13 +78,13 @@ class ZipperParser {
 
         func deriveDown(fromMemoizationRecord memoizationRecord: MemoizationRecord, toExpressionCase expressionCase: ExpressionCase) {
             switch (expressionCase) {
-            case let .Tok((tokenTag, _)):
+            case let .Tok(token: (tokenTag, _)):
                 // Deriving down over an atomic token is the last step in a
                 // derivation pass.
                 if tokenTag == tag {
                     // When the tags match, we've had a successful parse. Leave
                     // a labeled (but empty!) `Seq` behind in its place.
-                    worklist.insert((.Seq(symbol, []), memoizationRecord), at: 0)
+                    worklist.insert((.Seq(symbol: symbol, expressions: []), memoizationRecord), at: 0)
                 } else {
                     // When the tags don't match, the parse fails, so we do
                     // nothing.
@@ -93,7 +93,7 @@ class ZipperParser {
                 if expressions.isEmpty {
                     // An empty `Seq` indicates a previously successful parse.
                     // Just go back up!
-                    deriveUp(fromExpressionCase: .Seq(symbol, []), toMemoizationRecord: memoizationRecord)
+                    deriveUp(fromExpressionCase: .Seq(symbol: symbol, expressions: []), toMemoizationRecord: memoizationRecord)
                 } else {
                     // A non-empty `Seq` indicates a sequence of expressions we
                     // should derive over in-order. We pop the first one off,
@@ -109,16 +109,19 @@ class ZipperParser {
                     let (expression, expressions) = (expressions[0], Array(expressions[1...]))
                     let memoizationRecord = MemoizationRecord(startPosition: memoizationRecord.startPosition,
                                                               endPosition: Sentinel.of(Position.self),
-                                                              parentContexts: [.AltC(memoizationRecord)],
+                                                              parentContexts: [.AltC(memoizationRecord: memoizationRecord)],
                                                               resultExpression: Sentinel.of(Expression.self))
-                    deriveDown(fromContext: .SeqC(memoizationRecord, symbol, [], expressions),
+                    deriveDown(fromContext: .SeqC(memoizationRecord: memoizationRecord,
+                                                  symbol: symbol,
+                                                  leftExpressions: [],
+                                                  rightExpressions: expressions),
                                toExpression: expression)
                 }
             case let .Alt(expressions):
                 // An `Alt` simply represents a non-determinism in the grammar,
                 // so we continue the derivation downwards over each of the
                 // children expressions.
-                expressions.forEach { deriveDown(fromContext: .AltC(memoizationRecord), toExpression: $0) }
+                expressions.forEach { deriveDown(fromContext: .AltC(memoizationRecord: memoizationRecord), toExpression: $0) }
             }
         }
 
@@ -149,7 +152,7 @@ class ZipperParser {
                     // When there are no more expressions to the right, we have
                     // completed our parse of the sequence. We continue to go
                     // upwards in our derivation.
-                    deriveUp(fromExpressionCase: .Seq(symbol, ([expression] + leftExpressions).reversed()),
+                    deriveUp(fromExpressionCase: .Seq(symbol: symbol, expressions: ([expression] + leftExpressions).reversed()),
                              toMemoizationRecord: memoizationRecord)
                 } else {
                     // If there are still right siblings of the current
@@ -157,7 +160,10 @@ class ZipperParser {
                     // the potential of nullability in each of them). We will
                     // continue our derivation downwards over the next sibling.
                     let (rightExpression, rightExpressions) = (rightExpressions[0], Array(rightExpressions[1...]))
-                    deriveDown(fromContext: .SeqC(memoizationRecord, symbol, [expression] + leftExpressions, rightExpressions),
+                    deriveDown(fromContext: .SeqC(memoizationRecord: memoizationRecord,
+                                                  symbol: symbol,
+                                                  leftExpressions: [expression] + leftExpressions,
+                                                  rightExpressions: rightExpressions),
                                toExpression: rightExpression)
                 }
             case let .AltC(memoizationRecord):
@@ -176,7 +182,7 @@ class ZipperParser {
                 } else {
                     // No result is recorded. It'll be produced in the next
                     // step upwards.
-                    deriveUp(fromExpressionCase: .Alt([expression]),
+                    deriveUp(fromExpressionCase: .Alt(expressions: [expression]),
                              toMemoizationRecord: memoizationRecord)
                 }
             }
@@ -212,12 +218,12 @@ class ZipperParser {
                                                      resultExpression: Sentinel.of(Expression.self))
         let seqMemoizationRecord = MemoizationRecord(startPosition: Sentinel.of(Position.self),
                                                      endPosition: Sentinel.of(Position.self),
-                                                     parentContexts: [.SeqC(topMemoizationRecord,
-                                                                            Sentinel.of(Symbol.self),
-                                                                            [],
-                                                                            [expression])],
+                                                     parentContexts: [.SeqC(memoizationRecord: topMemoizationRecord,
+                                                                            symbol: Sentinel.of(Symbol.self),
+                                                                            leftExpressions: [],
+                                                                            rightExpressions: [expression])],
                                                      resultExpression: Sentinel.of(Expression.self))
-        return (.Seq(Sentinel.of(Symbol.self), []), seqMemoizationRecord)
+        return (.Seq(symbol: Sentinel.of(Symbol.self), expressions: []), seqMemoizationRecord)
     }
 
     /**

@@ -29,7 +29,7 @@ public class Expression: Equatable {
 
     /// Initializes a new `Expression` from a `MemoizationRecord` and internal
     /// `ExpressionCase`.
-    init(memoizationRecord memRec: MemoizationRecord,
+    public init(memoizationRecord memRec: MemoizationRecord,
          expressionCase expCase: ExpressionCase) {
         self.memoizationRecord = memRec
         self.expressionCase = expCase
@@ -46,18 +46,17 @@ public class Expression: Equatable {
 /// ExpressionCases encode the particular type of `Expression` being dealt with.
 public indirect enum ExpressionCase: Equatable {
     /// Tokens are trivial constructions.
-    case Tok(Token)
-    /// Sequences consist of a `Symbol` (naming the production represented
-    /// by the sequence) and a sequence of `Expression`s.
-    case Seq(Symbol, [Expression])
+    case Tok(token: Token)
+    /// Sequences consist of a `Symbol` (naming the production represented by
+    /// the sequence) and a sequence of `Expression`s.
+    case Seq(symbol: Symbol, expressions: [Expression])
     /**
-     Alternates are not named themselves, and contain a collection of
-     child `Expression`s.
+     Alternates are not named. They contain a collection of child `Expression`s.
 
      NOTE: The parsing implementation requires that this array can be updated
            in-place, so we use a `ReferenceArray` instead of a simple array.
      */
-    case Alt(ReferenceArray<Expression>)
+    case Alt(expressions: ReferenceArray<Expression>)
 
     /// `ExpressionCase`s are trivially `Equatable` from their components.
     public static func == (lhs: ExpressionCase, rhs: ExpressionCase) -> Bool {
@@ -79,9 +78,12 @@ public indirect enum ContextCase: Equatable {
      production name, and two lists of `Expression`s representing the left and
      right siblings of the current focused-on expression in the zipper.
      */
-    case SeqC(MemoizationRecord, Symbol, [Expression], [Expression])
+    case SeqC(memoizationRecord: MemoizationRecord,
+              symbol: Symbol,
+              leftExpressions: [Expression],
+              rightExpressions: [Expression])
     /// Contexts for `Alt`, which contains only a `MemoizationRecord`.
-    case AltC(MemoizationRecord)
+    case AltC(memoizationRecord: MemoizationRecord)
 
     /// `ContextCase`s are trivially `Equatable` from their components.
     public static func == (lhs: ContextCase, rhs: ContextCase) -> Bool {
@@ -116,7 +118,7 @@ public class MemoizationRecord: Equatable {
     private var _resultExpression: Expression?
 
     /// Initializes a new `MemoizationRecord` from the necessary components.
-    init(startPosition: Position, endPosition: Position, parentContexts: [ContextCase], resultExpression: Expression?) {
+    public init(startPosition: Position, endPosition: Position, parentContexts: [ContextCase], resultExpression: Expression?) {
         self.startPosition = startPosition
         self.endPosition = endPosition
         self.parentContexts = parentContexts
@@ -140,12 +142,5 @@ public class MemoizationRecord: Equatable {
  A Zipper is a pair of an expression with its parent context, allowing for
  efficient traversal of tree-like objects. We have adjusted the traditional
  zipper to support alternates (representing non-determinisim) as well as cycles.
-
- These developments are explained further in the paper:
-
-     Parsing with Zippers (Functional Pearl)
-         Pierce Darragh and Michael D. Adams
-         ICFP, August 2020
-         DOI: https://doi.org/10.1145/3408990
  */
 public typealias Zipper = (expression: ExpressionCase, context: MemoizationRecord)
