@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sentinels  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Sentinels" class="dashAnchor"></a>
+
+    <a title="Sentinels  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+           Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html"> Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Sentinels  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Parsing.html">Parsing</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Parsing.html#/s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltGz_AFtF">parse(inputTokens:withGrammar:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Basic%20Types.html">Basic Types</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Basic%20Types.html#/s:3PwZ8Positiona">Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Basic%20Types.html#/s:3PwZ6Symbola">Symbol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Basic%20Types.html#/s:3PwZ3Taga">Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ReferenceArray.html">ReferenceArray</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Grammar%20Types.html">Grammar Types</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Expression.html">Expression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ExpressionCase.html">ExpressionCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ContextCase.html">ContextCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MemoizationRecord.html">MemoizationRecord</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Zippers.html">Zippers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Zippers.html#/s:3PwZ6Zippera">Zipper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Sentinels.html">Sentinels</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Sentinels.html#/s:3PwZ8SentinelAA0B6StructVvp">Sentinel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SentinelStruct.html">SentinelStruct</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>Sentinels</h1>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3PwZ8SentinelAA0B6StructVvp"></a>
+                    <a name="//apple_ref/swift/Global/Sentinel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ8SentinelAA0B6StructVvp">Sentinel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Sentinel singleton allows for using the sentinel values of any of the
+parsing-related types. To use it, you call the <code>of</code> method with the desired
+type as an argument. For example, to get the sentinel for <code><a href="Classes/Expression.html">Expression</a></code>s, do:</p>
+<pre class="highlight swift"><code><span class="kt">Sentinel</span><span class="o">.</span><span class="nf">of</span><span class="p">(</span><span class="kt">Expression</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+<p>Note the use of <code>.self</code> on the type, which passes the type as a value directly.
+The <code>Sentinel.of</code> method supports the following types:</p>
+
+<ul>
+<li><code><a href="Basic%20Types.html#/s:3PwZ8Positiona">Position</a></code></li>
+<li><code><a href="Basic%20Types.html#/s:3PwZ6Symbola">Symbol</a></code></li>
+<li><code><a href="Basic%20Types.html#/s:3PwZ3Taga">Tag</a></code></li>
+<li><code><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></code></li>
+<li><code><a href="Classes/Expression.html">Expression</a></code></li>
+<li><code><a href="Classes/MemoizationRecord.html">MemoizationRecord</a></code></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">Sentinel</span><span class="p">:</span> <span class="kt"><a href="Structs/SentinelStruct.html">SentinelStruct</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3PwZ14SentinelStructV"></a>
+                    <a name="//apple_ref/swift/Struct/SentinelStruct" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ14SentinelStructV">SentinelStruct</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SentinelStruct exists only to produce a singleton from which sentinel
+values for various parsing-related types can be drawn. See the documentation
+for the <code><a href="Sentinels.html#/s:3PwZ8SentinelAA0B6StructVvp">Sentinel</a></code> singleton value.</p>
+
+                        <a href="Structs/SentinelStruct.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SentinelStruct</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-09-24)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
