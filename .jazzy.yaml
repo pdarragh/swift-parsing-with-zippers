@@ -1,0 +1,27 @@
+theme: fullwidth
+docset_path: "docsets/PwZ.docset"
+
+custom_categories:
+  - name: Parsing
+    children:
+      - parse(inputTokens:withGrammar:)
+  - name: Basic Types
+    children:
+      - Position
+      - Symbol
+      - Tag
+      - Token
+      - ReferenceArray
+  - name: Grammar Types
+    children:
+      - Expression
+      - ExpressionCase
+      - ContextCase
+      - MemoizationRecord
+  - name: Zippers
+    children:
+      - Zipper
+  - name: Sentinels
+    children:
+      - Sentinel
+      - SentinelStruct
