@@ -1,4 +1,7 @@
-/// MARK: Basic Types
+////////////////////////////////////////
+//
+// Basic Types
+//
 
 /// Positions are the indices of tokens within the input string being parsed.
 public typealias Position = Int
@@ -14,7 +17,10 @@ public typealias Tag = Int
 public typealias Token = (tag: Tag, symbol: Symbol)
 
 
-/// MARK: Core Types
+////////////////////////////////////////
+//
+// Core Types
+//
 
 /**
  Expressions form trees in a grammar. We use a class instead of a struct to
@@ -136,7 +142,10 @@ public class MemoizationRecord: Equatable {
 }
 
 
-/// MARK: Zippers
+////////////////////////////////////////
+//
+// Zippers
+//
 
 /**
  A Zipper is a pair of an expression with its parent context, allowing for
