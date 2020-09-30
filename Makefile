@@ -29,8 +29,9 @@ release:
 .PHONY: docs
 
 modules := PwZ
+protected_docs := documentation abstracts
 
-docs: clean-docs $(patsubst %,docs/%.json, $(modules))
+docs: clean-docs $(patsubst %,docs/%.json,$(modules))
 	jazzy --sourcekitten-sourcefile "`echo $(filter-out $<,$^) | sed 's/ /,/g'`"
 
 docs/%.json: FORCE
@@ -45,7 +46,8 @@ docs/%.json: FORCE
 clean: clean-debug clean-release clean-executable
 
 clean-docs:
-	$(RM) -R $(DOCS_DIR)/*
+	@if [ ! -d "$(DOCS_DIR)" ]; then mkdir -p "$(DOCS_DIR)"; fi
+	find $(DOCS_DIR) -mindepth 1 -maxdepth 1 $(patsubst %,! -name '%',$(protected_docs)) -exec rm -rf {} +
 
 clean-all:
 	$(RM) -R $(BUILD_DIR)/*

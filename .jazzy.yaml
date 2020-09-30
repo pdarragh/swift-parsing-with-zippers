@@ -1,6 +1,9 @@
 theme: fullwidth
 docset_path: "docsets/PwZ.docset"
 
+documentation: docs/documentation/*.md
+abstract: docs/abstracts/*.md
+
 custom_categories:
   - name: Parsing
     children:
