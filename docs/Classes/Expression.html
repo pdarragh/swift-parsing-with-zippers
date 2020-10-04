@@ -118,7 +118,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Expression</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Expression</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                 </div>
               </div>
@@ -189,6 +189,92 @@ the same expression multiple times.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3PwZ10ExpressionC11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ10ExpressionC11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A rendering of the <code>Expression</code> to a string. The rendering is memoized,
+so you should not make changes to the expression after accessing this.
+If you need to, you can use <code><a href="../Classes/Expression.html#/s:3PwZ10ExpressionC20recomputeDescriptionyyF">Expression.recomputeDescription()</a></code> to force
+the description to be updated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3PwZ10ExpressionC20recomputeDescriptionyyF"></a>
+                    <a name="//apple_ref/swift/Method/recomputeDescription()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ10ExpressionC20recomputeDescriptionyyF">recomputeDescription()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Recomputes the <code><a href="../Classes/Expression.html#/s:3PwZ10ExpressionC11descriptionSSvp">Expression.description</a></code>, in case the expression was
+modified after the last access of the description.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">recomputeDescription</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3PwZ10ExpressionC14expressionCaseAcA0bD0O_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(expressionCase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ10ExpressionC14expressionCaseAcA0bD0O_tcfc">init(expressionCase:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize an <code>Expression</code> without needing to give an explicit
+<code><a href="../Classes/MemoizationRecord.html">MemoizationRecord</a></code>. The record used is from the <code><a href="../Sentinels.html#/s:3PwZ8SentinelAA0B6StructVvp">Sentinel</a></code> value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">expressionCase</span><span class="p">:</span> <span class="kt"><a href="../Enums/ExpressionCase.html">ExpressionCase</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -197,7 +283,7 @@ the same expression multiple times.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-09-30)</p>
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-04)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
