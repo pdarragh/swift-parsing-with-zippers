@@ -48,12 +48,23 @@ public class Expression: Equatable, CustomStringConvertible {
           lhs.expressionCase == rhs.expressionCase
     }
 
+    /// A private holder of the actual description, for memoization.
     private var _description: String? = nil
+    /// A rendering of the `Expression` to a string. The rendering is memoized,
+    /// so you should not make changes to the expression after accessing this.
+    /// If you need to, you can use `Expression.recomputeDescription()` to force
+    /// the description to be updated.
     public var description: String {
         if _description == nil {
             _description = render(expression: self)
         }
         return _description!
+    }
+
+    /// Recomputes the `Expression.description`, in case the expression was
+    /// modified after the last access of the description.
+    public func recomputeDescription() {
+        _description = render(expression: self)
     }
 }
 
