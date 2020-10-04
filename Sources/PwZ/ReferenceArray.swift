@@ -5,8 +5,11 @@
  Only the necessary methods are implemented.
  */
 public class ReferenceArray<Element: Equatable>: ExpressibleByArrayLiteral {
+    /// The type of elements in the array.
+    public typealias Element = Element
+
     /// The internal array that the class provides a reference to.
-    fileprivate var items: [Element] = []
+    var items: [Element] = []
 
     /// Initializes the array from an existing sequence of values.
     public init<S: Sequence>(_ sequence: S)
