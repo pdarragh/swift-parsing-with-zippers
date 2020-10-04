@@ -6,7 +6,7 @@
 public struct SentinelStruct {
     fileprivate let integer: Int = -1  // Both Position and Tag will use this value.
     fileprivate let symbol: Symbol = "<s_bottom>"
-    fileprivate let token: Token
+    fileprivate let token: Token = (-1, "<t_eof>")
     /*
      The `expression` and `memoizationRecord` fields must be initialized
      dynamically because Swift does not allow mutually recursive references to
@@ -18,7 +18,6 @@ public struct SentinelStruct {
     fileprivate let memoizationRecord: MemoizationRecord
 
     fileprivate init() {
-        self.token = (self.integer, "<t_eof>")
         self.memoizationRecord = MemoizationRecord(startPosition: self.integer,
                                                    endPosition: self.integer,
                                                    parentContexts: [],
