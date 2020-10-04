@@ -27,11 +27,11 @@ public typealias Token = (tag: Tag, symbol: Symbol)
  preserve reference semantics because grammars may have duplicate references to
  the same expression multiple times.
  */
-public class Expression: Equatable {
+public class Expression: Equatable, CustomStringConvertible {
     /// Memoization records are pushed into expressions for efficiency.
     var memoizationRecord: MemoizationRecord
     /// The specific case of expression being represented in this `Expression`.
-    let expressionCase: ExpressionCase
+    var expressionCase: ExpressionCase
 
     /// Initializes a new `Expression` from a `MemoizationRecord` and internal
     /// `ExpressionCase`.
@@ -46,6 +46,14 @@ public class Expression: Equatable {
         return
           lhs.memoizationRecord == rhs.memoizationRecord &&
           lhs.expressionCase == rhs.expressionCase
+    }
+
+    private var _description: String? = nil
+    public var description: String {
+        if _description == nil {
+            _description = render(expression: self)
+        }
+        return _description!
     }
 }
 
