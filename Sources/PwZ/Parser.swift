@@ -123,8 +123,7 @@ class ZipperParser {
         func deriveUp(fromExpressionCase expressionCase: ExpressionCase, toMemoizationRecord memoizationRecord: MemoizationRecord) {
             // We construct a new parent `Expression` for the `ExpressionCase`
             // with its own fresh `MemoizationRecord`.
-            let expression = Expression(memoizationRecord: Sentinel.of(MemoizationRecord.self),
-                                        expressionCase: expressionCase)
+            let expression = Expression(expressionCase: expressionCase)
             // Then, we update the parent memoization record we came in with to
             // point to our new `Expression`, noting that the record is now
             // considered complete (i.e., its result is marked as corresponding

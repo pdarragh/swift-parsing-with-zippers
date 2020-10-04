@@ -61,3 +61,14 @@ public struct SentinelStruct {
    - `MemoizationRecord`
  */
 public let Sentinel = SentinelStruct()
+
+/// Extend the `Expression` to be initializable with a default
+/// `MemoizationRecord`.
+extension Expression {
+    /// Initialize an `Expression` without needing to give an explicit
+    /// `MemoizationRecord`. The record used is from the `Sentinel` value.
+    public convenience init(expressionCase: ExpressionCase) {
+        self.init(memoizationRecord: Sentinel.of(MemoizationRecord.self),
+                  expressionCase: expressionCase)
+    }
+}
