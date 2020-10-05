@@ -11,7 +11,11 @@ public enum GrammarError: Error {
 fileprivate extension Dictionary {
     /// Checks whether a key is present in the dictionary.
     func contains(_ key: Key) -> Bool {
-        return self[key] == nil
+        if let _ = self[key] {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
@@ -221,7 +225,7 @@ extension Grammar: ExpressibleByDictionaryLiteral {
             try self.init(fromAbstractProductions: abstractProductions)
         } catch {
             // Invalid grammar literals are not tolerated.
-            fatalError("Invalid Grammar literal.")
+            fatalError("invalid Grammar literal")
         }
     }
 }
