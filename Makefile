@@ -23,6 +23,9 @@ debug:
 release:
 	swift build -c release
 
+test:
+	swift test
+
 ################################################################################
 # Documentation Targets
 
