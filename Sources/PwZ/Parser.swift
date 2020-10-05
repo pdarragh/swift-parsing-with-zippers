@@ -252,7 +252,7 @@ public func parse(expression: Expression, withInputTokens tokens: [Token]) -> [E
         let savedZippers = worklist
         worklist.removeAll(keepingCapacity: true)
         tops.removeAll(keepingCapacity: true)
-        if position > tokens.count {
+        if position >= tokens.count {
             savedZippers.forEach { derive(withToken: Sentinel.of(Token.self), atPosition: position, fromZipper: $0) }
             return tops.map { unwrapTopExpression($0) }
         } else {
