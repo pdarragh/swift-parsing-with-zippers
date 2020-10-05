@@ -189,7 +189,7 @@ public struct Grammar {
      - Returns: A list of resulting `Expression`s.
      */
     public func parse(inputTokens tokens: [Token]) -> [Expression] {
-        return PwZ.parse(inputTokens: tokens, withGrammar: root)
+        return PwZ.parse(expression: root, withInputTokens: tokens)
     }
 }
 

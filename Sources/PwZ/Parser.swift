@@ -1,17 +1,19 @@
 /**
- The `ZipperParser` enables parsing over a grammar using the algorithm described
- in the paper "Parsing with Zippers" by Darragh and Adams (ICFP 2020).
+ Parses a sequence of input tokens against a given expression using the
+ algorithm described in "Parsing with Zippers" by Darragh and Adams (ICFP 2020).
 
- It's implemented as a class to make management of state and encapsulation of
- helper methods more straightforward, but that's not strictly necessary.
+ - Parameters:
+     - expression: The root expression of the grammar to parse with respect to.
+     - tokens: A list of `Token`s representing the input string to parse.
+ - Returns: A list of parse trees.
  */
-class ZipperParser {
+public func parse(expression: Expression, withInputTokens tokens: [Token]) -> [Expression] {
     /// Used for keeping track of resume-able `Zipper`s produced from parsing
     /// atomic `Tok` productions.
-    var worklist: [Zipper] = []
+    var worklist: [Zipper]
     /// Used for keeping track of completed parses resulting from parsing up
     /// to a `TopC` context.
-    var tops: [Expression] = []
+    var tops: [Expression]
 
     /**
      Derives the grammar with respect to the given token. A position is used to
@@ -205,7 +207,7 @@ class ZipperParser {
                 calls to `derive(withToken:atPosition:fromZipper)` proceed as
                 expected.
      */
-    private func initializeZipper(fromExpression expression: Expression) -> Zipper {
+    func initializeZipper(fromExpression expression: Expression) -> Zipper {
         let topMemoizationRecord = MemoizationRecord(startPosition: Sentinel.of(Position.self),
                                                      endPosition: Sentinel.of(Position.self),
                                                      parentContexts: [.TopC],
@@ -228,7 +230,7 @@ class ZipperParser {
          expression: An `Expression` resulting from a completed parse.
      - Returns: The unwrapped inner `Expression`.
      */
-    private func unwrapTopExpression(_ expression: Expression) -> Expression {
+    func unwrapTopExpression(_ expression: Expression) -> Expression {
         switch (expression.expressionCase) {
         case let .Seq(_, expressions) where expressions.count >= 2:
             // TODO: Why do we throw away the first expression? This is done in
@@ -240,40 +242,29 @@ class ZipperParser {
     }
 
     /**
-     Parses a sequence of input tokens against a given grammar.
+     Parses the token at a specific position in the input.
 
      - Parameters:
-         - tokens: A list of `Token`s representing the input string.
-         - grammar: The grammar to parse with respect to.
+         - position: The index of the next token in the input string to parse.
      - Returns: A list of parse trees.
      */
-    func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression] {
-        func parse(inputTokens tokens: [Token], atPosition position: Position) -> [Expression] {
-            let savedZippers = worklist
-            worklist.removeAll(keepingCapacity: true)
-            tops.removeAll(keepingCapacity: true)
-            if position > tokens.count {
-                savedZippers.forEach { derive(withToken: Sentinel.of(Token.self), atPosition: position, fromZipper: $0) }
-                return tops.map { unwrapTopExpression($0) }
-            } else {
-                let token = tokens[position]
-                savedZippers.forEach { derive(withToken: token, atPosition: position, fromZipper: $0) }
-                return parse(inputTokens: tokens, atPosition: position + 1)
-            }
+    func parse(atPosition position: Position) -> [Expression] {
+        let savedZippers = worklist
+        worklist.removeAll(keepingCapacity: true)
+        tops.removeAll(keepingCapacity: true)
+        if position > tokens.count {
+            savedZippers.forEach { derive(withToken: Sentinel.of(Token.self), atPosition: position, fromZipper: $0) }
+            return tops.map { unwrapTopExpression($0) }
+        } else {
+            let token = tokens[position]
+            savedZippers.forEach { derive(withToken: token, atPosition: position, fromZipper: $0) }
+            return parse(atPosition: position + 1)
         }
-        worklist = [initializeZipper(fromExpression: grammar)]
-        return parse(inputTokens: tokens, atPosition: 0)
     }
-}
 
-/**
- Parses a sequence of input tokens against a given grammar.
-
- - Parameters:
-     - tokens: A list of `Token`s representing the input string.
-     - grammar: The grammar to parse with respect to.
- - Returns: A list of parse trees.
- */
-public func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression] {
-    return ZipperParser().parse(inputTokens: tokens, withGrammar: grammar)
+    // Initialize the worklist and list of top expressions.
+    worklist = [initializeZipper(fromExpression: expression)]
+    tops = []
+    // Start the parse!
+    return parse(atPosition: 0)
 }
