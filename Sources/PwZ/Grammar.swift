@@ -201,38 +201,6 @@ extension Grammar: ExpressibleByDictionaryLiteral {
      convenience initializers and operators for `AbstractGrammar`s, this allows
      for a convenient way to create a new `Grammar` from scratch.
 
-     For example, consider the following BNF grammar where `S` represents the
-     start symbol:
-
-         S      ::= expr
-         expr   ::= term
-                  | expr '+' term
-                  | expr '-' term
-         term   ::= factor
-                  | term '*' factor
-                  | term '/' factor
-         factor ::= 'int'
-                  | '-' factor
-                  | '(' expr ')'
-
-     We can generate the grammar described like so:
-
-         let grammar: Grammar =
-           [ "START": "expr"
-           , "expr":
-               [ "term"
-               , "expr" ++ "+" ++ "term"
-               , "expr" ++ "-" ++ "term" ]
-           , "term":
-               [ "factor"
-               , "term" ++ "*" ++ "factor"
-               , "term" ++ "/" ++ "factor" ]
-           , "factor":
-               [ "int"
-               , "-" ++ "factor"
-               , "(" ++ "expr" ++ ")" ]
-           ]
-
      If the grammar described is somehow invalid, a fatal error occurs. I
      recommend not writing invalid grammar literals.
 

@@ -468,38 +468,6 @@ be addressed as needed.</p>
 convenience initializers and operators for <code><a href="../Enums/AbstractGrammar.html">AbstractGrammar</a></code>s, this allows
 for a convenient way to create a new <code>Grammar</code> from scratch.</p>
 
-<p>For example, consider the following BNF grammar where <code>S</code> represents the
-start symbol:</p>
-<pre class="highlight swift"><code><span class="kt">S</span>      <span class="p">::</span><span class="o">=</span> <span class="n">expr</span>
-<span class="nv">expr</span>   <span class="p">::</span><span class="o">=</span> <span class="n">term</span>
-         <span class="o">|</span> <span class="n">expr</span> <span class="sc">'+'</span> <span class="n">term</span>
-         <span class="o">|</span> <span class="n">expr</span> <span class="sc">'-'</span> <span class="n">term</span>
-<span class="nv">term</span>   <span class="p">::</span><span class="o">=</span> <span class="n">factor</span>
-         <span class="o">|</span> <span class="n">term</span> <span class="sc">'*'</span> <span class="n">factor</span>
-         <span class="o">|</span> <span class="n">term</span> <span class="sc">'/'</span> <span class="n">factor</span>
-<span class="nv">factor</span> <span class="p">::</span><span class="o">=</span> <span class="err">'</span><span class="n">int</span><span class="err">'</span>
-         <span class="o">|</span> <span class="sc">'-'</span> <span class="n">factor</span>
-         <span class="o">|</span> <span class="sc">'('</span> <span class="n">expr</span> <span class="sc">')'</span>
-</code></pre>
-
-<p>We can generate the grammar described like so:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">grammar</span><span class="p">:</span> <span class="kt">Grammar</span> <span class="o">=</span>
-  <span class="p">[</span> <span class="s">"START"</span><span class="p">:</span> <span class="s">"expr"</span>
-  <span class="p">,</span> <span class="s">"expr"</span><span class="p">:</span>
-      <span class="p">[</span> <span class="s">"term"</span>
-      <span class="p">,</span> <span class="s">"expr"</span> <span class="o">++</span> <span class="s">"+"</span> <span class="o">++</span> <span class="s">"term"</span>
-      <span class="p">,</span> <span class="s">"expr"</span> <span class="o">++</span> <span class="s">"-"</span> <span class="o">++</span> <span class="s">"term"</span> <span class="p">]</span>
-  <span class="p">,</span> <span class="s">"term"</span><span class="p">:</span>
-      <span class="p">[</span> <span class="s">"factor"</span>
-      <span class="p">,</span> <span class="s">"term"</span> <span class="o">++</span> <span class="s">"*"</span> <span class="o">++</span> <span class="s">"factor"</span>
-      <span class="p">,</span> <span class="s">"term"</span> <span class="o">++</span> <span class="s">"/"</span> <span class="o">++</span> <span class="s">"factor"</span> <span class="p">]</span>
-  <span class="p">,</span> <span class="s">"factor"</span><span class="p">:</span>
-      <span class="p">[</span> <span class="s">"int"</span>
-      <span class="p">,</span> <span class="s">"-"</span> <span class="o">++</span> <span class="s">"factor"</span>
-      <span class="p">,</span> <span class="s">"("</span> <span class="o">++</span> <span class="s">"expr"</span> <span class="o">++</span> <span class="s">")"</span> <span class="p">]</span>
-  <span class="p">]</span>
-</code></pre>
-
 <p>If the grammar described is somehow invalid, a fatal error occurs. I
 recommend not writing invalid grammar literals.</p>
 
