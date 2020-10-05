@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Expression Class Reference</title>
+    <title>AbstractGrammar Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/Expression" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/AbstractGrammar" class="dashAnchor"></a>
 
-    <a title="Expression Class Reference"></a>
+    <a title="AbstractGrammar Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -38,7 +38,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html"> Reference</a>
       <img class="carat" src="../img/carat.png" />
-      Expression Class Reference
+      AbstractGrammar Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -131,17 +131,17 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Expression</h1>
+            <h1>AbstractGrammar</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Expression</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">indirect</span> <span class="kd">enum</span> <span class="kt">AbstractGrammar</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AbstractGrammar</span><span class="p">:</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AbstractGrammar</span><span class="p">:</span> <span class="kt">ExpressibleByArrayLiteral</span></code></pre>
 
                 </div>
               </div>
-            <p>Expressions form trees in a grammar. We use a class instead of a struct to
-preserve reference semantics because grammars may have duplicate references to
-the same expression multiple times.</p>
+            <p>A simplified grammar specification language.</p>
 
           </div>
         </section>
@@ -153,9 +153,9 @@ the same expression multiple times.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3PwZ10ExpressionC17memoizationRecord14expressionCaseAcA011MemoizationD0C_AA0bF0Otcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(memoizationRecord:expressionCase:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3PwZ10ExpressionC17memoizationRecord14expressionCaseAcA011MemoizationD0C_AA0bF0Otcfc">init(memoizationRecord:<wbr>expressionCase:<wbr>)</a>
+                    <a name="/s:3PwZ15AbstractGrammarO6SymbolyACSScACmF"></a>
+                    <a name="//apple_ref/swift/Element/Symbol(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ15AbstractGrammarO6SymbolyACSScACmF">Symbol(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -163,16 +163,14 @@ the same expression multiple times.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes a new <code>Expression</code> from a <code><a href="../Classes/MemoizationRecord.html">MemoizationRecord</a></code> and internal
-<code><a href="../Enums/ExpressionCase.html">ExpressionCase</a></code>.</p>
+                        <p>Either a terminal or non-terminal symbol.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">memoizationRecord</span> <span class="nv">memRec</span><span class="p">:</span> <span class="kt"><a href="../Classes/MemoizationRecord.html">MemoizationRecord</a></span><span class="p">,</span>
-     <span class="n">expressionCase</span> <span class="nv">expCase</span><span class="p">:</span> <span class="kt"><a href="../Enums/ExpressionCase.html">ExpressionCase</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt"><a href="../Basic%20Types.html#/s:3PwZ6Symbola">Symbol</a></span><span class="p">(</span><span class="kt"><a href="../Basic%20Types.html#/s:3PwZ6Symbola">Symbol</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -182,9 +180,9 @@ the same expression multiple times.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3PwZ10ExpressionC2eeoiySbAC_ACtFZ"></a>
-                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3PwZ10ExpressionC2eeoiySbAC_ACtFZ">==(_:<wbr>_:<wbr>)</a>
+                    <a name="/s:3PwZ15AbstractGrammarO13ConcatenationyACSayACGcACmF"></a>
+                    <a name="//apple_ref/swift/Element/Concatenation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ15AbstractGrammarO13ConcatenationyACSayACGcACmF">Concatenation(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -192,14 +190,14 @@ the same expression multiple times.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>Expression</code>s are trivially <code>Equatable</code> from their components.</p>
+                        <p>A sequence of expressions that must be considered in-order.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Expression</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Expression</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Concatenation</span><span class="p">([</span><span class="kt">AbstractGrammar</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -209,9 +207,9 @@ the same expression multiple times.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3PwZ10ExpressionC11descriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3PwZ10ExpressionC11descriptionSSvp">description</a>
+                    <a name="/s:3PwZ15AbstractGrammarO11AlternationyACSayACGcACmF"></a>
+                    <a name="//apple_ref/swift/Element/Alternation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ15AbstractGrammarO11AlternationyACSayACGcACmF">Alternation(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -219,15 +217,14 @@ the same expression multiple times.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A rendering of the <code>Expression</code> to a string. This is lazily computed
-fresh when the <code>Expression.expressionCase</code> is updated.</p>
+                        <p>A collection of non-deterministic expressions.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Alternation</span><span class="p">([</span><span class="kt">AbstractGrammar</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -237,9 +234,9 @@ fresh when the <code>Expression.expressionCase</code> is updated.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3PwZ10ExpressionC14expressionCaseAcA0bD0O_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(expressionCase:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3PwZ10ExpressionC14expressionCaseAcA0bD0O_tcfc">init(expressionCase:<wbr>)</a>
+                    <a name="/s:3PwZ15AbstractGrammarO13stringLiteralACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ15AbstractGrammarO13stringLiteralACSS_tcfc">init(stringLiteral:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,15 +244,43 @@ fresh when the <code>Expression.expressionCase</code> is updated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize an <code>Expression</code> without needing to give an explicit
-<code><a href="../Classes/MemoizationRecord.html">MemoizationRecord</a></code>. The record used is from the <code><a href="../Sentinels.html#/s:3PwZ8SentinelAA0B6StructVvp">Sentinel</a></code> value.</p>
+                        <p>Creates an <code>AbstractGrammar.Symbol</code> from a string literal.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">expressionCase</span><span class="p">:</span> <span class="kt"><a href="../Enums/ExpressionCase.html">ExpressionCase</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3PwZ15AbstractGrammarO12arrayLiteralA2Cd_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrayLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ15AbstractGrammarO12arrayLiteralA2Cd_tcfc">init(arrayLiteral:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code>AbstractGrammar.Alternation</code> from an array of
+<code>AbstractGrammar</code>s. If the array only contains one element, it will be
+used as the sole production (i.e., no alternate is created).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">arrayLiteral</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt">AbstractGrammar</span><span class="o">...</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

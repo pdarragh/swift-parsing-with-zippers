@@ -5,6 +5,12 @@ documentation: docs/documentation/*.md
 abstract: docs/abstracts/*.md
 
 custom_categories:
+  - name: Grammars
+    children:
+      - Grammar
+      - GrammarError
+      - AbstractGrammar
+      - "++(_:_:)"
   - name: Parsing
     children:
       - parse(inputTokens:withGrammar:)

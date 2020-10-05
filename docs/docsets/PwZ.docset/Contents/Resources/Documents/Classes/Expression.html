@@ -45,10 +45,27 @@
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Grammars.html">Grammars</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Grammar.html">Grammar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GrammarError.html">GrammarError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AbstractGrammar.html">AbstractGrammar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Grammars.html#/s:3PwZ2ppoiyAA15AbstractGrammarOAD_ADtF">++(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Parsing.html">Parsing</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Parsing.html#/s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltGz_AFtF">parse(inputTokens:withGrammar:)</a>
+                <a class="nav-group-task-link" href="../Parsing.html#/s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AFtF">parse(inputTokens:withGrammar:)</a>
               </li>
             </ul>
           </li>
@@ -202,10 +219,8 @@ the same expression multiple times.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A rendering of the <code>Expression</code> to a string. The rendering is memoized,
-so you should not make changes to the expression after accessing this.
-If you need to, you can use <code><a href="../Classes/Expression.html#/s:3PwZ10ExpressionC20recomputeDescriptionyyF">Expression.recomputeDescription()</a></code> to force
-the description to be updated.</p>
+                        <p>A rendering of the <code>Expression</code> to a string. This is lazily computed
+fresh when the <code>Expression.expressionCase</code> is updated.</p>
 
                       </div>
                       <div class="declaration">
@@ -213,34 +228,6 @@ the description to be updated.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3PwZ10ExpressionC20recomputeDescriptionyyF"></a>
-                    <a name="//apple_ref/swift/Method/recomputeDescription()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3PwZ10ExpressionC20recomputeDescriptionyyF">recomputeDescription()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Recomputes the <code><a href="../Classes/Expression.html#/s:3PwZ10ExpressionC11descriptionSSvp">Expression.description</a></code>, in case the expression was
-modified after the last access of the description.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">recomputeDescription</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
