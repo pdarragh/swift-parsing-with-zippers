@@ -6,7 +6,7 @@
 /// Positions are the indices of tokens within the input string being parsed.
 public typealias Position = Int
 
-/// Symbols are the names given to productions with a grammar.
+/// Symbols are the names given to productions within a grammar.
 public typealias Symbol = String
 
 /// Tags uniquely identify token types.
@@ -31,7 +31,11 @@ public class Expression: Equatable, CustomStringConvertible {
     /// Memoization records are pushed into expressions for efficiency.
     var memoizationRecord: MemoizationRecord
     /// The specific case of expression being represented in this `Expression`.
-    var expressionCase: ExpressionCase
+    var expressionCase: ExpressionCase {
+        // If the internal `ExpressionCase` is changed, the
+        // `Expression.description` becomes invalid.
+        didSet { _description = nil }
+    }
 
     /// Initializes a new `Expression` from a `MemoizationRecord` and internal
     /// `ExpressionCase`.
@@ -50,21 +54,13 @@ public class Expression: Equatable, CustomStringConvertible {
 
     /// A private holder of the actual description, for memoization.
     private var _description: String? = nil
-    /// A rendering of the `Expression` to a string. The rendering is memoized,
-    /// so you should not make changes to the expression after accessing this.
-    /// If you need to, you can use `Expression.recomputeDescription()` to force
-    /// the description to be updated.
+    /// A rendering of the `Expression` to a string. This is lazily computed
+    /// fresh when the `Expression.expressionCase` is updated.
     public var description: String {
         if _description == nil {
             _description = render(expression: self)
         }
         return _description!
-    }
-
-    /// Recomputes the `Expression.description`, in case the expression was
-    /// modified after the last access of the description.
-    public func recomputeDescription() {
-        _description = render(expression: self)
     }
 }
 
