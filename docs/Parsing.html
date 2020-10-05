@@ -65,7 +65,7 @@
             <a class="nav-group-name-link" href="Parsing.html">Parsing</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Parsing.html#/s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AFtF">parse(inputTokens:withGrammar:)</a>
+                <a class="nav-group-task-link" href="Parsing.html#/s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF">parse(expression:withInputTokens:)</a>
               </li>
             </ul>
           </li>
@@ -143,9 +143,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AFtF"></a>
-                    <a name="//apple_ref/swift/Function/parse(inputTokens:withGrammar:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AFtF">parse(inputTokens:<wbr>withGrammar:<wbr>)</a>
+                    <a name="/s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF"></a>
+                    <a name="//apple_ref/swift/Function/parse(expression:withInputTokens:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF">parse(expression:<wbr>withInputTokens:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -153,14 +153,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Parses a sequence of input tokens against a given grammar.</p>
+                        <p>Parses a sequence of input tokens against a given expression using the
+algorithm described in &ldquo;Parsing with Zippers&rdquo; by Darragh and Adams (ICFP 2020).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parse</span><span class="p">(</span><span class="n">inputTokens</span> <span class="nv">tokens</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></span><span class="p">],</span> <span class="n">withGrammar</span> <span class="nv">grammar</span><span class="p">:</span> <span class="kt"><a href="Classes/Expression.html">Expression</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="Classes/Expression.html">Expression</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">expression</span><span class="p">:</span> <span class="kt"><a href="Classes/Expression.html">Expression</a></span><span class="p">,</span> <span class="n">withInputTokens</span> <span class="nv">tokens</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="Classes/Expression.html">Expression</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -171,24 +172,24 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>tokens</em>
+                                <em>expression</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>A list of <code><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></code>s representing the input string.</p>
+                                  <p>The root expression of the grammar to parse with respect to.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>grammar</em>
+                                <em>tokens</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The grammar to parse with respect to.</p>
+                                  <p>A list of <code><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></code>s representing the input string to parse.</p>
                                 </div>
                               </td>
                             </tr>
@@ -210,7 +211,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-04)</p>
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-10-05)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -891,7 +891,7 @@
 }, {
   "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 11750,
+    "key.length" : 11753,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -1196,7 +1196,7 @@
             "key.offset" : 888
           }
         ],
-        "key.bodylength" : 7611,
+        "key.bodylength" : 7614,
         "key.bodyoffset" : 911,
         "key.doc.column" : 15,
         "key.doc.comment" : "A `Grammar` is a collection of productions. A basic knowledge of formal\ngrammars is assumed. See the [Wikipedia article](https:\/\/en.wikipedia.org\/wiki\/Formal_grammar)\nfor more information.\n\nOnce built, a `Grammar` can be used for parsing by using the\n`Grammar.parse(inputTokens:)` function.",
@@ -1216,7 +1216,7 @@
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
         "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Grammar<\/decl.name><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.struct",
-        "key.length" : 7628,
+        "key.length" : 7631,
         "key.name" : "Grammar",
         "key.namelength" : 7,
         "key.nameoffset" : 902,
@@ -1605,7 +1605,7 @@
                 "key.offset" : 8386
               }
             ],
-            "key.bodylength" : 70,
+            "key.bodylength" : 73,
             "key.bodyoffset" : 8450,
             "key.doc.column" : 17,
             "key.doc.comment" : "Parses the grammar using the given input tokens.\n\n- Parameters:\n    - tokens: An array of `Token`s to parse.\n- Returns: A list of resulting `Expression`s.",
@@ -1635,7 +1635,7 @@
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>inputTokens<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tokens<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 128,
+            "key.length" : 131,
             "key.name" : "parse(inputTokens:)",
             "key.namelength" : 34,
             "key.nameoffset" : 8398,
@@ -1659,7 +1659,7 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>public struct Grammar<\/Declaration>",
         "key.bodylength" : 1156,
-        "key.bodyoffset" : 8668,
+        "key.bodyoffset" : 8671,
         "key.doc.column" : 15,
         "key.doc.comment" : "For convenience, we extend the `Grammar` to be expressible as a dictionary\nliteral.",
         "key.doc.declaration" : "public struct Grammar",
@@ -1674,12 +1674,12 @@
         "key.doc.name" : "Grammar",
         "key.doc.type" : "Class",
         "key.doclength" : 92,
-        "key.docoffset" : 8525,
+        "key.docoffset" : 8528,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 30,
-            "key.offset" : 8636
+            "key.offset" : 8639
           }
         ],
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
@@ -1693,8 +1693,8 @@
         "key.length" : 1208,
         "key.name" : "Grammar",
         "key.namelength" : 7,
-        "key.nameoffset" : 8627,
-        "key.offset" : 8617,
+        "key.nameoffset" : 8630,
+        "key.offset" : 8620,
         "key.parsed_declaration" : "extension Grammar: ExpressibleByDictionaryLiteral",
         "key.parsed_scope.end" : 223,
         "key.parsed_scope.start" : 198,
@@ -1706,11 +1706,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 9180
+                "key.offset" : 9183
               }
             ],
             "key.bodylength" : 571,
-            "key.bodyoffset" : 9251,
+            "key.bodyoffset" : 9254,
             "key.doc.column" : 12,
             "key.doc.comment" : "Initializes a `Grammar` from a dictionary literal. Together with the\nconvenience initializers and operators for `AbstractGrammar`s, this allows\nfor a convenient way to create a new `Grammar` from scratch.\n\nIf the grammar described is somehow invalid, a fatal error occurs. I\nrecommend not writing invalid grammar literals.\n\n- Parameters:\n    - elements: A sequence of `Symbol`-`AbstractGrammar` pairs from which\n                to create a `Grammar`.",
             "key.doc.declaration" : "public init(dictionaryLiteral elements: (Symbol, AbstractGrammar)...)",
@@ -1735,15 +1735,15 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 502,
-            "key.docoffset" : 8673,
+            "key.docoffset" : 8676,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>dictionaryLiteral<\/decl.var.parameter.argument_label> <decl.var.parameter.name>elements<\/decl.var.parameter.name>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type>...<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 636,
             "key.name" : "init(dictionaryLiteral:)",
             "key.namelength" : 62,
-            "key.nameoffset" : 9187,
-            "key.offset" : 9187,
+            "key.nameoffset" : 9190,
+            "key.offset" : 9190,
             "key.overrides" : [
               {
                 "key.usr" : "s:s30ExpressibleByDictionaryLiteralP010dictionaryD0x3KeyQz_5ValueQztd_tcfc"
@@ -1766,8 +1766,8 @@
                 "key.length" : 334,
                 "key.name" : "abstractProductions",
                 "key.namelength" : 19,
-                "key.nameoffset" : 9264,
-                "key.offset" : 9260,
+                "key.nameoffset" : 9267,
+                "key.offset" : 9263,
                 "key.parsed_declaration" : "let abstractProductions = Dictionary.init(elements, uniquingKeysWith: {\n                                                        (lv, rv) in\n                                                        fatalError(\"Duplicate non-terminal name in grammar: \\(lv)\")\n                                                    })",
                 "key.parsed_scope.end" : 212,
                 "key.parsed_scope.start" : 212,
@@ -1792,16 +1792,16 @@
           {
             "key.attribute" : "source.decl.attribute.indirect",
             "key.length" : 8,
-            "key.offset" : 9883
+            "key.offset" : 9886
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 9876
+            "key.offset" : 9879
           }
         ],
         "key.bodylength" : 280,
-        "key.bodyoffset" : 9914,
+        "key.bodyoffset" : 9917,
         "key.doc.column" : 22,
         "key.doc.comment" : "A simplified grammar specification language.",
         "key.doc.declaration" : "public indirect enum AbstractGrammar",
@@ -1811,15 +1811,15 @@
         "key.doc.name" : "AbstractGrammar",
         "key.doc.type" : "Other",
         "key.doclength" : 49,
-        "key.docoffset" : 9827,
+        "key.docoffset" : 9830,
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
         "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>indirect<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <decl.name>AbstractGrammar<\/decl.name><\/decl.enum>",
         "key.kind" : "source.lang.swift.decl.enum",
         "key.length" : 303,
         "key.name" : "AbstractGrammar",
         "key.namelength" : 15,
-        "key.nameoffset" : 9897,
-        "key.offset" : 9892,
+        "key.nameoffset" : 9900,
+        "key.offset" : 9895,
         "key.parsed_declaration" : "public indirect enum AbstractGrammar",
         "key.parsed_scope.end" : 233,
         "key.parsed_scope.start" : 226,
@@ -1829,7 +1829,7 @@
             "key.length" : 19,
             "key.namelength" : 0,
             "key.nameoffset" : 0,
-            "key.offset" : 9969,
+            "key.offset" : 9972,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1843,15 +1843,15 @@
                 "key.doc.name" : "Symbol(_:)",
                 "key.doc.type" : "Other",
                 "key.doclength" : 46,
-                "key.docoffset" : 9919,
+                "key.docoffset" : 9922,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>Symbol<\/decl.name>(<decl.var.parameter><decl.var.parameter.type><ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
                 "key.kind" : "source.lang.swift.decl.enumelement",
                 "key.length" : 14,
                 "key.name" : "Symbol(_:)",
                 "key.namelength" : 14,
-                "key.nameoffset" : 9974,
-                "key.offset" : 9974,
+                "key.nameoffset" : 9977,
+                "key.offset" : 9977,
                 "key.parsed_declaration" : "case Symbol(Symbol)",
                 "key.parsed_scope.end" : 228,
                 "key.parsed_scope.start" : 228,
@@ -1866,7 +1866,7 @@
             "key.length" : 37,
             "key.namelength" : 0,
             "key.nameoffset" : 0,
-            "key.offset" : 10061,
+            "key.offset" : 10064,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1880,15 +1880,15 @@
                 "key.doc.name" : "Concatenation(_:)",
                 "key.doc.type" : "Other",
                 "key.doclength" : 64,
-                "key.docoffset" : 9993,
+                "key.docoffset" : 9996,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>Concatenation<\/decl.name>(<decl.var.parameter><decl.var.parameter.type>[<ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
                 "key.kind" : "source.lang.swift.decl.enumelement",
                 "key.length" : 32,
                 "key.name" : "Concatenation(_:)",
                 "key.namelength" : 32,
-                "key.nameoffset" : 10066,
-                "key.offset" : 10066,
+                "key.nameoffset" : 10069,
+                "key.offset" : 10069,
                 "key.parsed_declaration" : "case Concatenation([AbstractGrammar])",
                 "key.parsed_scope.end" : 230,
                 "key.parsed_scope.start" : 230,
@@ -1903,7 +1903,7 @@
             "key.length" : 35,
             "key.namelength" : 0,
             "key.nameoffset" : 0,
-            "key.offset" : 10158,
+            "key.offset" : 10161,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1917,15 +1917,15 @@
                 "key.doc.name" : "Alternation(_:)",
                 "key.doc.type" : "Other",
                 "key.doclength" : 51,
-                "key.docoffset" : 10103,
+                "key.docoffset" : 10106,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>Alternation<\/decl.name>(<decl.var.parameter><decl.var.parameter.type>[<ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
                 "key.kind" : "source.lang.swift.decl.enumelement",
                 "key.length" : 30,
                 "key.name" : "Alternation(_:)",
                 "key.namelength" : 30,
-                "key.nameoffset" : 10163,
-                "key.offset" : 10163,
+                "key.nameoffset" : 10166,
+                "key.offset" : 10166,
                 "key.parsed_declaration" : "case Alternation([AbstractGrammar])",
                 "key.parsed_scope.end" : 232,
                 "key.parsed_scope.start" : 232,
@@ -1944,7 +1944,7 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>public indirect enum AbstractGrammar<\/Declaration>",
         "key.bodylength" : 154,
-        "key.bodyoffset" : 10344,
+        "key.bodyoffset" : 10347,
         "key.doc.column" : 22,
         "key.doc.comment" : "Allow `AbstractGrammar.Symbol`s to be created from string literals for\nconvenience.",
         "key.doc.declaration" : "public indirect enum AbstractGrammar",
@@ -1954,12 +1954,12 @@
         "key.doc.name" : "AbstractGrammar",
         "key.doc.type" : "Other",
         "key.doclength" : 92,
-        "key.docoffset" : 10197,
+        "key.docoffset" : 10200,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 26,
-            "key.offset" : 10316
+            "key.offset" : 10319
           }
         ],
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
@@ -1973,8 +1973,8 @@
         "key.length" : 210,
         "key.name" : "AbstractGrammar",
         "key.namelength" : 15,
-        "key.nameoffset" : 10299,
-        "key.offset" : 10289,
+        "key.nameoffset" : 10302,
+        "key.offset" : 10292,
         "key.parsed_declaration" : "extension AbstractGrammar: ExpressibleByStringLiteral",
         "key.parsed_scope.end" : 242,
         "key.parsed_scope.start" : 237,
@@ -1986,11 +1986,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 10416
+                "key.offset" : 10419
               }
             ],
             "key.bodylength" : 37,
-            "key.bodyoffset" : 10459,
+            "key.bodyoffset" : 10462,
             "key.doc.column" : 12,
             "key.doc.comment" : "Creates an `AbstractGrammar.Symbol` from a string literal.",
             "key.doc.declaration" : "public init(stringLiteral string: String)",
@@ -2000,15 +2000,15 @@
             "key.doc.name" : "init(stringLiteral:)",
             "key.doc.type" : "Function",
             "key.doclength" : 63,
-            "key.docoffset" : 10349,
+            "key.docoffset" : 10352,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>stringLiteral<\/decl.var.parameter.argument_label> <decl.var.parameter.name>string<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 74,
             "key.name" : "init(stringLiteral:)",
             "key.namelength" : 34,
-            "key.nameoffset" : 10423,
-            "key.offset" : 10423,
+            "key.nameoffset" : 10426,
+            "key.offset" : 10426,
             "key.overrides" : [
               {
                 "key.usr" : "s:s26ExpressibleByStringLiteralP06stringD0x0cD4TypeQz_tcfc"
@@ -2038,7 +2038,7 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>public indirect enum AbstractGrammar<\/Declaration>",
         "key.bodylength" : 493,
-        "key.bodyoffset" : 10631,
+        "key.bodyoffset" : 10634,
         "key.doc.column" : 22,
         "key.doc.comment" : "Allow `AbstractGrammar.Alternation`s to be created from array literals.",
         "key.doc.declaration" : "public indirect enum AbstractGrammar",
@@ -2048,12 +2048,12 @@
         "key.doc.name" : "AbstractGrammar",
         "key.doc.type" : "Other",
         "key.doclength" : 76,
-        "key.docoffset" : 10501,
+        "key.docoffset" : 10504,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 25,
-            "key.offset" : 10604
+            "key.offset" : 10607
           }
         ],
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
@@ -2067,8 +2067,8 @@
         "key.length" : 548,
         "key.name" : "AbstractGrammar",
         "key.namelength" : 15,
-        "key.nameoffset" : 10587,
-        "key.offset" : 10577,
+        "key.nameoffset" : 10590,
+        "key.offset" : 10580,
         "key.parsed_declaration" : "extension AbstractGrammar: ExpressibleByArrayLiteral",
         "key.parsed_scope.end" : 258,
         "key.parsed_scope.start" : 245,
@@ -2080,11 +2080,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 10850
+                "key.offset" : 10853
               }
             ],
             "key.bodylength" : 215,
-            "key.bodyoffset" : 10907,
+            "key.bodyoffset" : 10910,
             "key.doc.column" : 12,
             "key.doc.comment" : "Creates an `AbstractGrammar.Alternation` from an array of\n`AbstractGrammar`s. If the array only contains one element, it will be\nused as the sole production (i.e., no alternate is created).",
             "key.doc.declaration" : "public init(arrayLiteral elements: AbstractGrammar...)",
@@ -2094,15 +2094,15 @@
             "key.doc.name" : "init(arrayLiteral:)",
             "key.doc.type" : "Function",
             "key.doclength" : 210,
-            "key.docoffset" : 10636,
+            "key.docoffset" : 10639,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>arrayLiteral<\/decl.var.parameter.argument_label> <decl.var.parameter.name>elements<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type>...<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 266,
             "key.name" : "init(arrayLiteral:)",
             "key.namelength" : 48,
-            "key.nameoffset" : 10857,
-            "key.offset" : 10857,
+            "key.nameoffset" : 10860,
+            "key.offset" : 10860,
             "key.overrides" : [
               {
                 "key.usr" : "s:s25ExpressibleByArrayLiteralP05arrayD0x0cD7ElementQzd_tcfc"
@@ -2135,11 +2135,11 @@
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 11316
+            "key.offset" : 11319
           }
         ],
         "key.bodylength" : 352,
-        "key.bodyoffset" : 11396,
+        "key.bodyoffset" : 11399,
         "key.doc.column" : 13,
         "key.doc.comment" : "Concatenates two `AbstractGrammar`s into a single\n`AbstractGrammar.Concatenation`.",
         "key.doc.declaration" : "public func ++ (lhs: AbstractGrammar, rhs: AbstractGrammar) -> AbstractGrammar",
@@ -2149,15 +2149,15 @@
         "key.doc.name" : "++(_:_:)",
         "key.doc.type" : "Function",
         "key.doclength" : 91,
-        "key.docoffset" : 11225,
+        "key.docoffset" : 11228,
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
         "key.fully_annotated_decl" : "<decl.function.operator.infix><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>++ <\/decl.name>(<decl.var.parameter><decl.var.parameter.name>lhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>rhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.function.returntype><\/decl.function.operator.infix>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 426,
         "key.name" : "++(_:_:)",
         "key.namelength" : 47,
-        "key.nameoffset" : 11328,
-        "key.offset" : 11323,
+        "key.nameoffset" : 11331,
+        "key.offset" : 11326,
         "key.parsed_declaration" : "public func ++ (lhs: AbstractGrammar, rhs: AbstractGrammar) -> AbstractGrammar",
         "key.parsed_scope.end" : 276,
         "key.parsed_scope.start" : 265,
@@ -2169,8 +2169,8 @@
             "key.kind" : "source.lang.swift.decl.var.parameter",
             "key.length" : 3,
             "key.name" : "lhs",
-            "key.offset" : 11332,
-            "key.parent_loc" : 11328,
+            "key.offset" : 11335,
+            "key.parent_loc" : 11331,
             "key.parsed_declaration" : "public func ++ (lhs",
             "key.parsed_scope.end" : 265,
             "key.parsed_scope.start" : 265,
@@ -2188,105 +2188,125 @@
 }, {
   "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 16096,
+    "key.length" : 15599,
     "key.offset" : 0,
     "key.substructure" : [
       {
-        "key.accessibility" : "source.lang.swift.accessibility.internal",
-        "key.annotated_decl" : "<Declaration>class ZipperParser<\/Declaration>",
-        "key.bodylength" : 15348,
-        "key.bodyoffset" : 332,
-        "key.doc.column" : 7,
-        "key.doc.comment" : "The `ZipperParser` enables parsing over a grammar using the algorithm described\nin the paper \"Parsing with Zippers\" by Darragh and Adams (ICFP 2020).\n\nIt's implemented as a class to make management of state and encapsulation of\nhelper methods more straightforward, but that's not strictly necessary.",
-        "key.doc.declaration" : "class ZipperParser",
-        "key.doc.discussion" : [
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public func parse(expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>, withInputTokens tokens: [<Type usr=\"s:3PwZ5Tokena\">Token<\/Type>]) -&gt; [<Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
+        "key.attributes" : [
           {
-            "Para" : "It’s implemented as a class to make management of state and encapsulation of helper methods more straightforward, but that’s not strictly necessary."
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 366
           }
         ],
+        "key.bodylength" : 15139,
+        "key.bodyoffset" : 458,
+        "key.doc.column" : 13,
+        "key.doc.comment" : "Parses a sequence of input tokens against a given expression using the\nalgorithm described in \"Parsing with Zippers\" by Darragh and Adams (ICFP 2020).\n\n- Parameters:\n    - expression: The root expression of the grammar to parse with respect to.\n    - tokens: A list of `Token`s representing the input string to parse.\n- Returns: A list of parse trees.",
+        "key.doc.declaration" : "public func parse(expression: Expression, withInputTokens tokens: [Token]) -> [Expression]",
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"8\" column=\"7\"><Name>ZipperParser<\/Name><USR>s:3PwZ12ZipperParserC<\/USR><Declaration>class ZipperParser<\/Declaration><CommentParts><Abstract><Para>The <codeVoice>ZipperParser<\/codeVoice> enables parsing over a grammar using the algorithm described in the paper “Parsing with Zippers” by Darragh and Adams (ICFP 2020).<\/Para><\/Abstract><Discussion><Para>It’s implemented as a class to make management of state and encapsulation of helper methods more straightforward, but that’s not strictly necessary.<\/Para><\/Discussion><\/CommentParts><\/Class>",
-        "key.doc.line" : 8,
-        "key.doc.name" : "ZipperParser",
-        "key.doc.type" : "Class",
-        "key.doclength" : 311,
+        "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"10\" column=\"13\"><Name>parse(expression:withInputTokens:)<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF<\/USR><Declaration>public func parse(expression: Expression, withInputTokens tokens: [Token]) -&gt; [Expression]<\/Declaration><CommentParts><Abstract><Para>Parses a sequence of input tokens against a given expression using the algorithm described in “Parsing with Zippers” by Darragh and Adams (ICFP 2020).<\/Para><\/Abstract><Parameters><Parameter><Name>expression<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The root expression of the grammar to parse with respect to.<\/Para><\/Discussion><\/Parameter><Parameter><Name>tokens<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A list of <codeVoice>Token<\/codeVoice>s representing the input string to parse.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A list of parse trees.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+        "key.doc.line" : 10,
+        "key.doc.name" : "parse(expression:withInputTokens:)",
+        "key.doc.parameters" : [
+          {
+            "discussion" : [
+              {
+                "Para" : "The root expression of the grammar to parse with respect to."
+              }
+            ],
+            "name" : "expression"
+          },
+          {
+            "discussion" : [
+              {
+                "Para" : "A list of `Token`s representing the input string to parse."
+              }
+            ],
+            "name" : "tokens"
+          }
+        ],
+        "key.doc.result_discussion" : [
+          {
+            "Para" : "A list of parse trees."
+          }
+        ],
+        "key.doc.type" : "Function",
+        "key.doclength" : 365,
         "key.docoffset" : 0,
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ZipperParser<\/decl.name><\/decl.class>",
-        "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 15369,
-        "key.name" : "ZipperParser",
-        "key.namelength" : 12,
-        "key.nameoffset" : 318,
-        "key.offset" : 312,
-        "key.parsed_declaration" : "class ZipperParser",
-        "key.parsed_scope.end" : 267,
-        "key.parsed_scope.start" : 8,
-        "key.runtime_name" : "_TtC4main12ZipperParser",
+        "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>expression<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>withInputTokens<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tokens<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.free>",
+        "key.kind" : "source.lang.swift.decl.function.free",
+        "key.length" : 15225,
+        "key.name" : "parse(expression:withInputTokens:)",
+        "key.namelength" : 62,
+        "key.nameoffset" : 378,
+        "key.offset" : 373,
+        "key.parsed_declaration" : "public func parse(expression: Expression, withInputTokens tokens: [Token]) -> [Expression]",
+        "key.parsed_scope.end" : 270,
+        "key.parsed_scope.start" : 10,
         "key.substructure" : [
           {
-            "key.accessibility" : "source.lang.swift.accessibility.internal",
             "key.annotated_decl" : "<Declaration>var worklist: [<Type usr=\"s:3PwZ6Zippera\">Zipper<\/Type>]<\/Declaration>",
             "key.doc.column" : 9,
             "key.doc.comment" : "Used for keeping track of resume-able `Zipper`s produced from parsing\natomic `Tok` productions.",
-            "key.doc.declaration" : "var worklist: [PwZ.Zipper]",
+            "key.doc.declaration" : "var worklist: [Zipper]",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"11\" column=\"9\"><Name>worklist<\/Name><USR>s:3PwZ12ZipperParserC8worklistSayAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contexttGvp<\/USR><Declaration>var worklist: [PwZ.Zipper]<\/Declaration><CommentParts><Abstract><Para>Used for keeping track of resume-able <codeVoice>Zipper<\/codeVoice>s produced from parsing atomic <codeVoice>Tok<\/codeVoice> productions.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-            "key.doc.line" : 11,
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"13\" column=\"9\"><Name>worklist<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF8worklistL_SayAA0G4CaseOAC_AA17MemoizationRecordC7contexttGvp<\/USR><Declaration>var worklist: [Zipper]<\/Declaration><CommentParts><Abstract><Para>Used for keeping track of resume-able <codeVoice>Zipper<\/codeVoice>s produced from parsing atomic <codeVoice>Tok<\/codeVoice> productions.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 13,
             "key.doc.name" : "worklist",
             "key.doc.type" : "Other",
             "key.doclength" : 108,
-            "key.docoffset" : 337,
+            "key.docoffset" : 463,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>worklist<\/decl.name>: <decl.var.type>[<ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias>]<\/decl.var.type><\/decl.var.instance>",
-            "key.kind" : "source.lang.swift.decl.var.instance",
-            "key.length" : 27,
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>worklist<\/decl.name>: <decl.var.type>[<ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias>]<\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 22,
             "key.name" : "worklist",
             "key.namelength" : 8,
-            "key.nameoffset" : 453,
-            "key.offset" : 449,
-            "key.parsed_declaration" : "var worklist: [Zipper] = []",
-            "key.parsed_scope.end" : 11,
-            "key.parsed_scope.start" : 11,
-            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.nameoffset" : 579,
+            "key.offset" : 575,
+            "key.parsed_declaration" : "var worklist: [Zipper]",
+            "key.parsed_scope.end" : 13,
+            "key.parsed_scope.start" : 13,
             "key.typename" : "[(expression: ExpressionCase, context: MemoizationRecord)]",
             "key.typeusr" : "$sSay3PwZ14ExpressionCaseO10expression_AA17MemoizationRecordC7contexttGD",
-            "key.usr" : "s:3PwZ12ZipperParserC8worklistSayAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contexttGvp"
+            "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF8worklistL_SayAA0G4CaseOAC_AA17MemoizationRecordC7contexttGvp"
           },
           {
-            "key.accessibility" : "source.lang.swift.accessibility.internal",
             "key.annotated_decl" : "<Declaration>var tops: [<Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
             "key.doc.column" : 9,
             "key.doc.comment" : "Used for keeping track of completed parses resulting from parsing up\nto a `TopC` context.",
-            "key.doc.declaration" : "var tops: [PwZ.Expression]",
+            "key.doc.declaration" : "var tops: [Expression]",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"14\" column=\"9\"><Name>tops<\/Name><USR>s:3PwZ12ZipperParserC4topsSayAA10ExpressionCGvp<\/USR><Declaration>var tops: [PwZ.Expression]<\/Declaration><CommentParts><Abstract><Para>Used for keeping track of completed parses resulting from parsing up to a <codeVoice>TopC<\/codeVoice> context.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-            "key.doc.line" : 14,
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"16\" column=\"9\"><Name>tops<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF4topsL_AGvp<\/USR><Declaration>var tops: [Expression]<\/Declaration><CommentParts><Abstract><Para>Used for keeping track of completed parses resulting from parsing up to a <codeVoice>TopC<\/codeVoice> context.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 16,
             "key.doc.name" : "tops",
             "key.doc.type" : "Other",
             "key.doclength" : 102,
-            "key.docoffset" : 481,
+            "key.docoffset" : 602,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tops<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.var.type><\/decl.var.instance>",
-            "key.kind" : "source.lang.swift.decl.var.instance",
-            "key.length" : 27,
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tops<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 22,
             "key.name" : "tops",
             "key.namelength" : 4,
-            "key.nameoffset" : 591,
-            "key.offset" : 587,
-            "key.parsed_declaration" : "var tops: [Expression] = []",
-            "key.parsed_scope.end" : 14,
-            "key.parsed_scope.start" : 14,
-            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.nameoffset" : 712,
+            "key.offset" : 708,
+            "key.parsed_declaration" : "var tops: [Expression]",
+            "key.parsed_scope.end" : 16,
+            "key.parsed_scope.start" : 16,
             "key.typename" : "[Expression]",
             "key.typeusr" : "$sSay3PwZ10ExpressionCGD",
-            "key.usr" : "s:3PwZ12ZipperParserC4topsSayAA10ExpressionCGvp"
+            "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF4topsL_AGvp"
           },
           {
-            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.accessibility" : "source.lang.swift.accessibility.private",
             "key.annotated_decl" : "<Declaration>func derive(withToken token: <Type usr=\"s:3PwZ5Tokena\">Token<\/Type>, atPosition position: <Type usr=\"s:3PwZ8Positiona\">Position<\/Type>, fromZipper zipper: <Type usr=\"s:3PwZ6Zippera\">Zipper<\/Type>)<\/Declaration>",
             "key.bodylength" : 9703,
-            "key.bodyoffset" : 2076,
+            "key.bodyoffset" : 2192,
             "key.doc.column" : 10,
             "key.doc.comment" : "Derives the grammar with respect to the given token. A position is used to\nindex `MemoizationRecords` so we know when old records have gone stale.\n\nThe implementation is divided into four sub-functions, which can be divided\ninto two categories: two functions moving the current position *down* the\ngrammar, and two functions moving the current position *up* the grammar.\n\nThe theory of the procedure is given in the paper. This particular\nimplementation is more verbose than the paper's version. The hope is that\nthis version may be easier to read for those who prefer descriptive names.\nComments have been added in a few places to explain the general principles\nat play, but a more thorough discussion is, of course, left to the paper.\n\n- Parameters:\n    - token: The `Token` that we are taking the derivative with respect to.\n             In other words, we are attempting to see if one of the next\n             available atomic `Tok` positions in the grammar matches this\n             token, in which case the derivative is successful.\n    - position: The current index into the list of input `Token`s. This is\n                used to ensure we don't use stale memoization records.\n    - zipper: A representation of the \"current point\" in the grammar.",
             "key.doc.declaration" : "func derive(withToken token: Token, atPosition position: Position, fromZipper zipper: Zipper)",
@@ -2299,8 +2319,8 @@
               }
             ],
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"39\" column=\"10\"><Name>derive(withToken:atPosition:fromZipper:)<\/Name><USR>s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF<\/USR><Declaration>func derive(withToken token: Token, atPosition position: Position, fromZipper zipper: Zipper)<\/Declaration><CommentParts><Abstract><Para>Derives the grammar with respect to the given token. A position is used to index <codeVoice>MemoizationRecords<\/codeVoice> so we know when old records have gone stale.<\/Para><\/Abstract><Parameters><Parameter><Name>token<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The <codeVoice>Token<\/codeVoice> that we are taking the derivative with respect to. In other words, we are attempting to see if one of the next available atomic <codeVoice>Tok<\/codeVoice> positions in the grammar matches this token, in which case the derivative is successful.<\/Para><\/Discussion><\/Parameter><Parameter><Name>position<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The current index into the list of input <codeVoice>Token<\/codeVoice>s. This is used to ensure we don’t use stale memoization records.<\/Para><\/Discussion><\/Parameter><Parameter><Name>zipper<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A representation of the “current point” in the grammar.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>The implementation is divided into four sub-functions, which can be divided into two categories: two functions moving the current position <emphasis>down<\/emphasis> the grammar, and two functions moving the current position <emphasis>up<\/emphasis> the grammar.<\/Para><Para>The theory of the procedure is given in the paper. This particular implementation is more verbose than the paper’s version. The hope is that this version may be easier to read for those who prefer descriptive names. Comments have been added in a few places to explain the general principles at play, but a more thorough discussion is, of course, left to the paper.<\/Para><\/Discussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 39,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"41\" column=\"10\"><Name>derive(withToken:atPosition:fromZipper:)<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF<\/USR><Declaration>func derive(withToken token: Token, atPosition position: Position, fromZipper zipper: Zipper)<\/Declaration><CommentParts><Abstract><Para>Derives the grammar with respect to the given token. A position is used to index <codeVoice>MemoizationRecords<\/codeVoice> so we know when old records have gone stale.<\/Para><\/Abstract><Parameters><Parameter><Name>token<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The <codeVoice>Token<\/codeVoice> that we are taking the derivative with respect to. In other words, we are attempting to see if one of the next available atomic <codeVoice>Tok<\/codeVoice> positions in the grammar matches this token, in which case the derivative is successful.<\/Para><\/Discussion><\/Parameter><Parameter><Name>position<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The current index into the list of input <codeVoice>Token<\/codeVoice>s. This is used to ensure we don’t use stale memoization records.<\/Para><\/Discussion><\/Parameter><Parameter><Name>zipper<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A representation of the “current point” in the grammar.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>The implementation is divided into four sub-functions, which can be divided into two categories: two functions moving the current position <emphasis>down<\/emphasis> the grammar, and two functions moving the current position <emphasis>up<\/emphasis> the grammar.<\/Para><Para>The theory of the procedure is given in the paper. This particular implementation is more verbose than the paper’s version. The hope is that this version may be easier to read for those who prefer descriptive names. Comments have been added in a few places to explain the general principles at play, but a more thorough discussion is, of course, left to the paper.<\/Para><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 41,
             "key.doc.name" : "derive(withToken:atPosition:fromZipper:)",
             "key.doc.parameters" : [
               {
@@ -2330,18 +2350,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 1356,
-            "key.docoffset" : 620,
+            "key.docoffset" : 736,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>derive<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>withToken<\/decl.var.parameter.argument_label> <decl.var.parameter.name>token<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>atPosition<\/decl.var.parameter.argument_label> <decl.var.parameter.name>position<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ8Positiona\">Position<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>fromZipper<\/decl.var.parameter.argument_label> <decl.var.parameter.name>zipper<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>derive<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>withToken<\/decl.var.parameter.argument_label> <decl.var.parameter.name>token<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>atPosition<\/decl.var.parameter.argument_label> <decl.var.parameter.name>position<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ8Positiona\">Position<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>fromZipper<\/decl.var.parameter.argument_label> <decl.var.parameter.name>zipper<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
+            "key.kind" : "source.lang.swift.decl.function.free",
             "key.length" : 9799,
             "key.name" : "derive(withToken:atPosition:fromZipper:)",
             "key.namelength" : 88,
-            "key.nameoffset" : 1986,
-            "key.offset" : 1981,
+            "key.nameoffset" : 2102,
+            "key.offset" : 2097,
             "key.parsed_declaration" : "func derive(withToken token: Token, atPosition position: Position, fromZipper zipper: Zipper)",
-            "key.parsed_scope.end" : 193,
-            "key.parsed_scope.start" : 39,
+            "key.parsed_scope.end" : 195,
+            "key.parsed_scope.start" : 41,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let tag: <Type usr=\"s:3PwZ3Taga\">Tag<\/Type><\/Declaration>",
@@ -2351,14 +2371,14 @@
                 "key.length" : 25,
                 "key.name" : "tag",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2124,
-                "key.offset" : 2119,
+                "key.nameoffset" : 2240,
+                "key.offset" : 2235,
                 "key.parsed_declaration" : "let (tag, symbol) = token",
-                "key.parsed_scope.end" : 41,
-                "key.parsed_scope.start" : 41,
+                "key.parsed_scope.end" : 43,
+                "key.parsed_scope.start" : 43,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttFAHL_Sivp"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttFAHL_Sivp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let symbol: <Type usr=\"s:3PwZ6Symbola\">Symbol<\/Type><\/Declaration>",
@@ -2368,14 +2388,14 @@
                 "key.length" : 25,
                 "key.name" : "symbol",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2129,
-                "key.offset" : 2119,
+                "key.nameoffset" : 2245,
+                "key.offset" : 2235,
                 "key.parsed_declaration" : "let (tag, symbol) = token",
-                "key.parsed_scope.end" : 41,
-                "key.parsed_scope.start" : 41,
+                "key.parsed_scope.end" : 43,
+                "key.parsed_scope.start" : 43,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttFAIL_SSvp"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttFAIL_SSvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let expressionCase: <Type usr=\"s:3PwZ14ExpressionCaseO\">ExpressionCase<\/Type><\/Declaration>",
@@ -2385,14 +2405,14 @@
                 "key.length" : 48,
                 "key.name" : "expressionCase",
                 "key.namelength" : 14,
-                "key.nameoffset" : 2158,
-                "key.offset" : 2153,
+                "key.nameoffset" : 2274,
+                "key.offset" : 2269,
                 "key.parsed_declaration" : "let (expressionCase, memoizationRecord) = zipper",
-                "key.parsed_scope.end" : 42,
-                "key.parsed_scope.start" : 42,
+                "key.parsed_scope.end" : 44,
+                "key.parsed_scope.start" : 44,
                 "key.typename" : "ExpressionCase",
                 "key.typeusr" : "$s3PwZ14ExpressionCaseOD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF0nM0L_AKvp"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF0cP0L_APvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let memoizationRecord: <Type usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/Type><\/Declaration>",
@@ -2402,77 +2422,77 @@
                 "key.length" : 48,
                 "key.name" : "memoizationRecord",
                 "key.namelength" : 17,
-                "key.nameoffset" : 2174,
-                "key.offset" : 2153,
+                "key.nameoffset" : 2290,
+                "key.offset" : 2269,
                 "key.parsed_declaration" : "let (expressionCase, memoizationRecord) = zipper",
-                "key.parsed_scope.end" : 42,
-                "key.parsed_scope.start" : 42,
+                "key.parsed_scope.end" : 44,
+                "key.parsed_scope.start" : 44,
                 "key.typename" : "MemoizationRecord",
                 "key.typeusr" : "$s3PwZ17MemoizationRecordCD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF011memoizationP0L_ANvp"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF011memoizationR0L_ARvp"
               },
               {
                 "key.accessibility" : "source.lang.swift.accessibility.private",
                 "key.annotated_decl" : "<Declaration>func deriveDown(fromContext context: <Type usr=\"s:3PwZ11ContextCaseO\">ContextCase<\/Type>, toExpression expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>)<\/Declaration>",
                 "key.bodylength" : 1869,
-                "key.bodyoffset" : 2299,
+                "key.bodyoffset" : 2415,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
                 "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>deriveDown<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>fromContext<\/decl.var.parameter.argument_label> <decl.var.parameter.name>context<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ11ContextCaseO\">ContextCase<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>toExpression<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expression<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
                 "key.kind" : "source.lang.swift.decl.function.free",
                 "key.length" : 1958,
                 "key.name" : "deriveDown(fromContext:toExpression:)",
                 "key.namelength" : 81,
-                "key.nameoffset" : 2216,
-                "key.offset" : 2211,
+                "key.nameoffset" : 2332,
+                "key.offset" : 2327,
                 "key.parsed_declaration" : "func deriveDown(fromContext context: ContextCase, toExpression expression: Expression)",
-                "key.parsed_scope.end" : 72,
-                "key.parsed_scope.start" : 44,
+                "key.parsed_scope.end" : 74,
+                "key.parsed_scope.start" : 46,
                 "key.substructure" : [
 
                 ],
                 "key.typename" : "(ContextCase, Expression) -> ()",
                 "key.typeusr" : "$s11fromContext12toExpressiony3PwZ0B4CaseO_AC0D0CtcD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF0D4DownL_0I7Context02toL0yAA0sM0O_AA0L0CtF"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF0J4DownL_0N7Context02toG0yAA0uP0O_AFtF"
               },
               {
                 "key.accessibility" : "source.lang.swift.accessibility.private",
                 "key.annotated_decl" : "<Declaration>func deriveDown(fromMemoizationRecord memoizationRecord: <Type usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/Type>, toExpressionCase expressionCase: <Type usr=\"s:3PwZ14ExpressionCaseO\">ExpressionCase<\/Type>)<\/Declaration>",
                 "key.bodylength" : 3112,
-                "key.bodyoffset" : 4305,
+                "key.bodyoffset" : 4421,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
                 "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>deriveDown<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>fromMemoizationRecord<\/decl.var.parameter.argument_label> <decl.var.parameter.name>memoizationRecord<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>toExpressionCase<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expressionCase<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ14ExpressionCaseO\">ExpressionCase<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
                 "key.kind" : "source.lang.swift.decl.function.free",
                 "key.length" : 3239,
                 "key.name" : "deriveDown(fromMemoizationRecord:toExpressionCase:)",
                 "key.namelength" : 119,
-                "key.nameoffset" : 4184,
-                "key.offset" : 4179,
+                "key.nameoffset" : 4300,
+                "key.offset" : 4295,
                 "key.parsed_declaration" : "func deriveDown(fromMemoizationRecord memoizationRecord: MemoizationRecord, toExpressionCase expressionCase: ExpressionCase)",
-                "key.parsed_scope.end" : 121,
-                "key.parsed_scope.start" : 74,
+                "key.parsed_scope.end" : 123,
+                "key.parsed_scope.start" : 76,
                 "key.substructure" : [
 
                 ],
                 "key.typename" : "(MemoizationRecord, ExpressionCase) -> ()",
                 "key.typeusr" : "$s21fromMemoizationRecord16toExpressionCasey3PwZ0bC0C_AC0eF0OtcD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF0D4DownL0_0ioP002tolM0yAN_AKtF"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF0J4DownL0_0nqR002togP0yAR_APtF"
               },
               {
                 "key.accessibility" : "source.lang.swift.accessibility.private",
                 "key.annotated_decl" : "<Declaration>func deriveUp(fromExpressionCase expressionCase: <Type usr=\"s:3PwZ14ExpressionCaseO\">ExpressionCase<\/Type>, toMemoizationRecord memoizationRecord: <Type usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/Type>)<\/Declaration>",
                 "key.bodylength" : 862,
-                "key.bodyoffset" : 7552,
+                "key.bodyoffset" : 7668,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
                 "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>deriveUp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>fromExpressionCase<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expressionCase<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ14ExpressionCaseO\">ExpressionCase<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>toMemoizationRecord<\/decl.var.parameter.argument_label> <decl.var.parameter.name>memoizationRecord<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
                 "key.kind" : "source.lang.swift.decl.function.free",
                 "key.length" : 987,
                 "key.name" : "deriveUp(fromExpressionCase:toMemoizationRecord:)",
                 "key.namelength" : 117,
-                "key.nameoffset" : 7433,
-                "key.offset" : 7428,
+                "key.nameoffset" : 7549,
+                "key.offset" : 7544,
                 "key.parsed_declaration" : "func deriveUp(fromExpressionCase expressionCase: ExpressionCase, toMemoizationRecord memoizationRecord: MemoizationRecord)",
-                "key.parsed_scope.end" : 136,
-                "key.parsed_scope.start" : 123,
+                "key.parsed_scope.end" : 138,
+                "key.parsed_scope.start" : 125,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>let expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type><\/Declaration>",
@@ -2482,66 +2502,59 @@
                     "key.length" : 59,
                     "key.name" : "expression",
                     "key.namelength" : 10,
-                    "key.nameoffset" : 7703,
-                    "key.offset" : 7699,
+                    "key.nameoffset" : 7819,
+                    "key.offset" : 7815,
                     "key.parsed_declaration" : "let expression = Expression(expressionCase: expressionCase)",
-                    "key.parsed_scope.end" : 126,
-                    "key.parsed_scope.start" : 126,
+                    "key.parsed_scope.end" : 128,
+                    "key.parsed_scope.start" : 128,
                     "key.typename" : "Expression",
                     "key.typeusr" : "$s3PwZ10ExpressionCD",
-                    "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF0D2UpL_0ilM002tooP0yAK_ANtFALL_AA0L0Cvp"
+                    "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF0J2UpL_0ngP002toqR0yAP_ARtFACL_AFvp"
                   }
                 ],
                 "key.typename" : "(ExpressionCase, MemoizationRecord) -> ()",
                 "key.typeusr" : "$s18fromExpressionCase19toMemoizationRecordy3PwZ0bC0O_AC0eF0CtcD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF0D2UpL_0ilM002tooP0yAK_ANtF"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF0J2UpL_0ngP002toqR0yAP_ARtF"
               },
               {
                 "key.accessibility" : "source.lang.swift.accessibility.private",
                 "key.annotated_decl" : "<Declaration>func deriveUp(fromExpression expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>, toContext context: <Type usr=\"s:3PwZ11ContextCaseO\">ContextCase<\/Type>)<\/Declaration>",
                 "key.bodylength" : 2761,
-                "key.bodyoffset" : 8511,
+                "key.bodyoffset" : 8627,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
                 "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>deriveUp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>fromExpression<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expression<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>toContext<\/decl.var.parameter.argument_label> <decl.var.parameter.name>context<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ11ContextCaseO\">ContextCase<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
                 "key.kind" : "source.lang.swift.decl.function.free",
                 "key.length" : 2848,
                 "key.name" : "deriveUp(fromExpression:toContext:)",
                 "key.namelength" : 79,
-                "key.nameoffset" : 8430,
-                "key.offset" : 8425,
+                "key.nameoffset" : 8546,
+                "key.offset" : 8541,
                 "key.parsed_declaration" : "func deriveUp(fromExpression expression: Expression, toContext context: ContextCase)",
-                "key.parsed_scope.end" : 183,
-                "key.parsed_scope.start" : 138,
+                "key.parsed_scope.end" : 185,
+                "key.parsed_scope.start" : 140,
                 "key.substructure" : [
 
                 ],
                 "key.typename" : "(Expression, ContextCase) -> ()",
                 "key.typeusr" : "$s14fromExpression9toContexty3PwZ0B0C_AC0D4CaseOtcD",
-                "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF0D2UpL0_0iL09toContextyAA0L0C_AA0tM0OtF"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF0J2UpL0_0nG09toContextyAF_AA0vP0OtF"
               }
             ],
-            "key.typename" : "(ZipperParser) -> ((tag: Int, symbol: String), Int, (expression: ExpressionCase, context: MemoizationRecord)) -> ()",
+            "key.typename" : "((tag: Int, symbol: String), Int, (expression: ExpressionCase, context: MemoizationRecord)) -> ()",
             "key.typeusr" : "$s9withToken10atPosition10fromZipperySi3tag_SS6symbolt_Si3PwZ14ExpressionCaseO10expression_AF17MemoizationRecordC7contextttcD",
-            "key.usr" : "s:3PwZ12ZipperParserC6derive9withToken10atPosition04fromB0ySi3tag_SS6symbolt_SiAA14ExpressionCaseO10expression_AA17MemoizationRecordC7contextttF"
+            "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF6deriveL_0D5Token10atPosition10fromZipperySiAH_SSAIt_SiAA0G4CaseOAC_AA17MemoizationRecordC7contextttF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
-            "key.annotated_decl" : "<Declaration>private func initializeZipper(fromExpression expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>) -&gt; <Type usr=\"s:3PwZ6Zippera\">Zipper<\/Type><\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.private",
-                "key.length" : 7,
-                "key.offset" : 12377
-              }
-            ],
+            "key.annotated_decl" : "<Declaration>func initializeZipper(fromExpression expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>) -&gt; <Type usr=\"s:3PwZ6Zippera\">Zipper<\/Type><\/Declaration>",
             "key.bodylength" : 1194,
-            "key.bodyoffset" : 12457,
-            "key.doc.column" : 18,
+            "key.bodyoffset" : 12565,
+            "key.doc.column" : 10,
             "key.doc.comment" : "Wraps an expression in sufficient material that it will automatically parse\nwithout needing to add special cases to the parsing machinery. However, the\nresults produced will need to be unwrapped by a call to\n`unwrapTopExpression(_:)`.\n\n- Parameters:\n    - expression: The `Expression` representing the root of the grammar to\n                  be derived over.\n- Returns: A `Zipper` properly encoding the given `Expression` so that\n           calls to `derive(withToken:atPosition:fromZipper)` proceed as\n           expected.",
-            "key.doc.declaration" : "private func initializeZipper(fromExpression expression: Expression) -> Zipper",
+            "key.doc.declaration" : "func initializeZipper(fromExpression expression: Expression) -> Zipper",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"208\" column=\"18\"><Name>initializeZipper(fromExpression:)<\/Name><USR>s:3PwZ12ZipperParserC010initializeB033_D3AF2067F1A21C190E7D34B06C19EADFLL14fromExpressionAA0P4CaseO10expression_AA17MemoizationRecordC7contexttAA0P0C_tF<\/USR><Declaration>private func initializeZipper(fromExpression expression: Expression) -&gt; Zipper<\/Declaration><CommentParts><Abstract><Para>Wraps an expression in sufficient material that it will automatically parse without needing to add special cases to the parsing machinery. However, the results produced will need to be unwrapped by a call to <codeVoice>unwrapTopExpression(_:)<\/codeVoice>.<\/Para><\/Abstract><Parameters><Parameter><Name>expression<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The <codeVoice>Expression<\/codeVoice> representing the root of the grammar to be derived over.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A <codeVoice>Zipper<\/codeVoice> properly encoding the given <codeVoice>Expression<\/codeVoice> so that calls to <codeVoice>derive(withToken:atPosition:fromZipper)<\/codeVoice> proceed as expected.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 208,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"210\" column=\"10\"><Name>initializeZipper(fromExpression:)<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF16initializeZipperL_04fromG0AA0G4CaseOAC_AA17MemoizationRecordC7contexttAF_tF<\/USR><Declaration>func initializeZipper(fromExpression expression: Expression) -&gt; Zipper<\/Declaration><CommentParts><Abstract><Para>Wraps an expression in sufficient material that it will automatically parse without needing to add special cases to the parsing machinery. However, the results produced will need to be unwrapped by a call to <codeVoice>unwrapTopExpression(_:)<\/codeVoice>.<\/Para><\/Abstract><Parameters><Parameter><Name>expression<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The <codeVoice>Expression<\/codeVoice> representing the root of the grammar to be derived over.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A <codeVoice>Zipper<\/codeVoice> properly encoding the given <codeVoice>Expression<\/codeVoice> so that calls to <codeVoice>derive(withToken:atPosition:fromZipper)<\/codeVoice> proceed as expected.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 210,
             "key.doc.name" : "initializeZipper(fromExpression:)",
             "key.doc.parameters" : [
               {
@@ -2560,18 +2573,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 586,
-            "key.docoffset" : 11786,
+            "key.docoffset" : 11902,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>initializeZipper<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>fromExpression<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expression<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias><\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>initializeZipper<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>fromExpression<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expression<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias><\/decl.function.returntype><\/decl.function.free>",
+            "key.kind" : "source.lang.swift.decl.function.free",
             "key.length" : 1267,
             "key.name" : "initializeZipper(fromExpression:)",
             "key.namelength" : 55,
-            "key.nameoffset" : 12390,
-            "key.offset" : 12385,
-            "key.parsed_declaration" : "private func initializeZipper(fromExpression expression: Expression) -> Zipper",
-            "key.parsed_scope.end" : 221,
-            "key.parsed_scope.start" : 208,
+            "key.nameoffset" : 12498,
+            "key.offset" : 12493,
+            "key.parsed_declaration" : "func initializeZipper(fromExpression expression: Expression) -> Zipper",
+            "key.parsed_scope.end" : 223,
+            "key.parsed_scope.start" : 210,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let topMemoizationRecord: <Type usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/Type><\/Declaration>",
@@ -2581,14 +2594,14 @@
                 "key.length" : 360,
                 "key.name" : "topMemoizationRecord",
                 "key.namelength" : 20,
-                "key.nameoffset" : 12470,
-                "key.offset" : 12466,
+                "key.nameoffset" : 12578,
+                "key.offset" : 12574,
                 "key.parsed_declaration" : "let topMemoizationRecord = MemoizationRecord(startPosition: Sentinel.of(Position.self),\n                                             endPosition: Sentinel.of(Position.self),\n                                             parentContexts: [.TopC],\n                                             resultExpression: Sentinel.of(Expression.self))",
-                "key.parsed_scope.end" : 209,
-                "key.parsed_scope.start" : 209,
+                "key.parsed_scope.end" : 211,
+                "key.parsed_scope.start" : 211,
                 "key.typename" : "MemoizationRecord",
                 "key.typeusr" : "$s3PwZ17MemoizationRecordCD",
-                "key.usr" : "s:3PwZ12ZipperParserC010initializeB033_D3AF2067F1A21C190E7D34B06C19EADFLL14fromExpressionAA0P4CaseO10expression_AA17MemoizationRecordC7contexttAA0P0C_tF03topsT0L_AKvp"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF16initializeZipperL_04fromG0AA0G4CaseOAC_AA17MemoizationRecordC7contexttAF_tF03topnO0L_APvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let seqMemoizationRecord: <Type usr=\"s:3PwZ17MemoizationRecordC\">MemoizationRecord<\/Type><\/Declaration>",
@@ -2598,43 +2611,36 @@
                 "key.length" : 716,
                 "key.name" : "seqMemoizationRecord",
                 "key.namelength" : 20,
-                "key.nameoffset" : 12839,
-                "key.offset" : 12835,
+                "key.nameoffset" : 12947,
+                "key.offset" : 12943,
                 "key.parsed_declaration" : "let seqMemoizationRecord = MemoizationRecord(startPosition: Sentinel.of(Position.self),\n                                             endPosition: Sentinel.of(Position.self),\n                                             parentContexts: [.SeqC(memoizationRecord: topMemoizationRecord,\n                                                                    symbol: Sentinel.of(Symbol.self),\n                                                                    leftExpressions: [],\n                                                                    rightExpressions: [expression])],\n                                             resultExpression: Sentinel.of(Expression.self))",
-                "key.parsed_scope.end" : 213,
-                "key.parsed_scope.start" : 213,
+                "key.parsed_scope.end" : 215,
+                "key.parsed_scope.start" : 215,
                 "key.typename" : "MemoizationRecord",
                 "key.typeusr" : "$s3PwZ17MemoizationRecordCD",
-                "key.usr" : "s:3PwZ12ZipperParserC010initializeB033_D3AF2067F1A21C190E7D34B06C19EADFLL14fromExpressionAA0P4CaseO10expression_AA17MemoizationRecordC7contexttAA0P0C_tF03seqsT0L_AKvp"
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF16initializeZipperL_04fromG0AA0G4CaseOAC_AA17MemoizationRecordC7contexttAF_tF03seqnO0L_APvp"
               }
             ],
-            "key.typename" : "(ZipperParser) -> (Expression) -> (expression: ExpressionCase, context: MemoizationRecord)",
+            "key.typename" : "(Expression) -> (expression: ExpressionCase, context: MemoizationRecord)",
             "key.typeusr" : "$s14fromExpression3PwZ0B4CaseO10expression_AB17MemoizationRecordC7contexttAB0B0C_tcD",
-            "key.usr" : "s:3PwZ12ZipperParserC010initializeB033_D3AF2067F1A21C190E7D34B06C19EADFLL14fromExpressionAA0P4CaseO10expression_AA17MemoizationRecordC7contexttAA0P0C_tF"
+            "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF16initializeZipperL_04fromG0AA0G4CaseOAC_AA17MemoizationRecordC7contexttAF_tF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
-            "key.annotated_decl" : "<Declaration>private func unwrapTopExpression(_ expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>) -&gt; <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type><\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.private",
-                "key.length" : 7,
-                "key.offset" : 13961
-              }
-            ],
+            "key.annotated_decl" : "<Declaration>func unwrapTopExpression(_ expression: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>) -&gt; <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type><\/Declaration>",
             "key.bodylength" : 421,
-            "key.bodyoffset" : 14035,
-            "key.doc.column" : 18,
+            "key.bodyoffset" : 14135,
+            "key.doc.column" : 10,
             "key.doc.comment" : "Unwraps a top expression resulting from a completed parse. This essentially\njust undoes the work of `initializeZipper(fromExpression)`.\n\n- Parameters:\n    expression: An `Expression` resulting from a completed parse.\n- Returns: The unwrapped inner `Expression`.",
-            "key.doc.declaration" : "private func unwrapTopExpression(_ expression: Expression) -> Expression",
+            "key.doc.declaration" : "func unwrapTopExpression(_ expression: Expression) -> Expression",
             "key.doc.discussion" : [
               {
                 "List-Bullet" : ""
               }
             ],
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"231\" column=\"18\"><Name>unwrapTopExpression(_:)<\/Name><USR>s:3PwZ12ZipperParserC19unwrapTopExpression33_D3AF2067F1A21C190E7D34B06C19EADFLLyAA0F0CAGF<\/USR><Declaration>private func unwrapTopExpression(_ expression: Expression) -&gt; Expression<\/Declaration><CommentParts><Abstract><Para>Unwraps a top expression resulting from a completed parse. This essentially just undoes the work of <codeVoice>initializeZipper(fromExpression)<\/codeVoice>.<\/Para><\/Abstract><ResultDiscussion><Para>The unwrapped inner <codeVoice>Expression<\/codeVoice>.<\/Para><\/ResultDiscussion><Discussion><List-Bullet><Item><Para>Parameters: expression: An <codeVoice>Expression<\/codeVoice> resulting from a completed parse.<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 231,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"233\" column=\"10\"><Name>unwrapTopExpression(_:)<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF09unwrapTopG0L_yA2FF<\/USR><Declaration>func unwrapTopExpression(_ expression: Expression) -&gt; Expression<\/Declaration><CommentParts><Abstract><Para>Unwraps a top expression resulting from a completed parse. This essentially just undoes the work of <codeVoice>initializeZipper(fromExpression)<\/codeVoice>.<\/Para><\/Abstract><ResultDiscussion><Para>The unwrapped inner <codeVoice>Expression<\/codeVoice>.<\/Para><\/ResultDiscussion><Discussion><List-Bullet><Item><Para>Parameters: expression: An <codeVoice>Expression<\/codeVoice> resulting from a completed parse.<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 233,
             "key.doc.name" : "unwrapTopExpression(_:)",
             "key.doc.result_discussion" : [
               {
@@ -2643,53 +2649,45 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 298,
-            "key.docoffset" : 13658,
+            "key.docoffset" : 13766,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>unwrapTopExpression<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expression<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>unwrapTopExpression<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>expression<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.function.returntype><\/decl.function.free>",
+            "key.kind" : "source.lang.swift.decl.function.free",
             "key.length" : 488,
             "key.name" : "unwrapTopExpression(_:)",
             "key.namelength" : 45,
-            "key.nameoffset" : 13974,
-            "key.offset" : 13969,
-            "key.parsed_declaration" : "private func unwrapTopExpression(_ expression: Expression) -> Expression",
-            "key.parsed_scope.end" : 240,
-            "key.parsed_scope.start" : 231,
+            "key.nameoffset" : 14074,
+            "key.offset" : 14069,
+            "key.parsed_declaration" : "func unwrapTopExpression(_ expression: Expression) -> Expression",
+            "key.parsed_scope.end" : 242,
+            "key.parsed_scope.start" : 233,
             "key.substructure" : [
 
             ],
-            "key.typename" : "(ZipperParser) -> (Expression) -> Expression",
+            "key.typename" : "(Expression) -> Expression",
             "key.typeusr" : "$sy3PwZ10ExpressionCACcD",
-            "key.usr" : "s:3PwZ12ZipperParserC19unwrapTopExpression33_D3AF2067F1A21C190E7D34B06C19EADFLLyAA0F0CAGF"
+            "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF09unwrapTopG0L_yA2FF"
           },
           {
-            "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>func parse(inputTokens tokens: [<Type usr=\"s:3PwZ5Tokena\">Token<\/Type>], withGrammar grammar: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>) -&gt; [<Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
-            "key.bodylength" : 859,
-            "key.bodyoffset" : 14819,
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>func parse(atPosition position: <Type usr=\"s:3PwZ8Positiona\">Position<\/Type>) -&gt; [<Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
+            "key.bodylength" : 567,
+            "key.bodyoffset" : 14835,
             "key.doc.column" : 10,
-            "key.doc.comment" : "Parses a sequence of input tokens against a given grammar.\n\n- Parameters:\n    - tokens: A list of `Token`s representing the input string.\n    - grammar: The grammar to parse with respect to.\n- Returns: A list of parse trees.",
-            "key.doc.declaration" : "func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression]",
+            "key.doc.comment" : "Parses the token at a specific position in the input.\n\n- Parameters:\n    - position: The index of the next token in the input string to parse.\n- Returns: A list of parse trees.",
+            "key.doc.declaration" : "func parse(atPosition position: Position) -> [Expression]",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"250\" column=\"10\"><Name>parse(inputTokens:withGrammar:)<\/Name><USR>s:3PwZ12ZipperParserC5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AHtF<\/USR><Declaration>func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -&gt; [Expression]<\/Declaration><CommentParts><Abstract><Para>Parses a sequence of input tokens against a given grammar.<\/Para><\/Abstract><Parameters><Parameter><Name>tokens<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A list of <codeVoice>Token<\/codeVoice>s representing the input string.<\/Para><\/Discussion><\/Parameter><Parameter><Name>grammar<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The grammar to parse with respect to.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A list of parse trees.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 250,
-            "key.doc.name" : "parse(inputTokens:withGrammar:)",
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"251\" column=\"10\"><Name>parse(atPosition:)<\/Name><USR>s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtFABL_10atPositionAGSi_tF<\/USR><Declaration>func parse(atPosition position: Position) -&gt; [Expression]<\/Declaration><CommentParts><Abstract><Para>Parses the token at a specific position in the input.<\/Para><\/Abstract><Parameters><Parameter><Name>position<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The index of the next token in the input string to parse.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A list of parse trees.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 251,
+            "key.doc.name" : "parse(atPosition:)",
             "key.doc.parameters" : [
               {
                 "discussion" : [
                   {
-                    "Para" : "A list of `Token`s representing the input string."
+                    "Para" : "The index of the next token in the input string to parse."
                   }
                 ],
-                "name" : "tokens"
-              },
-              {
-                "discussion" : [
-                  {
-                    "Para" : "The grammar to parse with respect to."
-                  }
-                ],
-                "name" : "grammar"
+                "name" : "position"
               }
             ],
             "key.doc.result_discussion" : [
@@ -2698,136 +2696,51 @@
               }
             ],
             "key.doc.type" : "Function",
-            "key.doclength" : 261,
-            "key.docoffset" : 14463,
+            "key.doclength" : 208,
+            "key.docoffset" : 14563,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>inputTokens<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tokens<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>withGrammar<\/decl.var.parameter.argument_label> <decl.var.parameter.name>grammar<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 950,
-            "key.name" : "parse(inputTokens:withGrammar:)",
-            "key.namelength" : 67,
-            "key.nameoffset" : 14734,
-            "key.offset" : 14729,
-            "key.parsed_declaration" : "func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression]",
-            "key.parsed_scope.end" : 266,
-            "key.parsed_scope.start" : 250,
+            "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>atPosition<\/decl.var.parameter.argument_label> <decl.var.parameter.name>position<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ8Positiona\">Position<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.free>",
+            "key.kind" : "source.lang.swift.decl.function.free",
+            "key.length" : 627,
+            "key.name" : "parse(atPosition:)",
+            "key.namelength" : 36,
+            "key.nameoffset" : 14781,
+            "key.offset" : 14776,
+            "key.parsed_declaration" : "func parse(atPosition position: Position) -> [Expression]",
+            "key.parsed_scope.end" : 263,
+            "key.parsed_scope.start" : 251,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF\">parse(expression:withInputTokens:)<\/RelatedName>"
+              }
+            ],
             "key.substructure" : [
               {
-                "key.accessibility" : "source.lang.swift.accessibility.private",
-                "key.annotated_decl" : "<Declaration>func parse(inputTokens tokens: [<Type usr=\"s:3PwZ5Tokena\">Token<\/Type>], atPosition position: <Type usr=\"s:3PwZ8Positiona\">Position<\/Type>) -&gt; [<Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
-                "key.bodylength" : 636,
-                "key.bodyoffset" : 14916,
+                "key.annotated_decl" : "<Declaration>let savedZippers: [<Type usr=\"s:3PwZ6Zippera\">Zipper<\/Type>]<\/Declaration>",
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-                "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>inputTokens<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tokens<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>atPosition<\/decl.var.parameter.argument_label> <decl.var.parameter.name>position<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ8Positiona\">Position<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.free>",
-                "key.kind" : "source.lang.swift.decl.function.free",
-                "key.length" : 725,
-                "key.name" : "parse(inputTokens:atPosition:)",
-                "key.namelength" : 65,
-                "key.nameoffset" : 14833,
-                "key.offset" : 14828,
-                "key.parsed_declaration" : "func parse(inputTokens tokens: [Token], atPosition position: Position) -> [Expression]",
-                "key.parsed_scope.end" : 263,
-                "key.parsed_scope.start" : 251,
-                "key.related_decls" : [
-                  {
-                    "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ12ZipperParserC5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AHtF\">parse(inputTokens:withGrammar:)<\/RelatedName>"
-                  }
-                ],
-                "key.substructure" : [
-                  {
-                    "key.annotated_decl" : "<Declaration>let savedZippers: [<Type usr=\"s:3PwZ6Zippera\">Zipper<\/Type>]<\/Declaration>",
-                    "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-                    "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>savedZippers<\/decl.name>: <decl.var.type>[<ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias>]<\/decl.var.type><\/decl.var.local>",
-                    "key.kind" : "source.lang.swift.decl.var.local",
-                    "key.length" : 27,
-                    "key.name" : "savedZippers",
-                    "key.namelength" : 12,
-                    "key.nameoffset" : 14933,
-                    "key.offset" : 14929,
-                    "key.parsed_declaration" : "let savedZippers = worklist",
-                    "key.parsed_scope.end" : 252,
-                    "key.parsed_scope.start" : 252,
-                    "key.typename" : "[(expression: ExpressionCase, context: MemoizationRecord)]",
-                    "key.typeusr" : "$sSay3PwZ14ExpressionCaseO10expression_AA17MemoizationRecordC7contexttGD",
-                    "key.usr" : "s:3PwZ12ZipperParserC5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AHtFADL_AE10atPositionAiL_SitF12savedZippersL_SayAA0I4CaseO10expression_AA17MemoizationRecordC7contexttGvp"
-                  }
-                ],
-                "key.typename" : "([(tag: Int, symbol: String)], Int) -> [Expression]",
-                "key.typeusr" : "$s11inputTokens10atPositionSay3PwZ10ExpressionCGSaySi3tag_SS6symboltG_SitcD",
-                "key.usr" : "s:3PwZ12ZipperParserC5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AHtFADL_AE10atPositionAiL_SitF"
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>savedZippers<\/decl.name>: <decl.var.type>[<ref.typealias usr=\"s:3PwZ6Zippera\">Zipper<\/ref.typealias>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 27,
+                "key.name" : "savedZippers",
+                "key.namelength" : 12,
+                "key.nameoffset" : 14848,
+                "key.offset" : 14844,
+                "key.parsed_declaration" : "let savedZippers = worklist",
+                "key.parsed_scope.end" : 252,
+                "key.parsed_scope.start" : 252,
+                "key.typename" : "[(expression: ExpressionCase, context: MemoizationRecord)]",
+                "key.typeusr" : "$sSay3PwZ14ExpressionCaseO10expression_AA17MemoizationRecordC7contexttGD",
+                "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtFABL_10atPositionAGSi_tF12savedZippersL_SayAA0G4CaseOAC_AA17MemoizationRecordC7contexttGvp"
               }
             ],
-            "key.typename" : "(ZipperParser) -> ([(tag: Int, symbol: String)], Expression) -> [Expression]",
-            "key.typeusr" : "$s11inputTokens11withGrammarSay3PwZ10ExpressionCGSaySi3tag_SS6symboltG_AEtcD",
-            "key.usr" : "s:3PwZ12ZipperParserC5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AHtF"
+            "key.typename" : "(Int) -> [Expression]",
+            "key.typeusr" : "$s10atPositionSay3PwZ10ExpressionCGSi_tcD",
+            "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtFABL_10atPositionAGSi_tF"
           }
         ],
-        "key.typename" : "ZipperParser.Type",
-        "key.typeusr" : "$s3PwZ12ZipperParserCmD",
-        "key.usr" : "s:3PwZ12ZipperParserC"
-      },
-      {
-        "key.accessibility" : "source.lang.swift.accessibility.public",
-        "key.annotated_decl" : "<Declaration>public func parse(inputTokens tokens: [<Type usr=\"s:3PwZ5Tokena\">Token<\/Type>], withGrammar grammar: <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>) -&gt; [<Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
-        "key.attributes" : [
-          {
-            "key.attribute" : "source.decl.attribute.public",
-            "key.length" : 6,
-            "key.offset" : 15921
-          }
-        ],
-        "key.bodylength" : 76,
-        "key.bodyoffset" : 16018,
-        "key.doc.column" : 13,
-        "key.doc.comment" : "Parses a sequence of input tokens against a given grammar.\n\n- Parameters:\n    - tokens: A list of `Token`s representing the input string.\n    - grammar: The grammar to parse with respect to.\n- Returns: A list of parse trees.",
-        "key.doc.declaration" : "public func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression]",
-        "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-        "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift\" line=\"277\" column=\"13\"><Name>parse(inputTokens:withGrammar:)<\/Name><USR>s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AFtF<\/USR><Declaration>public func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -&gt; [Expression]<\/Declaration><CommentParts><Abstract><Para>Parses a sequence of input tokens against a given grammar.<\/Para><\/Abstract><Parameters><Parameter><Name>tokens<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A list of <codeVoice>Token<\/codeVoice>s representing the input string.<\/Para><\/Discussion><\/Parameter><Parameter><Name>grammar<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The grammar to parse with respect to.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A list of parse trees.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-        "key.doc.line" : 277,
-        "key.doc.name" : "parse(inputTokens:withGrammar:)",
-        "key.doc.parameters" : [
-          {
-            "discussion" : [
-              {
-                "Para" : "A list of `Token`s representing the input string."
-              }
-            ],
-            "name" : "tokens"
-          },
-          {
-            "discussion" : [
-              {
-                "Para" : "The grammar to parse with respect to."
-              }
-            ],
-            "name" : "grammar"
-          }
-        ],
-        "key.doc.result_discussion" : [
-          {
-            "Para" : "A list of parse trees."
-          }
-        ],
-        "key.doc.type" : "Function",
-        "key.doclength" : 237,
-        "key.docoffset" : 15683,
-        "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Parser.swift",
-        "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>inputTokens<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tokens<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>withGrammar<\/decl.var.parameter.argument_label> <decl.var.parameter.name>grammar<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.free>",
-        "key.kind" : "source.lang.swift.decl.function.free",
-        "key.length" : 167,
-        "key.name" : "parse(inputTokens:withGrammar:)",
-        "key.namelength" : 67,
-        "key.nameoffset" : 15933,
-        "key.offset" : 15928,
-        "key.parsed_declaration" : "public func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression]",
-        "key.parsed_scope.end" : 279,
-        "key.parsed_scope.start" : 277,
-        "key.substructure" : [
-
-        ],
-        "key.typename" : "([(tag: Int, symbol: String)], Expression) -> [Expression]",
-        "key.typeusr" : "$s11inputTokens11withGrammarSay3PwZ10ExpressionCGSaySi3tag_SS6symboltG_AEtcD",
-        "key.usr" : "s:3PwZ5parse11inputTokens11withGrammarSayAA10ExpressionCGSaySi3tag_SS6symboltG_AFtF"
+        "key.typename" : "(Expression, [(tag: Int, symbol: String)]) -> [Expression]",
+        "key.typeusr" : "$s10expression15withInputTokensSay3PwZ10ExpressionCGAE_SaySi3tag_SS6symboltGtcD",
+        "key.usr" : "s:3PwZ5parse10expression15withInputTokensSayAA10ExpressionCGAF_SaySi3tag_SS6symboltGtF"
       }
     ]
   }

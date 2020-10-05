@@ -13,7 +13,7 @@ custom_categories:
       - "++(_:_:)"
   - name: Parsing
     children:
-      - parse(inputTokens:withGrammar:)
+      - parse(expression:withInputTokens:)
   - name: Basic Types
     children:
       - Position
