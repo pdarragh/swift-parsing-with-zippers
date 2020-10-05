@@ -891,7 +891,7 @@
 }, {
   "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 12563,
+    "key.length" : 12667,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -1193,20 +1193,25 @@
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 784
+            "key.offset" : 888
           }
         ],
         "key.bodylength" : 7611,
-        "key.bodyoffset" : 807,
+        "key.bodyoffset" : 911,
         "key.doc.column" : 15,
-        "key.doc.comment" : "A `Grammar` is a collection of productions. A basic knowledge of formal\ngrammars is assumed. See the [Wikipedia article](https:\/\/en.wikipedia.org\/wiki\/Formal_grammar)\nfor more information.",
+        "key.doc.comment" : "A `Grammar` is a collection of productions. A basic knowledge of formal\ngrammars is assumed. See the [Wikipedia article](https:\/\/en.wikipedia.org\/wiki\/Formal_grammar)\nfor more information.\n\nOnce built, a `Grammar` can be used for parsing by using the\n`Grammar.parse(inputTokens:)` function.",
         "key.doc.declaration" : "public struct Grammar",
+        "key.doc.discussion" : [
+          {
+            "Para" : "Once built, a `Grammar` can be used for parsing by using the `Grammar.parse(inputTokens:)` function."
+          }
+        ],
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"23\" column=\"15\"><Name>Grammar<\/Name><USR>s:3PwZ7GrammarV<\/USR><Declaration>public struct Grammar<\/Declaration><CommentParts><Abstract><Para>A <codeVoice>Grammar<\/codeVoice> is a collection of productions. A basic knowledge of formal grammars is assumed. See the <Link href=\"https:\/\/en.wikipedia.org\/wiki\/Formal_grammar\">Wikipedia article<\/Link> for more information.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 23,
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"26\" column=\"15\"><Name>Grammar<\/Name><USR>s:3PwZ7GrammarV<\/USR><Declaration>public struct Grammar<\/Declaration><CommentParts><Abstract><Para>A <codeVoice>Grammar<\/codeVoice> is a collection of productions. A basic knowledge of formal grammars is assumed. See the <Link href=\"https:\/\/en.wikipedia.org\/wiki\/Formal_grammar\">Wikipedia article<\/Link> for more information.<\/Para><\/Abstract><Discussion><Para>Once built, a <codeVoice>Grammar<\/codeVoice> can be used for parsing by using the <codeVoice>Grammar.parse(inputTokens:)<\/codeVoice> function.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 26,
         "key.doc.name" : "Grammar",
         "key.doc.type" : "Class",
-        "key.doclength" : 199,
+        "key.doclength" : 303,
         "key.docoffset" : 584,
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
         "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Grammar<\/decl.name><\/decl.struct>",
@@ -1214,11 +1219,11 @@
         "key.length" : 7628,
         "key.name" : "Grammar",
         "key.namelength" : 7,
-        "key.nameoffset" : 798,
-        "key.offset" : 791,
+        "key.nameoffset" : 902,
+        "key.offset" : 895,
         "key.parsed_declaration" : "public struct Grammar",
-        "key.parsed_scope.end" : 191,
-        "key.parsed_scope.start" : 23,
+        "key.parsed_scope.end" : 194,
+        "key.parsed_scope.start" : 26,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1227,30 +1232,30 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 968
+                "key.offset" : 1072
               }
             ],
             "key.doc.column" : 23,
             "key.doc.comment" : "All `Grammar`s must contain a top-level start symbol to indicate the\nroot of the grammar. An error will be thrown if this is not satisfied.",
             "key.doc.declaration" : "public static let startSymbol: String",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"26\" column=\"23\"><Name>startSymbol<\/Name><USR>s:3PwZ7GrammarV11startSymbolSSvpZ<\/USR><Declaration>public static let startSymbol: String<\/Declaration><CommentParts><Abstract><Para>All <codeVoice>Grammar<\/codeVoice>s must contain a top-level start symbol to indicate the root of the grammar. An error will be thrown if this is not satisfied.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-            "key.doc.line" : 26,
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"29\" column=\"23\"><Name>startSymbol<\/Name><USR>s:3PwZ7GrammarV11startSymbolSSvpZ<\/USR><Declaration>public static let startSymbol: String<\/Declaration><CommentParts><Abstract><Para>All <codeVoice>Grammar<\/codeVoice>s must contain a top-level start symbol to indicate the root of the grammar. An error will be thrown if this is not satisfied.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 29,
             "key.doc.name" : "startSymbol",
             "key.doc.type" : "Other",
             "key.doclength" : 152,
-            "key.docoffset" : 812,
+            "key.docoffset" : 916,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>startSymbol<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 32,
             "key.name" : "startSymbol",
             "key.namelength" : 11,
-            "key.nameoffset" : 986,
-            "key.offset" : 975,
+            "key.nameoffset" : 1090,
+            "key.offset" : 1079,
             "key.parsed_declaration" : "public static let startSymbol = \"START\"",
-            "key.parsed_scope.end" : 26,
-            "key.parsed_scope.start" : 26,
+            "key.parsed_scope.end" : 29,
+            "key.parsed_scope.start" : 29,
             "key.typename" : "String",
             "key.typeusr" : "$sSSD",
             "key.usr" : "s:3PwZ7GrammarV11startSymbolSSvpZ"
@@ -1262,35 +1267,35 @@
               {
                 "key.attribute" : "source.decl.attribute.setter_access.private",
                 "key.length" : 12,
-                "key.offset" : 1154
+                "key.offset" : 1258
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1147
+                "key.offset" : 1251
               }
             ],
             "key.doc.column" : 29,
             "key.doc.comment" : "A map of token symbols to generated tags. This is useful for producing\ninput strings of tokens for the PwZ algorithm.",
             "key.doc.declaration" : "public private(set) var tokenMap: [Symbol : Tag] {\n    get\n    }",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"30\" column=\"29\"><Name>tokenMap<\/Name><USR>s:3PwZ7GrammarV8tokenMapSDySSSiGvp<\/USR><Declaration>public private(set) var tokenMap: [Symbol : Tag] {\n    get\n    }<\/Declaration><CommentParts><Abstract><Para>A map of token symbols to generated tags. This is useful for producing input strings of tokens for the PwZ algorithm.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-            "key.doc.line" : 30,
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"33\" column=\"29\"><Name>tokenMap<\/Name><USR>s:3PwZ7GrammarV8tokenMapSDySSSiGvp<\/USR><Declaration>public private(set) var tokenMap: [Symbol : Tag] {\n    get\n    }<\/Declaration><CommentParts><Abstract><Para>A map of token symbols to generated tags. This is useful for producing input strings of tokens for the PwZ algorithm.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 33,
             "key.doc.name" : "tokenMap",
             "key.doc.type" : "Other",
             "key.doclength" : 130,
-            "key.docoffset" : 1013,
+            "key.docoffset" : 1117,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>private<\/syntaxtype.keyword>(set) <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tokenMap<\/decl.name>: <decl.var.type>[<ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias> : <ref.typealias usr=\"s:3PwZ3Taga\">Tag<\/ref.typealias>]<\/decl.var.type> {\n  get\n  }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 28,
             "key.name" : "tokenMap",
             "key.namelength" : 8,
-            "key.nameoffset" : 1171,
-            "key.offset" : 1167,
+            "key.nameoffset" : 1275,
+            "key.offset" : 1271,
             "key.parsed_declaration" : "public private(set) var tokenMap: [Symbol : Tag]",
-            "key.parsed_scope.end" : 30,
-            "key.parsed_scope.start" : 30,
+            "key.parsed_scope.end" : 33,
+            "key.parsed_scope.start" : 33,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "[String : Int]",
             "key.typeusr" : "$sSDySSSiGD",
@@ -1303,30 +1308,30 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1329
+                "key.offset" : 1433
               }
             ],
             "key.doc.column" : 16,
             "key.doc.comment" : "The root `Expression` of the grammar after initialization. Use this for\nperforming derivations over the grammar.",
             "key.doc.declaration" : "public let root: Expression",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"33\" column=\"16\"><Name>root<\/Name><USR>s:3PwZ7GrammarV4rootAA10ExpressionCvp<\/USR><Declaration>public let root: Expression<\/Declaration><CommentParts><Abstract><Para>The root <codeVoice>Expression<\/codeVoice> of the grammar after initialization. Use this for performing derivations over the grammar.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-            "key.doc.line" : 33,
+            "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"36\" column=\"16\"><Name>root<\/Name><USR>s:3PwZ7GrammarV4rootAA10ExpressionCvp<\/USR><Declaration>public let root: Expression<\/Declaration><CommentParts><Abstract><Para>The root <codeVoice>Expression<\/codeVoice> of the grammar after initialization. Use this for performing derivations over the grammar.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 36,
             "key.doc.name" : "root",
             "key.doc.type" : "Other",
             "key.doclength" : 125,
-            "key.docoffset" : 1200,
+            "key.docoffset" : 1304,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>root<\/decl.name>: <decl.var.type><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 20,
             "key.name" : "root",
             "key.namelength" : 4,
-            "key.nameoffset" : 1340,
-            "key.offset" : 1336,
+            "key.nameoffset" : 1444,
+            "key.offset" : 1440,
             "key.parsed_declaration" : "public let root: Expression",
-            "key.parsed_scope.end" : 33,
-            "key.parsed_scope.start" : 33,
+            "key.parsed_scope.end" : 36,
+            "key.parsed_scope.start" : 36,
             "key.typename" : "Expression",
             "key.typeusr" : "$s3PwZ10ExpressionCD",
             "key.usr" : "s:3PwZ7GrammarV4rootAA10ExpressionCvp"
@@ -1338,17 +1343,17 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1756
+                "key.offset" : 1860
               }
             ],
             "key.bodylength" : 4962,
-            "key.bodyoffset" : 1849,
+            "key.bodyoffset" : 1953,
             "key.doc.column" : 12,
             "key.doc.comment" : "Initializes a new grammar from a dictionary mapping production names to\nproductions.\n\n- Parameters:\n    - abstractProductions: A dictionary mapping non-terminal production\n                           names to `AbstractGrammar` production\n                           descriptions.\n- Throws: Any `GrammarError` that results during initialization.",
             "key.doc.declaration" : "public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar]) throws",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"45\" column=\"12\"><Name>init(fromAbstractProductions:)<\/Name><USR>s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc<\/USR><Declaration>public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar]) throws<\/Declaration><CommentParts><Abstract><Para>Initializes a new grammar from a dictionary mapping production names to productions.<\/Para><\/Abstract><Parameters><Parameter><Name>abstractProductions<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A dictionary mapping non-terminal production names to <codeVoice>AbstractGrammar<\/codeVoice> production descriptions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ThrowsDiscussion><Para>Any <codeVoice>GrammarError<\/codeVoice> that results during initialization.<\/Para><\/ThrowsDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 45,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"48\" column=\"12\"><Name>init(fromAbstractProductions:)<\/Name><USR>s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc<\/USR><Declaration>public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar]) throws<\/Declaration><CommentParts><Abstract><Para>Initializes a new grammar from a dictionary mapping production names to productions.<\/Para><\/Abstract><Parameters><Parameter><Name>abstractProductions<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A dictionary mapping non-terminal production names to <codeVoice>AbstractGrammar<\/codeVoice> production descriptions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ThrowsDiscussion><Para>Any <codeVoice>GrammarError<\/codeVoice> that results during initialization.<\/Para><\/ThrowsDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 48,
             "key.doc.name" : "init(fromAbstractProductions:)",
             "key.doc.parameters" : [
               {
@@ -1362,18 +1367,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 389,
-            "key.docoffset" : 1362,
+            "key.docoffset" : 1466,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>fromAbstractProductions<\/decl.var.parameter.argument_label> <decl.var.parameter.name>abstractProductions<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias> : <ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 5049,
             "key.name" : "init(fromAbstractProductions:)",
             "key.namelength" : 77,
-            "key.nameoffset" : 1763,
-            "key.offset" : 1763,
+            "key.nameoffset" : 1867,
+            "key.offset" : 1867,
             "key.parsed_declaration" : "public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar]) throws",
-            "key.parsed_scope.end" : 145,
-            "key.parsed_scope.start" : 45,
+            "key.parsed_scope.end" : 148,
+            "key.parsed_scope.start" : 48,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ7GrammarV17dictionaryLiteralACSS_AA08AbstractB0Otd_tcfc\">init(dictionaryLiteral:)<\/RelatedName>"
@@ -1386,7 +1391,7 @@
                 "key.name" : "TODO: Is there a better way to implement this? One that doesn't",
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 1923
+                "key.offset" : 2027
               },
               {
                 "key.annotated_decl" : "<Declaration>let productions: [<Type usr=\"s:3PwZ6Symbola\">Symbol<\/Type> : <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type>]<\/Declaration>",
@@ -1396,11 +1401,11 @@
                 "key.length" : 327,
                 "key.name" : "productions",
                 "key.namelength" : 11,
-                "key.nameoffset" : 2368,
-                "key.offset" : 2364,
+                "key.nameoffset" : 2472,
+                "key.offset" : 2468,
                 "key.parsed_declaration" : "let productions = abstractProductions.keys.reduce(into: [Symbol : Expression]()) {\n    (productions, symbol) in\n    productions[symbol] = Expression(memoizationRecord: Sentinel.of(MemoizationRecord.self),\n                                   expressionCase: .Tok(token: Sentinel.of(Token.self)))\n}",
-                "key.parsed_scope.end" : 57,
-                "key.parsed_scope.start" : 57,
+                "key.parsed_scope.end" : 60,
+                "key.parsed_scope.start" : 60,
                 "key.typename" : "[String : Expression]",
                 "key.typeusr" : "$sSDySS3PwZ10ExpressionCGD",
                 "key.usr" : "s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc11productionsL_SDySSAA10ExpressionCGvp"
@@ -1413,11 +1418,11 @@
                 "key.length" : 25,
                 "key.name" : "nextTokenTag",
                 "key.namelength" : 12,
-                "key.nameoffset" : 3541,
-                "key.offset" : 3537,
+                "key.nameoffset" : 3645,
+                "key.offset" : 3641,
                 "key.parsed_declaration" : "var nextTokenTag: Tag = 0",
-                "key.parsed_scope.end" : 80,
-                "key.parsed_scope.start" : 80,
+                "key.parsed_scope.end" : 83,
+                "key.parsed_scope.start" : 83,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc12nextTokenTagL_Sivp"
@@ -1426,7 +1431,7 @@
                 "key.accessibility" : "source.lang.swift.accessibility.private",
                 "key.annotated_decl" : "<Declaration>func processSubgrammar(_ subgrammar: <Type usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/Type>, withSymbol symbol: <Type usr=\"s:3PwZ6Symbola\">Symbol<\/Type>) -&gt; <Type usr=\"s:3PwZ10ExpressionC\">Expression<\/Type><\/Declaration>",
                 "key.bodylength" : 2103,
-                "key.bodyoffset" : 4352,
+                "key.bodyoffset" : 4456,
                 "key.doc.column" : 14,
                 "key.doc.comment" : "Recursively builds an `Expression` from a given `AbstractGrammar`. The\ntop-level productions must have names supplied by the\n`abstractProductions` dictionary, but child expressions are named\nautomatically. Terminal symbols take their matching string literal as\ntheir name.\n\n- Parameters\n    - subgrammar: The `AbstractGrammar` being processed right now.\n    - symbol: The name given to the `subgrammar` (if needed) based on\n              the shape of its parent.\n- Returns: An `Expression` corresponding to the description given by\n           the `subgrammar`.",
                 "key.doc.declaration" : "func processSubgrammar(_ subgrammar: AbstractGrammar, withSymbol symbol: Symbol) -> Expression",
@@ -1436,8 +1441,8 @@
                   }
                 ],
                 "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-                "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"96\" column=\"14\"><Name>processSubgrammar(_:withSymbol:)<\/Name><USR>s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc17processSubgrammarL__10withSymbolAA10ExpressionCAF_SStF<\/USR><Declaration>func processSubgrammar(_ subgrammar: AbstractGrammar, withSymbol symbol: Symbol) -&gt; Expression<\/Declaration><CommentParts><Abstract><Para>Recursively builds an <codeVoice>Expression<\/codeVoice> from a given <codeVoice>AbstractGrammar<\/codeVoice>. The top-level productions must have names supplied by the <codeVoice>abstractProductions<\/codeVoice> dictionary, but child expressions are named automatically. Terminal symbols take their matching string literal as their name.<\/Para><\/Abstract><ResultDiscussion><Para>An <codeVoice>Expression<\/codeVoice> corresponding to the description given by the <codeVoice>subgrammar<\/codeVoice>.<\/Para><\/ResultDiscussion><Discussion><List-Bullet><Item><Para>Parameters<\/Para><List-Bullet><Item><Para>subgrammar: The <codeVoice>AbstractGrammar<\/codeVoice> being processed right now.<\/Para><\/Item><Item><Para>symbol: The name given to the <codeVoice>subgrammar<\/codeVoice> (if needed) based on the shape of its parent.<\/Para><\/Item><\/List-Bullet><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Function>",
-                "key.doc.line" : 96,
+                "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"99\" column=\"14\"><Name>processSubgrammar(_:withSymbol:)<\/Name><USR>s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc17processSubgrammarL__10withSymbolAA10ExpressionCAF_SStF<\/USR><Declaration>func processSubgrammar(_ subgrammar: AbstractGrammar, withSymbol symbol: Symbol) -&gt; Expression<\/Declaration><CommentParts><Abstract><Para>Recursively builds an <codeVoice>Expression<\/codeVoice> from a given <codeVoice>AbstractGrammar<\/codeVoice>. The top-level productions must have names supplied by the <codeVoice>abstractProductions<\/codeVoice> dictionary, but child expressions are named automatically. Terminal symbols take their matching string literal as their name.<\/Para><\/Abstract><ResultDiscussion><Para>An <codeVoice>Expression<\/codeVoice> corresponding to the description given by the <codeVoice>subgrammar<\/codeVoice>.<\/Para><\/ResultDiscussion><Discussion><List-Bullet><Item><Para>Parameters<\/Para><List-Bullet><Item><Para>subgrammar: The <codeVoice>AbstractGrammar<\/codeVoice> being processed right now.<\/Para><\/Item><Item><Para>symbol: The name given to the <codeVoice>subgrammar<\/codeVoice> (if needed) based on the shape of its parent.<\/Para><\/Item><\/List-Bullet><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Function>",
+                "key.doc.line" : 99,
                 "key.doc.name" : "processSubgrammar(_:withSymbol:)",
                 "key.doc.result_discussion" : [
                   {
@@ -1446,18 +1451,18 @@
                 ],
                 "key.doc.type" : "Function",
                 "key.doclength" : 675,
-                "key.docoffset" : 3572,
+                "key.docoffset" : 3676,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>processSubgrammar<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>subgrammar<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>withSymbol<\/decl.var.parameter.argument_label> <decl.var.parameter.name>symbol<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class><\/decl.function.returntype><\/decl.function.free>",
                 "key.kind" : "source.lang.swift.decl.function.free",
                 "key.length" : 2200,
                 "key.name" : "processSubgrammar(_:withSymbol:)",
                 "key.namelength" : 75,
-                "key.nameoffset" : 4261,
-                "key.offset" : 4256,
+                "key.nameoffset" : 4365,
+                "key.offset" : 4360,
                 "key.parsed_declaration" : "func processSubgrammar(_ subgrammar: AbstractGrammar, withSymbol symbol: Symbol) -> Expression",
-                "key.parsed_scope.end" : 136,
-                "key.parsed_scope.start" : 96,
+                "key.parsed_scope.end" : 139,
+                "key.parsed_scope.start" : 99,
                 "key.substructure" : [
 
                 ],
@@ -1477,17 +1482,17 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 7161
+                "key.offset" : 7265
               }
             ],
             "key.bodylength" : 70,
-            "key.bodyoffset" : 7229,
+            "key.bodyoffset" : 7333,
             "key.doc.column" : 17,
             "key.doc.comment" : "Converts a sequence of strings into `Token`s for parsing.\n\n- Parameters:\n    - strings: An array of strings representing token symbols.\n- Returns: An array of `Token`s.\n- Throws: `GrammarError.NoTagForSymbol` if any of the given strings do not\n          match any terminal symbols in the grammar.",
             "key.doc.declaration" : "public func tokenizeStrings(_ strings: [String]) throws -> [Token]",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"156\" column=\"17\"><Name>tokenizeStrings(_:)<\/Name><USR>s:3PwZ7GrammarV15tokenizeStringsySaySi3tag_SS6symboltGSaySSGKF<\/USR><Declaration>public func tokenizeStrings(_ strings: [String]) throws -&gt; [Token]<\/Declaration><CommentParts><Abstract><Para>Converts a sequence of strings into <codeVoice>Token<\/codeVoice>s for parsing.<\/Para><\/Abstract><Parameters><Parameter><Name>strings<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>An array of strings representing token symbols.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>An array of <codeVoice>Token<\/codeVoice>s.<\/Para><\/ResultDiscussion><ThrowsDiscussion><Para><codeVoice>GrammarError.NoTagForSymbol<\/codeVoice> if any of the given strings do not match any terminal symbols in the grammar.<\/Para><\/ThrowsDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 156,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"159\" column=\"17\"><Name>tokenizeStrings(_:)<\/Name><USR>s:3PwZ7GrammarV15tokenizeStringsySaySi3tag_SS6symboltGSaySSGKF<\/USR><Declaration>public func tokenizeStrings(_ strings: [String]) throws -&gt; [Token]<\/Declaration><CommentParts><Abstract><Para>Converts a sequence of strings into <codeVoice>Token<\/codeVoice>s for parsing.<\/Para><\/Abstract><Parameters><Parameter><Name>strings<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>An array of strings representing token symbols.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>An array of <codeVoice>Token<\/codeVoice>s.<\/Para><\/ResultDiscussion><ThrowsDiscussion><Para><codeVoice>GrammarError.NoTagForSymbol<\/codeVoice> if any of the given strings do not match any terminal symbols in the grammar.<\/Para><\/ThrowsDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 159,
             "key.doc.name" : "tokenizeStrings(_:)",
             "key.doc.parameters" : [
               {
@@ -1506,18 +1511,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 338,
-            "key.docoffset" : 6818,
+            "key.docoffset" : 6922,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>tokenizeStrings<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>strings<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 132,
             "key.name" : "tokenizeStrings(_:)",
             "key.namelength" : 36,
-            "key.nameoffset" : 7173,
-            "key.offset" : 7168,
+            "key.nameoffset" : 7277,
+            "key.offset" : 7272,
             "key.parsed_declaration" : "public func tokenizeStrings(_ strings: [String]) throws -> [Token]",
-            "key.parsed_scope.end" : 158,
-            "key.parsed_scope.start" : 156,
+            "key.parsed_scope.end" : 161,
+            "key.parsed_scope.start" : 159,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ7GrammarV15tokenizeStringsySays6ResultOySi3tag_SS6symboltAA0B5ErrorOGGSaySSGF\">tokenizeStrings(_: [String]) -&gt; [Result&lt;Token, GrammarError&gt;]<\/RelatedName>"
@@ -1537,17 +1542,17 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 7732
+                "key.offset" : 7836
               }
             ],
             "key.bodylength" : 269,
-            "key.bodyoffset" : 7815,
+            "key.bodyoffset" : 7919,
             "key.doc.column" : 17,
             "key.doc.comment" : "Converts a sequence of strings into `Token`s for parsing. The result is a\nlist of `Result<Token, GrammarError>` items so individual failing cases can\nbe addressed as needed.\n\n- Parameters:\n    - strings: An array of strings representing token symbols.\n- Returns: An array of potential tokens (or errors, when a string does not\n           correspond to a tag in the grammar).",
             "key.doc.declaration" : "public func tokenizeStrings(_ strings: [String]) -> [Result<Token, GrammarError>]",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"170\" column=\"17\"><Name>tokenizeStrings(_:)<\/Name><USR>s:3PwZ7GrammarV15tokenizeStringsySays6ResultOySi3tag_SS6symboltAA0B5ErrorOGGSaySSGF<\/USR><Declaration>public func tokenizeStrings(_ strings: [String]) -&gt; [Result&lt;Token, GrammarError&gt;]<\/Declaration><CommentParts><Abstract><Para>Converts a sequence of strings into <codeVoice>Token<\/codeVoice>s for parsing. The result is a list of <codeVoice>Result&lt;Token, GrammarError&gt;<\/codeVoice> items so individual failing cases can be addressed as needed.<\/Para><\/Abstract><Parameters><Parameter><Name>strings<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>An array of strings representing token symbols.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>An array of potential tokens (or errors, when a string does not correspond to a tag in the grammar).<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 170,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"173\" column=\"17\"><Name>tokenizeStrings(_:)<\/Name><USR>s:3PwZ7GrammarV15tokenizeStringsySays6ResultOySi3tag_SS6symboltAA0B5ErrorOGGSaySSGF<\/USR><Declaration>public func tokenizeStrings(_ strings: [String]) -&gt; [Result&lt;Token, GrammarError&gt;]<\/Declaration><CommentParts><Abstract><Para>Converts a sequence of strings into <codeVoice>Token<\/codeVoice>s for parsing. The result is a list of <codeVoice>Result&lt;Token, GrammarError&gt;<\/codeVoice> items so individual failing cases can be addressed as needed.<\/Para><\/Abstract><Parameters><Parameter><Name>strings<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>An array of strings representing token symbols.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>An array of potential tokens (or errors, when a string does not correspond to a tag in the grammar).<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 173,
             "key.doc.name" : "tokenizeStrings(_:)",
             "key.doc.parameters" : [
               {
@@ -1566,18 +1571,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 421,
-            "key.docoffset" : 7306,
+            "key.docoffset" : 7410,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>tokenizeStrings<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>strings<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.enum usr=\"s:s6ResultO\">Result<\/ref.enum>&lt;<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>, <ref.enum usr=\"s:3PwZ12GrammarErrorO\">GrammarError<\/ref.enum>&gt;]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 346,
             "key.name" : "tokenizeStrings(_:)",
             "key.namelength" : 36,
-            "key.nameoffset" : 7744,
-            "key.offset" : 7739,
+            "key.nameoffset" : 7848,
+            "key.offset" : 7843,
             "key.parsed_declaration" : "public func tokenizeStrings(_ strings: [String]) -> [Result<Token, GrammarError>]",
-            "key.parsed_scope.end" : 179,
-            "key.parsed_scope.start" : 170,
+            "key.parsed_scope.end" : 182,
+            "key.parsed_scope.start" : 173,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ7GrammarV15tokenizeStringsySaySi3tag_SS6symboltGSaySSGKF\">tokenizeStrings(_: [String]) throws -&gt; [Token]<\/RelatedName>"
@@ -1597,17 +1602,17 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 8282
+                "key.offset" : 8386
               }
             ],
             "key.bodylength" : 70,
-            "key.bodyoffset" : 8346,
+            "key.bodyoffset" : 8450,
             "key.doc.column" : 17,
             "key.doc.comment" : "Parses the grammar using the given input tokens.\n\n- Parameters:\n    - tokens: An array of `Token`s to parse.\n- Returns: A list of resulting `Expression`s.",
             "key.doc.declaration" : "public func parse(inputTokens tokens: [Token]) -> [Expression]",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"188\" column=\"17\"><Name>parse(inputTokens:)<\/Name><USR>s:3PwZ7GrammarV5parse11inputTokensSayAA10ExpressionCGSaySi3tag_SS6symboltG_tF<\/USR><Declaration>public func parse(inputTokens tokens: [Token]) -&gt; [Expression]<\/Declaration><CommentParts><Abstract><Para>Parses the grammar using the given input tokens.<\/Para><\/Abstract><Parameters><Parameter><Name>tokens<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>An array of <codeVoice>Token<\/codeVoice>s to parse.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A list of resulting <codeVoice>Expression<\/codeVoice>s.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 188,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"191\" column=\"17\"><Name>parse(inputTokens:)<\/Name><USR>s:3PwZ7GrammarV5parse11inputTokensSayAA10ExpressionCGSaySi3tag_SS6symboltG_tF<\/USR><Declaration>public func parse(inputTokens tokens: [Token]) -&gt; [Expression]<\/Declaration><CommentParts><Abstract><Para>Parses the grammar using the given input tokens.<\/Para><\/Abstract><Parameters><Parameter><Name>tokens<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>An array of <codeVoice>Token<\/codeVoice>s to parse.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A list of resulting <codeVoice>Expression<\/codeVoice>s.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 191,
             "key.doc.name" : "parse(inputTokens:)",
             "key.doc.parameters" : [
               {
@@ -1626,18 +1631,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 186,
-            "key.docoffset" : 8091,
+            "key.docoffset" : 8195,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parse<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>inputTokens<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tokens<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.typealias usr=\"s:3PwZ5Tokena\">Token<\/ref.typealias>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.class usr=\"s:3PwZ10ExpressionC\">Expression<\/ref.class>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 128,
             "key.name" : "parse(inputTokens:)",
             "key.namelength" : 34,
-            "key.nameoffset" : 8294,
-            "key.offset" : 8289,
+            "key.nameoffset" : 8398,
+            "key.offset" : 8393,
             "key.parsed_declaration" : "public func parse(inputTokens tokens: [Token]) -> [Expression]",
-            "key.parsed_scope.end" : 190,
-            "key.parsed_scope.start" : 188,
+            "key.parsed_scope.end" : 193,
+            "key.parsed_scope.start" : 191,
             "key.substructure" : [
 
             ],
@@ -1654,22 +1659,27 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>public struct Grammar<\/Declaration>",
         "key.bodylength" : 2073,
-        "key.bodyoffset" : 8564,
+        "key.bodyoffset" : 8668,
         "key.doc.column" : 15,
         "key.doc.comment" : "For convenience, we extend the `Grammar` to be expressible as a dictionary\nliteral.",
         "key.doc.declaration" : "public struct Grammar",
+        "key.doc.discussion" : [
+          {
+            "Para" : "Once built, a `Grammar` can be used for parsing by using the `Grammar.parse(inputTokens:)` function."
+          }
+        ],
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"23\" column=\"15\"><Name>Grammar<\/Name><USR>s:3PwZ7GrammarV<\/USR><Declaration>public struct Grammar<\/Declaration><CommentParts><Abstract><Para>A <codeVoice>Grammar<\/codeVoice> is a collection of productions. A basic knowledge of formal grammars is assumed. See the <Link href=\"https:\/\/en.wikipedia.org\/wiki\/Formal_grammar\">Wikipedia article<\/Link> for more information.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 23,
+        "key.doc.full_as_xml" : "<Class file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"26\" column=\"15\"><Name>Grammar<\/Name><USR>s:3PwZ7GrammarV<\/USR><Declaration>public struct Grammar<\/Declaration><CommentParts><Abstract><Para>A <codeVoice>Grammar<\/codeVoice> is a collection of productions. A basic knowledge of formal grammars is assumed. See the <Link href=\"https:\/\/en.wikipedia.org\/wiki\/Formal_grammar\">Wikipedia article<\/Link> for more information.<\/Para><\/Abstract><Discussion><Para>Once built, a <codeVoice>Grammar<\/codeVoice> can be used for parsing by using the <codeVoice>Grammar.parse(inputTokens:)<\/codeVoice> function.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 26,
         "key.doc.name" : "Grammar",
         "key.doc.type" : "Class",
         "key.doclength" : 92,
-        "key.docoffset" : 8421,
+        "key.docoffset" : 8525,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 30,
-            "key.offset" : 8532
+            "key.offset" : 8636
           }
         ],
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
@@ -1683,11 +1693,11 @@
         "key.length" : 2125,
         "key.name" : "Grammar",
         "key.namelength" : 7,
-        "key.nameoffset" : 8523,
-        "key.offset" : 8513,
+        "key.nameoffset" : 8627,
+        "key.offset" : 8617,
         "key.parsed_declaration" : "extension Grammar: ExpressibleByDictionaryLiteral",
-        "key.parsed_scope.end" : 252,
-        "key.parsed_scope.start" : 195,
+        "key.parsed_scope.end" : 255,
+        "key.parsed_scope.start" : 198,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1696,11 +1706,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 9993
+                "key.offset" : 10097
               }
             ],
             "key.bodylength" : 571,
-            "key.bodyoffset" : 10064,
+            "key.bodyoffset" : 10168,
             "key.doc.column" : 12,
             "key.doc.comment" : "Initializes a `Grammar` from a dictionary literal. Together with the\nconvenience initializers and operators for `AbstractGrammar`s, this allows\nfor a convenient way to create a new `Grammar` from scratch.\n\nFor example, consider the following BNF grammar where `S` represents the\nstart symbol:\n\n    S      ::= expr\n    expr   ::= term\n             | expr '+' term\n             | expr '-' term\n    term   ::= factor\n             | term '*' factor\n             | term '\/' factor\n    factor ::= 'int'\n             | '-' factor\n             | '(' expr ')'\n\nWe can generate the grammar described like so:\n\n    let grammar: Grammar =\n      [ \"START\": \"expr\"\n      , \"expr\":\n          [ \"term\"\n          , \"expr\" ++ \"+\" ++ \"term\"\n          , \"expr\" ++ \"-\" ++ \"term\" ]\n      , \"term\":\n          [ \"factor\"\n          , \"term\" ++ \"*\" ++ \"factor\"\n          , \"term\" ++ \"\/\" ++ \"factor\" ]\n      , \"factor\":\n          [ \"int\"\n          , \"-\" ++ \"factor\"\n          , \"(\" ++ \"expr\" ++ \")\" ]\n      ]\n\nIf the grammar described is somehow invalid, a fatal error occurs. I\nrecommend not writing invalid grammar literals.\n\n- Parameters:\n    - elements: A sequence of `Symbol`-`AbstractGrammar` pairs from which\n                to create a `Grammar`.",
             "key.doc.declaration" : "public init(dictionaryLiteral elements: (Symbol, AbstractGrammar)...)",
@@ -1722,8 +1732,8 @@
               }
             ],
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"240\" column=\"12\"><Name>init(dictionaryLiteral:)<\/Name><USR>s:3PwZ7GrammarV17dictionaryLiteralACSS_AA08AbstractB0Otd_tcfc<\/USR><Declaration>public init(dictionaryLiteral elements: (Symbol, AbstractGrammar)...)<\/Declaration><CommentParts><Abstract><Para>Initializes a <codeVoice>Grammar<\/codeVoice> from a dictionary literal. Together with the convenience initializers and operators for <codeVoice>AbstractGrammar<\/codeVoice>s, this allows for a convenient way to create a new <codeVoice>Grammar<\/codeVoice> from scratch.<\/Para><\/Abstract><Parameters><Parameter><Name>elements<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A sequence of <codeVoice>Symbol<\/codeVoice>-<codeVoice>AbstractGrammar<\/codeVoice> pairs from which to create a <codeVoice>Grammar<\/codeVoice>.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>For example, consider the following BNF grammar where <codeVoice>S<\/codeVoice> represents the start symbol:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[S      ::= expr]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[expr   ::= term]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | expr '+' term]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | expr '-' term]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[term   ::= factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | term '*' factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | term '\/' factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[factor ::= 'int']]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | '-' factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | '(' expr ')']]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>We can generate the grammar described like so:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let grammar: Grammar =]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  [ \"START\": \"expr\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  , \"expr\":]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      [ \"term\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"expr\" ++ \"+\" ++ \"term\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"expr\" ++ \"-\" ++ \"term\" ]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  , \"term\":]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      [ \"factor\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"term\" ++ \"*\" ++ \"factor\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"term\" ++ \"\/\" ++ \"factor\" ]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  , \"factor\":]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      [ \"int\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"-\" ++ \"factor\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"(\" ++ \"expr\" ++ \")\" ]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  ]]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>If the grammar described is somehow invalid, a fatal error occurs. I recommend not writing invalid grammar literals.<\/Para><\/Discussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 240,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"243\" column=\"12\"><Name>init(dictionaryLiteral:)<\/Name><USR>s:3PwZ7GrammarV17dictionaryLiteralACSS_AA08AbstractB0Otd_tcfc<\/USR><Declaration>public init(dictionaryLiteral elements: (Symbol, AbstractGrammar)...)<\/Declaration><CommentParts><Abstract><Para>Initializes a <codeVoice>Grammar<\/codeVoice> from a dictionary literal. Together with the convenience initializers and operators for <codeVoice>AbstractGrammar<\/codeVoice>s, this allows for a convenient way to create a new <codeVoice>Grammar<\/codeVoice> from scratch.<\/Para><\/Abstract><Parameters><Parameter><Name>elements<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A sequence of <codeVoice>Symbol<\/codeVoice>-<codeVoice>AbstractGrammar<\/codeVoice> pairs from which to create a <codeVoice>Grammar<\/codeVoice>.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>For example, consider the following BNF grammar where <codeVoice>S<\/codeVoice> represents the start symbol:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[S      ::= expr]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[expr   ::= term]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | expr '+' term]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | expr '-' term]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[term   ::= factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | term '*' factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | term '\/' factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[factor ::= 'int']]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | '-' factor]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         | '(' expr ')']]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>We can generate the grammar described like so:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let grammar: Grammar =]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  [ \"START\": \"expr\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  , \"expr\":]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      [ \"term\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"expr\" ++ \"+\" ++ \"term\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"expr\" ++ \"-\" ++ \"term\" ]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  , \"term\":]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      [ \"factor\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"term\" ++ \"*\" ++ \"factor\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"term\" ++ \"\/\" ++ \"factor\" ]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  , \"factor\":]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      [ \"int\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"-\" ++ \"factor\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[      , \"(\" ++ \"expr\" ++ \")\" ]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[  ]]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>If the grammar described is somehow invalid, a fatal error occurs. I recommend not writing invalid grammar literals.<\/Para><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 243,
             "key.doc.name" : "init(dictionaryLiteral:)",
             "key.doc.parameters" : [
               {
@@ -1737,23 +1747,23 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 1419,
-            "key.docoffset" : 8569,
+            "key.docoffset" : 8673,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>dictionaryLiteral<\/decl.var.parameter.argument_label> <decl.var.parameter.name>elements<\/decl.var.parameter.name>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type>...<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 636,
             "key.name" : "init(dictionaryLiteral:)",
             "key.namelength" : 62,
-            "key.nameoffset" : 10000,
-            "key.offset" : 10000,
+            "key.nameoffset" : 10104,
+            "key.offset" : 10104,
             "key.overrides" : [
               {
                 "key.usr" : "s:s30ExpressibleByDictionaryLiteralP010dictionaryD0x3KeyQz_5ValueQztd_tcfc"
               }
             ],
             "key.parsed_declaration" : "public init(dictionaryLiteral elements: (Symbol, AbstractGrammar)...)",
-            "key.parsed_scope.end" : 251,
-            "key.parsed_scope.start" : 240,
+            "key.parsed_scope.end" : 254,
+            "key.parsed_scope.start" : 243,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc\">init(fromAbstractProductions:)<\/RelatedName>"
@@ -1768,11 +1778,11 @@
                 "key.length" : 334,
                 "key.name" : "abstractProductions",
                 "key.namelength" : 19,
-                "key.nameoffset" : 10077,
-                "key.offset" : 10073,
+                "key.nameoffset" : 10181,
+                "key.offset" : 10177,
                 "key.parsed_declaration" : "let abstractProductions = Dictionary.init(elements, uniquingKeysWith: {\n                                                        (lv, rv) in\n                                                        fatalError(\"Duplicate non-terminal name in grammar: \\(lv)\")\n                                                    })",
-                "key.parsed_scope.end" : 241,
-                "key.parsed_scope.start" : 241,
+                "key.parsed_scope.end" : 244,
+                "key.parsed_scope.start" : 244,
                 "key.typename" : "[String : AbstractGrammar]",
                 "key.typeusr" : "$sSDySS3PwZ15AbstractGrammarOGD",
                 "key.usr" : "s:3PwZ7GrammarV17dictionaryLiteralACSS_AA08AbstractB0Otd_tcfc19abstractProductionsL_SDySSAFGvp"
@@ -1794,44 +1804,44 @@
           {
             "key.attribute" : "source.decl.attribute.indirect",
             "key.length" : 8,
-            "key.offset" : 10696
+            "key.offset" : 10800
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 10689
+            "key.offset" : 10793
           }
         ],
         "key.bodylength" : 280,
-        "key.bodyoffset" : 10727,
+        "key.bodyoffset" : 10831,
         "key.doc.column" : 22,
         "key.doc.comment" : "A simplified grammar specification language.",
         "key.doc.declaration" : "public indirect enum AbstractGrammar",
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-        "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"255\" column=\"22\"><Name>AbstractGrammar<\/Name><USR>s:3PwZ15AbstractGrammarO<\/USR><Declaration>public indirect enum AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>A simplified grammar specification language.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-        "key.doc.line" : 255,
+        "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"258\" column=\"22\"><Name>AbstractGrammar<\/Name><USR>s:3PwZ15AbstractGrammarO<\/USR><Declaration>public indirect enum AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>A simplified grammar specification language.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+        "key.doc.line" : 258,
         "key.doc.name" : "AbstractGrammar",
         "key.doc.type" : "Other",
         "key.doclength" : 49,
-        "key.docoffset" : 10640,
+        "key.docoffset" : 10744,
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
         "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>indirect<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <decl.name>AbstractGrammar<\/decl.name><\/decl.enum>",
         "key.kind" : "source.lang.swift.decl.enum",
         "key.length" : 303,
         "key.name" : "AbstractGrammar",
         "key.namelength" : 15,
-        "key.nameoffset" : 10710,
-        "key.offset" : 10705,
+        "key.nameoffset" : 10814,
+        "key.offset" : 10809,
         "key.parsed_declaration" : "public indirect enum AbstractGrammar",
-        "key.parsed_scope.end" : 262,
-        "key.parsed_scope.start" : 255,
+        "key.parsed_scope.end" : 265,
+        "key.parsed_scope.start" : 258,
         "key.substructure" : [
           {
             "key.kind" : "source.lang.swift.decl.enumcase",
             "key.length" : 19,
             "key.namelength" : 0,
             "key.nameoffset" : 0,
-            "key.offset" : 10782,
+            "key.offset" : 10886,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1840,23 +1850,23 @@
                 "key.doc.comment" : "Either a terminal or non-terminal symbol.",
                 "key.doc.declaration" : "",
                 "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-                "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"257\" column=\"10\"><Name>Symbol(_:)<\/Name><USR>s:3PwZ15AbstractGrammarO6SymbolyACSScACmF<\/USR><Declaration><\/Declaration><CommentParts><Abstract><Para>Either a terminal or non-terminal symbol.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-                "key.doc.line" : 257,
+                "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"260\" column=\"10\"><Name>Symbol(_:)<\/Name><USR>s:3PwZ15AbstractGrammarO6SymbolyACSScACmF<\/USR><Declaration><\/Declaration><CommentParts><Abstract><Para>Either a terminal or non-terminal symbol.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+                "key.doc.line" : 260,
                 "key.doc.name" : "Symbol(_:)",
                 "key.doc.type" : "Other",
                 "key.doclength" : 46,
-                "key.docoffset" : 10732,
+                "key.docoffset" : 10836,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>Symbol<\/decl.name>(<decl.var.parameter><decl.var.parameter.type><ref.typealias usr=\"s:3PwZ6Symbola\">Symbol<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
                 "key.kind" : "source.lang.swift.decl.enumelement",
                 "key.length" : 14,
                 "key.name" : "Symbol(_:)",
                 "key.namelength" : 14,
-                "key.nameoffset" : 10787,
-                "key.offset" : 10787,
+                "key.nameoffset" : 10891,
+                "key.offset" : 10891,
                 "key.parsed_declaration" : "case Symbol(Symbol)",
-                "key.parsed_scope.end" : 257,
-                "key.parsed_scope.start" : 257,
+                "key.parsed_scope.end" : 260,
+                "key.parsed_scope.start" : 260,
                 "key.typename" : "(AbstractGrammar.Type) -> (String) -> AbstractGrammar",
                 "key.typeusr" : "$sy3PwZ15AbstractGrammarOSScACmcD",
                 "key.usr" : "s:3PwZ15AbstractGrammarO6SymbolyACSScACmF"
@@ -1868,7 +1878,7 @@
             "key.length" : 37,
             "key.namelength" : 0,
             "key.nameoffset" : 0,
-            "key.offset" : 10874,
+            "key.offset" : 10978,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1877,23 +1887,23 @@
                 "key.doc.comment" : "A sequence of expressions that must be considered in-order.",
                 "key.doc.declaration" : "",
                 "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-                "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"259\" column=\"10\"><Name>Concatenation(_:)<\/Name><USR>s:3PwZ15AbstractGrammarO13ConcatenationyACSayACGcACmF<\/USR><Declaration><\/Declaration><CommentParts><Abstract><Para>A sequence of expressions that must be considered in-order.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-                "key.doc.line" : 259,
+                "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"262\" column=\"10\"><Name>Concatenation(_:)<\/Name><USR>s:3PwZ15AbstractGrammarO13ConcatenationyACSayACGcACmF<\/USR><Declaration><\/Declaration><CommentParts><Abstract><Para>A sequence of expressions that must be considered in-order.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+                "key.doc.line" : 262,
                 "key.doc.name" : "Concatenation(_:)",
                 "key.doc.type" : "Other",
                 "key.doclength" : 64,
-                "key.docoffset" : 10806,
+                "key.docoffset" : 10910,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>Concatenation<\/decl.name>(<decl.var.parameter><decl.var.parameter.type>[<ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
                 "key.kind" : "source.lang.swift.decl.enumelement",
                 "key.length" : 32,
                 "key.name" : "Concatenation(_:)",
                 "key.namelength" : 32,
-                "key.nameoffset" : 10879,
-                "key.offset" : 10879,
+                "key.nameoffset" : 10983,
+                "key.offset" : 10983,
                 "key.parsed_declaration" : "case Concatenation([AbstractGrammar])",
-                "key.parsed_scope.end" : 259,
-                "key.parsed_scope.start" : 259,
+                "key.parsed_scope.end" : 262,
+                "key.parsed_scope.start" : 262,
                 "key.typename" : "(AbstractGrammar.Type) -> ([AbstractGrammar]) -> AbstractGrammar",
                 "key.typeusr" : "$sy3PwZ15AbstractGrammarOSayACGcACmcD",
                 "key.usr" : "s:3PwZ15AbstractGrammarO13ConcatenationyACSayACGcACmF"
@@ -1905,7 +1915,7 @@
             "key.length" : 35,
             "key.namelength" : 0,
             "key.nameoffset" : 0,
-            "key.offset" : 10971,
+            "key.offset" : 11075,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1914,23 +1924,23 @@
                 "key.doc.comment" : "A collection of non-deterministic expressions.",
                 "key.doc.declaration" : "",
                 "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-                "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"261\" column=\"10\"><Name>Alternation(_:)<\/Name><USR>s:3PwZ15AbstractGrammarO11AlternationyACSayACGcACmF<\/USR><Declaration><\/Declaration><CommentParts><Abstract><Para>A collection of non-deterministic expressions.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-                "key.doc.line" : 261,
+                "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"264\" column=\"10\"><Name>Alternation(_:)<\/Name><USR>s:3PwZ15AbstractGrammarO11AlternationyACSayACGcACmF<\/USR><Declaration><\/Declaration><CommentParts><Abstract><Para>A collection of non-deterministic expressions.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+                "key.doc.line" : 264,
                 "key.doc.name" : "Alternation(_:)",
                 "key.doc.type" : "Other",
                 "key.doclength" : 51,
-                "key.docoffset" : 10916,
+                "key.docoffset" : 11020,
                 "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
                 "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>Alternation<\/decl.name>(<decl.var.parameter><decl.var.parameter.type>[<ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
                 "key.kind" : "source.lang.swift.decl.enumelement",
                 "key.length" : 30,
                 "key.name" : "Alternation(_:)",
                 "key.namelength" : 30,
-                "key.nameoffset" : 10976,
-                "key.offset" : 10976,
+                "key.nameoffset" : 11080,
+                "key.offset" : 11080,
                 "key.parsed_declaration" : "case Alternation([AbstractGrammar])",
-                "key.parsed_scope.end" : 261,
-                "key.parsed_scope.start" : 261,
+                "key.parsed_scope.end" : 264,
+                "key.parsed_scope.start" : 264,
                 "key.typename" : "(AbstractGrammar.Type) -> ([AbstractGrammar]) -> AbstractGrammar",
                 "key.typeusr" : "$sy3PwZ15AbstractGrammarOSayACGcACmcD",
                 "key.usr" : "s:3PwZ15AbstractGrammarO11AlternationyACSayACGcACmF"
@@ -1946,22 +1956,22 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>public indirect enum AbstractGrammar<\/Declaration>",
         "key.bodylength" : 154,
-        "key.bodyoffset" : 11157,
+        "key.bodyoffset" : 11261,
         "key.doc.column" : 22,
         "key.doc.comment" : "Allow `AbstractGrammar.Symbol`s to be created from string literals for\nconvenience.",
         "key.doc.declaration" : "public indirect enum AbstractGrammar",
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-        "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"255\" column=\"22\"><Name>AbstractGrammar<\/Name><USR>s:3PwZ15AbstractGrammarO<\/USR><Declaration>public indirect enum AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>A simplified grammar specification language.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-        "key.doc.line" : 255,
+        "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"258\" column=\"22\"><Name>AbstractGrammar<\/Name><USR>s:3PwZ15AbstractGrammarO<\/USR><Declaration>public indirect enum AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>A simplified grammar specification language.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+        "key.doc.line" : 258,
         "key.doc.name" : "AbstractGrammar",
         "key.doc.type" : "Other",
         "key.doclength" : 92,
-        "key.docoffset" : 11010,
+        "key.docoffset" : 11114,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 26,
-            "key.offset" : 11129
+            "key.offset" : 11233
           }
         ],
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
@@ -1975,11 +1985,11 @@
         "key.length" : 210,
         "key.name" : "AbstractGrammar",
         "key.namelength" : 15,
-        "key.nameoffset" : 11112,
-        "key.offset" : 11102,
+        "key.nameoffset" : 11216,
+        "key.offset" : 11206,
         "key.parsed_declaration" : "extension AbstractGrammar: ExpressibleByStringLiteral",
-        "key.parsed_scope.end" : 271,
-        "key.parsed_scope.start" : 266,
+        "key.parsed_scope.end" : 274,
+        "key.parsed_scope.start" : 269,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1988,37 +1998,37 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 11229
+                "key.offset" : 11333
               }
             ],
             "key.bodylength" : 37,
-            "key.bodyoffset" : 11272,
+            "key.bodyoffset" : 11376,
             "key.doc.column" : 12,
             "key.doc.comment" : "Creates an `AbstractGrammar.Symbol` from a string literal.",
             "key.doc.declaration" : "public init(stringLiteral string: String)",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"268\" column=\"12\"><Name>init(stringLiteral:)<\/Name><USR>s:3PwZ15AbstractGrammarO13stringLiteralACSS_tcfc<\/USR><Declaration>public init(stringLiteral string: String)<\/Declaration><CommentParts><Abstract><Para>Creates an <codeVoice>AbstractGrammar.Symbol<\/codeVoice> from a string literal.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 268,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"271\" column=\"12\"><Name>init(stringLiteral:)<\/Name><USR>s:3PwZ15AbstractGrammarO13stringLiteralACSS_tcfc<\/USR><Declaration>public init(stringLiteral string: String)<\/Declaration><CommentParts><Abstract><Para>Creates an <codeVoice>AbstractGrammar.Symbol<\/codeVoice> from a string literal.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 271,
             "key.doc.name" : "init(stringLiteral:)",
             "key.doc.type" : "Function",
             "key.doclength" : 63,
-            "key.docoffset" : 11162,
+            "key.docoffset" : 11266,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>stringLiteral<\/decl.var.parameter.argument_label> <decl.var.parameter.name>string<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 74,
             "key.name" : "init(stringLiteral:)",
             "key.namelength" : 34,
-            "key.nameoffset" : 11236,
-            "key.offset" : 11236,
+            "key.nameoffset" : 11340,
+            "key.offset" : 11340,
             "key.overrides" : [
               {
                 "key.usr" : "s:s26ExpressibleByStringLiteralP06stringD0x0cD4TypeQz_tcfc"
               }
             ],
             "key.parsed_declaration" : "public init(stringLiteral string: String)",
-            "key.parsed_scope.end" : 270,
-            "key.parsed_scope.start" : 268,
+            "key.parsed_scope.end" : 273,
+            "key.parsed_scope.start" : 271,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ15AbstractGrammarO12arrayLiteralA2Cd_tcfc\">init(arrayLiteral:)<\/RelatedName>"
@@ -2040,22 +2050,22 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>public indirect enum AbstractGrammar<\/Declaration>",
         "key.bodylength" : 493,
-        "key.bodyoffset" : 11444,
+        "key.bodyoffset" : 11548,
         "key.doc.column" : 22,
         "key.doc.comment" : "Allow `AbstractGrammar.Alternation`s to be created from array literals.",
         "key.doc.declaration" : "public indirect enum AbstractGrammar",
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-        "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"255\" column=\"22\"><Name>AbstractGrammar<\/Name><USR>s:3PwZ15AbstractGrammarO<\/USR><Declaration>public indirect enum AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>A simplified grammar specification language.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-        "key.doc.line" : 255,
+        "key.doc.full_as_xml" : "<Other file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"258\" column=\"22\"><Name>AbstractGrammar<\/Name><USR>s:3PwZ15AbstractGrammarO<\/USR><Declaration>public indirect enum AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>A simplified grammar specification language.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+        "key.doc.line" : 258,
         "key.doc.name" : "AbstractGrammar",
         "key.doc.type" : "Other",
         "key.doclength" : 76,
-        "key.docoffset" : 11314,
+        "key.docoffset" : 11418,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 25,
-            "key.offset" : 11417
+            "key.offset" : 11521
           }
         ],
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
@@ -2069,11 +2079,11 @@
         "key.length" : 548,
         "key.name" : "AbstractGrammar",
         "key.namelength" : 15,
-        "key.nameoffset" : 11400,
-        "key.offset" : 11390,
+        "key.nameoffset" : 11504,
+        "key.offset" : 11494,
         "key.parsed_declaration" : "extension AbstractGrammar: ExpressibleByArrayLiteral",
-        "key.parsed_scope.end" : 287,
-        "key.parsed_scope.start" : 274,
+        "key.parsed_scope.end" : 290,
+        "key.parsed_scope.start" : 277,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -2082,37 +2092,37 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 11663
+                "key.offset" : 11767
               }
             ],
             "key.bodylength" : 215,
-            "key.bodyoffset" : 11720,
+            "key.bodyoffset" : 11824,
             "key.doc.column" : 12,
             "key.doc.comment" : "Creates an `AbstractGrammar.Alternation` from an array of\n`AbstractGrammar`s. If the array only contains one element, it will be\nused as the sole production (i.e., no alternate is created).",
             "key.doc.declaration" : "public init(arrayLiteral elements: AbstractGrammar...)",
             "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"278\" column=\"12\"><Name>init(arrayLiteral:)<\/Name><USR>s:3PwZ15AbstractGrammarO12arrayLiteralA2Cd_tcfc<\/USR><Declaration>public init(arrayLiteral elements: AbstractGrammar...)<\/Declaration><CommentParts><Abstract><Para>Creates an <codeVoice>AbstractGrammar.Alternation<\/codeVoice> from an array of <codeVoice>AbstractGrammar<\/codeVoice>s. If the array only contains one element, it will be used as the sole production (i.e., no alternate is created).<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 278,
+            "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"281\" column=\"12\"><Name>init(arrayLiteral:)<\/Name><USR>s:3PwZ15AbstractGrammarO12arrayLiteralA2Cd_tcfc<\/USR><Declaration>public init(arrayLiteral elements: AbstractGrammar...)<\/Declaration><CommentParts><Abstract><Para>Creates an <codeVoice>AbstractGrammar.Alternation<\/codeVoice> from an array of <codeVoice>AbstractGrammar<\/codeVoice>s. If the array only contains one element, it will be used as the sole production (i.e., no alternate is created).<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 281,
             "key.doc.name" : "init(arrayLiteral:)",
             "key.doc.type" : "Function",
             "key.doclength" : 210,
-            "key.docoffset" : 11449,
+            "key.docoffset" : 11553,
             "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>arrayLiteral<\/decl.var.parameter.argument_label> <decl.var.parameter.name>elements<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type>...<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 266,
             "key.name" : "init(arrayLiteral:)",
             "key.namelength" : 48,
-            "key.nameoffset" : 11670,
-            "key.offset" : 11670,
+            "key.nameoffset" : 11774,
+            "key.offset" : 11774,
             "key.overrides" : [
               {
                 "key.usr" : "s:s25ExpressibleByArrayLiteralP05arrayD0x0cD7ElementQzd_tcfc"
               }
             ],
             "key.parsed_declaration" : "public init (arrayLiteral elements: AbstractGrammar...)",
-            "key.parsed_scope.end" : 286,
-            "key.parsed_scope.start" : 278,
+            "key.parsed_scope.end" : 289,
+            "key.parsed_scope.start" : 281,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:3PwZ15AbstractGrammarO13stringLiteralACSS_tcfc\">init(stringLiteral:)<\/RelatedName>"
@@ -2137,32 +2147,32 @@
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 12129
+            "key.offset" : 12233
           }
         ],
         "key.bodylength" : 352,
-        "key.bodyoffset" : 12209,
+        "key.bodyoffset" : 12313,
         "key.doc.column" : 13,
         "key.doc.comment" : "Concatenates two `AbstractGrammar`s into a single\n`AbstractGrammar.Concatenation`.",
         "key.doc.declaration" : "public func ++ (lhs: AbstractGrammar, rhs: AbstractGrammar) -> AbstractGrammar",
         "key.doc.file" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
-        "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"294\" column=\"13\"><Name>++(_:_:)<\/Name><USR>s:3PwZ2ppoiyAA15AbstractGrammarOAD_ADtF<\/USR><Declaration>public func ++ (lhs: AbstractGrammar, rhs: AbstractGrammar) -&gt; AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>Concatenates two <codeVoice>AbstractGrammar<\/codeVoice>s into a single <codeVoice>AbstractGrammar.Concatenation<\/codeVoice>.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-        "key.doc.line" : 294,
+        "key.doc.full_as_xml" : "<Function file=\"\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift\" line=\"297\" column=\"13\"><Name>++(_:_:)<\/Name><USR>s:3PwZ2ppoiyAA15AbstractGrammarOAD_ADtF<\/USR><Declaration>public func ++ (lhs: AbstractGrammar, rhs: AbstractGrammar) -&gt; AbstractGrammar<\/Declaration><CommentParts><Abstract><Para>Concatenates two <codeVoice>AbstractGrammar<\/codeVoice>s into a single <codeVoice>AbstractGrammar.Concatenation<\/codeVoice>.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+        "key.doc.line" : 297,
         "key.doc.name" : "++(_:_:)",
         "key.doc.type" : "Function",
         "key.doclength" : 91,
-        "key.docoffset" : 12038,
+        "key.docoffset" : 12142,
         "key.filepath" : "\/Users\/pdarragh\/Development\/swift-parsing-with-zippers\/Sources\/PwZ\/Grammar.swift",
         "key.fully_annotated_decl" : "<decl.function.operator.infix><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>++ <\/decl.name>(<decl.var.parameter><decl.var.parameter.name>lhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>rhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.enum usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/ref.enum><\/decl.function.returntype><\/decl.function.operator.infix>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 426,
         "key.name" : "++(_:_:)",
         "key.namelength" : 47,
-        "key.nameoffset" : 12141,
-        "key.offset" : 12136,
+        "key.nameoffset" : 12245,
+        "key.offset" : 12240,
         "key.parsed_declaration" : "public func ++ (lhs: AbstractGrammar, rhs: AbstractGrammar) -> AbstractGrammar",
-        "key.parsed_scope.end" : 305,
-        "key.parsed_scope.start" : 294,
+        "key.parsed_scope.end" : 308,
+        "key.parsed_scope.start" : 297,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>let lhs: <Type usr=\"s:3PwZ15AbstractGrammarO\">AbstractGrammar<\/Type><\/Declaration>",
@@ -2171,11 +2181,11 @@
             "key.kind" : "source.lang.swift.decl.var.parameter",
             "key.length" : 3,
             "key.name" : "lhs",
-            "key.offset" : 12145,
-            "key.parent_loc" : 12141,
+            "key.offset" : 12249,
+            "key.parent_loc" : 12245,
             "key.parsed_declaration" : "public func ++ (lhs",
-            "key.parsed_scope.end" : 294,
-            "key.parsed_scope.start" : 294,
+            "key.parsed_scope.end" : 297,
+            "key.parsed_scope.start" : 297,
             "key.typename" : "AbstractGrammar",
             "key.typeusr" : "$s3PwZ15AbstractGrammarOD",
             "key.usr" : "s:3PwZ2ppoiyAA15AbstractGrammarOAD_ADtF3lhsL_ADvp"

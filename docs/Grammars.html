@@ -132,7 +132,80 @@
         <section class="section">
           <div class="section-content top-matter">
             <h1>Grammars</h1>
-            
+            <p>The <code><a href="Structs/Grammar.html">Grammar</a></code> is intended as the primary entry point into this implementation of
+Parsing with Zippers (PwZ).</p>
+
+<p>A new <code><a href="Structs/Grammar.html">Grammar</a></code> is initialized from a dictionary mapping non-terminal production
+names to <code><a href="Enums/AbstractGrammar.html">AbstractGrammar</a></code> production descriptions. This can either be done
+manually, by calling <code><a href="Structs/Grammar.html#/s:3PwZ7GrammarV23fromAbstractProductionsACSDySSAA0dB0OG_tKcfc">Grammar.init(fromAbstractProductions:)</a></code>, or it can be done
+more conveniently by using a dictionary literal.</p>
+
+<p>Consider the following BNF grammar description of a simple arithmetic language:</p>
+<pre class="highlight plaintext"><code>S      ::= expr
+expr   ::= term
+         | expr '+' term
+         | expr '-' term
+term   ::= factor
+         | term '*' factor
+         | term '/' factor
+factor ::= 'int'
+         | '-' factor
+         | '(' expr ')'
+</code></pre>
+
+<p>We can create a <code><a href="Structs/Grammar.html">Grammar</a></code> representing this grammar by doing:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">grammar</span><span class="p">:</span> <span class="kt">Grammar</span> <span class="o">=</span>
+<span class="p">[</span> <span class="s">"START"</span><span class="p">:</span> <span class="s">"expr"</span>
+<span class="p">,</span> <span class="s">"expr"</span><span class="p">:</span>
+    <span class="p">[</span> <span class="s">"term"</span>
+    <span class="p">,</span> <span class="s">"expr"</span> <span class="o">++</span> <span class="s">"+"</span> <span class="o">++</span> <span class="s">"term"</span>
+    <span class="p">,</span> <span class="s">"expr"</span> <span class="o">++</span> <span class="s">"-"</span> <span class="o">++</span> <span class="s">"term"</span> <span class="p">]</span>
+<span class="p">,</span> <span class="s">"term"</span><span class="p">:</span>
+    <span class="p">[</span> <span class="s">"factor"</span>
+    <span class="p">,</span> <span class="s">"term"</span> <span class="o">++</span> <span class="s">"*"</span> <span class="o">++</span> <span class="s">"factor"</span>
+    <span class="p">,</span> <span class="s">"term"</span> <span class="o">++</span> <span class="s">"/"</span> <span class="o">++</span> <span class="s">"factor"</span> <span class="p">]</span>
+<span class="p">,</span> <span class="s">"factor"</span><span class="p">:</span>
+    <span class="p">[</span> <span class="s">"int"</span>
+    <span class="p">,</span> <span class="s">"-"</span> <span class="o">++</span> <span class="s">"factor"</span>
+    <span class="p">,</span> <span class="s">"("</span> <span class="o">++</span> <span class="s">"expr"</span> <span class="o">++</span> <span class="s">")"</span> <span class="p">]</span>
+<span class="p">]</span>
+</code></pre>
+
+<p>This makes use of a few convenience features in the <code><a href="Enums/AbstractGrammar.html">AbstractGrammar</a></code> enum,
+specifically:</p>
+
+<ul>
+<li>String literals are converted into <code><a href="Enums/AbstractGrammar.html#/s:3PwZ15AbstractGrammarO6SymbolyACSScACmF">AbstractGrammar.Symbol(_:)</a></code> instances.</li>
+<li>Array literals are converted into <code><a href="Enums/AbstractGrammar.html#/s:3PwZ15AbstractGrammarO11AlternationyACSayACGcACmF">AbstractGrammar.Alternation(_:)</a></code> instances.</li>
+<li>The <code><a href="Grammars.html#/s:3PwZ2ppoiyAA15AbstractGrammarOAD_ADtF">++(_:_:)</a></code> operator converts adjacent instances into
+<code><a href="Enums/AbstractGrammar.html#/s:3PwZ15AbstractGrammarO13ConcatenationyACSayACGcACmF">AbstractGrammar.Concatenation(_:)</a></code> instances.</li>
+</ul>
+
+<p>The <code><a href="Enums/AbstractGrammar.html#/s:3PwZ15AbstractGrammarO6SymbolyACSScACmF">AbstractGrammar.Symbol(_:)</a></code> instances are assumed to represent top-level
+non-terminal production references if their text matches one of the keys of the
+dictionary literal. All other instances of <code><a href="Enums/AbstractGrammar.html#/s:3PwZ15AbstractGrammarO6SymbolyACSScACmF">AbstractGrammar.Symbol(_:)</a></code> are
+assumed to represent terminal productions. Terminals will have <code><a href="Basic%20Types.html#/s:3PwZ3Taga">Tag</a></code>s generated
+for parsing, where each <code><a href="Basic%20Types.html#/s:3PwZ3Taga">Tag</a></code> is unique to the text of a terminal symbol in the
+grammar.</p>
+
+<p>A list of <code>String</code>s can be converted into parse-able <code><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></code>s by calling
+<code><a href="Structs/Grammar.html#/s:3PwZ7GrammarV15tokenizeStringsySaySi3tag_SS6symboltGSaySSGKF">Grammar.tokenizeStrings(_:)</a></code>. This list of <code><a href="Basic%20Types.html#/s:3PwZ5Tokena">Token</a></code>s can then be passed into
+<code><a href="Structs/Grammar.html#/s:3PwZ7GrammarV5parse11inputTokensSayAA10ExpressionCGSaySi3tag_SS6symboltG_tF">Grammar.parse(inputTokens:)</a></code> to actually parse using PwZ.</p>
+<h3 id='mapping-multiple-symbols-to-a-single-tag' class='heading'>Mapping Multiple Symbols to a Single Tag</h3>
+
+<p>The <code><a href="Structs/Grammar.html">Grammar</a></code> does not support mapping multiple symbols to a single tag. This
+would be useful for cases where a terminal production in a grammar actually
+represents a class of potential symbols, such as integers or identifiers.</p>
+
+<p>To handle this, I currently recommend either converting all of your symbols to
+the terminal literals used by the grammar (which is lossy in the output parse
+forest and therefore unideal), or else handling tokenization manually by
+accessing the <code><a href="Structs/Grammar.html#/s:3PwZ7GrammarV8tokenMapSDySSSiGvp">Grammar.tokenMap</a></code> in your own tokenization function. (Actually,
+the tags generated are only used for distinguishing terminal/non-terminal
+references in the <code><a href="Enums/AbstractGrammar.html#/s:3PwZ15AbstractGrammarO6SymbolyACSScACmF">AbstractGrammar.Symbol(_:)</a></code> deconstruction phase and then for
+tokenization when that feature is used, so you can just generate an entirely
+different set of token tags if that seems easier to you.)</p>
+
           </div>
         </section>
 
@@ -156,6 +229,9 @@
                         <p>A <code>Grammar</code> is a collection of productions. A basic knowledge of formal
 grammars is assumed. See the <a href="https://en.wikipedia.org/wiki/Formal_grammar">Wikipedia article</a>
 for more information.</p>
+
+<p>Once built, a <code>Grammar</code> can be used for parsing by using the
+<code><a href="Structs/Grammar.html#/s:3PwZ7GrammarV5parse11inputTokensSayAA10ExpressionCGSaySi3tag_SS6symboltG_tF">Grammar.parse(inputTokens:)</a></code> function.</p>
 
                         <a href="Structs/Grammar.html" class="slightly-smaller">See more</a>
                       </div>

@@ -19,6 +19,9 @@ fileprivate extension Dictionary {
  A `Grammar` is a collection of productions. A basic knowledge of formal
  grammars is assumed. See the [Wikipedia article](https://en.wikipedia.org/wiki/Formal_grammar)
  for more information.
+
+ Once built, a `Grammar` can be used for parsing by using the
+ `Grammar.parse(inputTokens:)` function.
  */
 public struct Grammar {
     /// All `Grammar`s must contain a top-level start symbol to indicate the
