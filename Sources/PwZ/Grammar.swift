@@ -98,6 +98,10 @@ public struct Grammar {
          */
         func processSubgrammar(_ subgrammar: AbstractGrammar, withSymbol symbol: Symbol) -> Expression {
             switch (subgrammar) {
+            case .Epsilon:
+                // An epsilon production is encoded as an empty sequence.
+                return Expression(expressionCase: .Seq(symbol: symbol + "ε",
+                                                       expressions: []))
             case let .Symbol(symbol):
                 // Symbols can represent either a reference to another
                 // expression (i.e., a non-terminal production) or a token
@@ -224,6 +228,8 @@ extension Grammar: ExpressibleByDictionaryLiteral {
 
 /// A simplified grammar specification language.
 public indirect enum AbstractGrammar {
+    /// An empty production.
+    case Epsilon
     /// Either a terminal or non-terminal symbol.
     case Symbol(Symbol)
     /// A sequence of expressions that must be considered in-order.
@@ -235,9 +241,15 @@ public indirect enum AbstractGrammar {
 /// Allow `AbstractGrammar.Symbol`s to be created from string literals for
 /// convenience.
 extension AbstractGrammar: ExpressibleByStringLiteral {
-    /// Creates an `AbstractGrammar.Symbol` from a string literal.
+    /// Creates an `AbstractGrammar` from a string literal. An empty string
+    /// becomes `AbstractGrammar.Epsilon`, and other strings become instances of
+    /// `AbstractGrammar.Symbol`.
     public init(stringLiteral string: String) {
-        self = .Symbol(string)!
+        if string == "" {
+            self = .Epsilon
+        } else {
+            self = .Symbol(string)!
+        }
     }
 }
 
