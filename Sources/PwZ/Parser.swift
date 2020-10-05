@@ -247,22 +247,22 @@ class ZipperParser {
          - grammar: The grammar to parse with respect to.
      - Returns: A list of parse trees.
      */
-    func parse(inputTokens tokens: inout [Token], withGrammar grammar: Expression) -> [Expression] {
-        func parse(inputTokens tokens: inout [Token], atPosition position: Position) -> [Expression] {
+    func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression] {
+        func parse(inputTokens tokens: [Token], atPosition position: Position) -> [Expression] {
             let savedZippers = worklist
             worklist.removeAll(keepingCapacity: true)
             tops.removeAll(keepingCapacity: true)
-            if tokens.isEmpty {
+            if position > tokens.count {
                 savedZippers.forEach { derive(withToken: Sentinel.of(Token.self), atPosition: position, fromZipper: $0) }
                 return tops.map { unwrapTopExpression($0) }
             } else {
-                let token = tokens.removeFirst()
+                let token = tokens[position]
                 savedZippers.forEach { derive(withToken: token, atPosition: position, fromZipper: $0) }
-                return parse(inputTokens: &tokens, atPosition: position + 1)
+                return parse(inputTokens: tokens, atPosition: position + 1)
             }
         }
         worklist = [initializeZipper(fromExpression: grammar)]
-        return parse(inputTokens: &tokens, atPosition: 0)
+        return parse(inputTokens: tokens, atPosition: 0)
     }
 }
 
@@ -274,6 +274,6 @@ class ZipperParser {
      - grammar: The grammar to parse with respect to.
  - Returns: A list of parse trees.
  */
-public func parse(inputTokens tokens: inout [Token], withGrammar grammar: Expression) -> [Expression] {
-    return ZipperParser().parse(inputTokens: &tokens, withGrammar: grammar)
+public func parse(inputTokens tokens: [Token], withGrammar grammar: Expression) -> [Expression] {
+    return ZipperParser().parse(inputTokens: tokens, withGrammar: grammar)
 }
