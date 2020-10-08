@@ -61,8 +61,12 @@ func render(expression root: Expression) -> String {
         if depthPrintMap[depth] == nil {
             depthPrintMap[depth] = IdentityDict<Bool>()
         }
-        // Check if the current expression already has a reference number
-        // assigned.
+        // Check if the expression is a token. We will always print tokens.
+        if case .Tok = expression.expressionCase {
+            depthPrintMap[depth]![expression] = true
+        }
+        // Otherwise, we check if the current expression already has a reference
+        // number assigned.
         if let _ = expressionNumbers[expression] {
             // If a reference number exists, it's because we've already visited
             // this expression. That means at this point in the tree, we should
@@ -89,7 +93,7 @@ func render(expression root: Expression) -> String {
             // incrementing the depth value appropriately.
             switch (expression.expressionCase) {
             case .Tok:
-                break
+                break  // Tokens were already handled above, so ignore here.
             case let .Seq(_, expressions):
                 expressions.forEach { queue.append(($0, depth + 1)) }
             case let .Alt(expressions):
