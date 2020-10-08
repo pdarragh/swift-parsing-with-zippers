@@ -47,7 +47,11 @@ public struct Grammar {
          - abstractProductions: A dictionary mapping non-terminal production
                                 names to `AbstractGrammar` production
                                 descriptions.
-     - Throws: Any `GrammarError` that results during initialization.
+         - startSymbol: The symbol from which parses should originate. If you
+                        want to have multiple top-level expressions, create a
+                        higher-level alternate case that encapsulates them.
+     - Throws: `GrammarError.NoStartSymbol` if the indicated start symbol is not
+               present in the dictionary of abstract productions.
      */
     public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar],
                 withStartSymbol startSymbol: Symbol = Grammar.startSymbol) throws {
