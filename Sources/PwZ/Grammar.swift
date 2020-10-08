@@ -49,12 +49,10 @@ public struct Grammar {
                                 descriptions.
      - Throws: Any `GrammarError` that results during initialization.
      */
-    public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar]) throws {
-        // Ensure that a start symbol was defined.
-        //
-        // TODO: Is there a better way to implement this? One that doesn't
-        //       require using a literal?
-        guard abstractProductions.contains(Grammar.startSymbol) else {
+    public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar],
+                withStartSymbol startSymbol: Symbol = Grammar.startSymbol) throws {
+        // Verify that the start symbol is actually present in the productions.
+        guard abstractProductions.contains(startSymbol) else {
             throw GrammarError.NoStartSymbol
         }
 
@@ -64,18 +62,11 @@ public struct Grammar {
         let productions = abstractProductions.keys.reduce(into: [Symbol : Expression]()) {
             (productions, symbol) in
             productions[symbol] = Expression(memoizationRecord: Sentinel.of(MemoizationRecord.self),
-                                           expressionCase: .Tok(token: Sentinel.of(Token.self)))
+                                             expressionCase: .Tok(token: Sentinel.of(Token.self)))
         }
 
-        // We can go ahead and create the root expression of the grammar.
-        if productions.count == 1 {
-            // If there's only one production, it's the root of the grammar.
-            root = productions.values.first!
-        } else {
-            // Otherwise, the root expression is an alternate over all the
-            // top-level non-terminal productions.
-            root = Expression(expressionCase: .Alt(expressions: ReferenceArray(productions.values)))
-        }
+        // The root of the grammar is whatever is specified as the start symbol.
+        root = productions[startSymbol]!
 
         // Next, we traverse the abstract grammar. From this, we create all of
         // the expressions in the grammar, while also allocating tags for any
@@ -217,16 +208,30 @@ extension Grammar: ExpressibleByDictionaryLiteral {
                      to create a `Grammar`.
      */
     public init(dictionaryLiteral elements: (Symbol, AbstractGrammar)...) {
-        let abstractProductions = Dictionary.init(elements, uniquingKeysWith: {
+        var abstractProductions = Dictionary.init(elements, uniquingKeysWith: {
                                                                 (lv, rv) in
-                                                                fatalError("Duplicate non-terminal name in grammar: \(lv)")
+                                                                fatalError("Duplicate non-terminal name in grammar: \(rv)")
                                                             })
-        do {
-            try self.init(fromAbstractProductions: abstractProductions)
-        } catch {
-            // Invalid grammar literals are not tolerated.
-            fatalError("invalid Grammar literal")
+        // The default Grammar.startSymbol must be present in the dictionary
+        // literal to declare the grammar's starting point.
+        guard let startSymbolGrammar = abstractProductions[Grammar.startSymbol] else {
+            fatalError("invalid Grammar literal: no start symbol found")
         }
+        // The encoded start symbol must be a symbol.
+        guard case let .Symbol(startSymbol) = startSymbolGrammar else {
+            fatalError("invalid Grammar literal: start symbol must be instance of AbstractGrammar.Symbol")
+        }
+        // The encoded start symbol must correspond to a top-level production
+        // name in the dictionary literal.
+        guard abstractProductions.contains(startSymbol) else {
+            fatalError("invalid Grammar literal: start symbol must correspond to a top-level symbol")
+        }
+        // If the start symbol is correctly defined, we proceed by removing the
+        // placeholder start symbol from the dictionary.
+        abstractProductions.removeValue(forKey: Grammar.startSymbol)
+        // Lastly, we call the initializer.
+        try! self.init(fromAbstractProductions: abstractProductions,
+                       withStartSymbol: startSymbol)
     }
 }
 
