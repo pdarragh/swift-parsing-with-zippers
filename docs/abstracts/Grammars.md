@@ -3,8 +3,9 @@ Parsing with Zippers (PwZ).
 
 A new `Grammar` is initialized from a dictionary mapping non-terminal production
 names to `AbstractGrammar` production descriptions. This can either be done
-manually, by calling `Grammar.init(fromAbstractProductions:)`, or it can be done
-more conveniently by using a dictionary literal.
+manually, by calling `Grammar.init(fromAbstractProductions:withStartSymbol:)`,
+or it can be done more conveniently by using a dictionary literal (which invokes
+`Grammar.init(dictionaryLiteral:)`).
 
 Consider the following BNF grammar description of a simple arithmetic language:
 
@@ -58,7 +59,8 @@ grammar.
 
 A list of `String`s can be converted into parse-able `Token`s by calling
 `Grammar.tokenizeStrings(_:)`. This list of `Token`s can then be passed into
-`Grammar.parse(inputTokens:)` to actually parse using PwZ.
+`Grammar.parse(withInputTokens:)` or
+`Grammar.parse(withInputTokens:startingAtRule:)`to actually parse using PwZ.
 
 ### Mapping Multiple Symbols to a Single Tag
 
