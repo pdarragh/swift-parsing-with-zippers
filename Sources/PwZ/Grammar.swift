@@ -5,6 +5,8 @@ public enum GrammarError: Error {
     /// Thrown when attempting to tokenize a symbol that has no matching token
     /// in a given grammar.
     case NoTagForSymbol(symbol: String)
+    /// Thrown when attempting to parse a grammar given an invalid start symbol.
+    case InvalidStartSymbol(symbol: String)
 }
 
 /// We extend basic Dictionaries to support query containment for simplicity.
@@ -25,19 +27,28 @@ fileprivate extension Dictionary {
  for more information.
 
  Once built, a `Grammar` can be used for parsing by using the
- `Grammar.parse(inputTokens:)` function.
+ `Grammar.parse(withInputTokens:)` function.
  */
 public struct Grammar {
     /// All `Grammar`s must contain a top-level start symbol to indicate the
     /// root of the grammar. An error will be thrown if this is not satisfied.
     public static let startSymbol = "START"
 
+    /// The specifications to which the grammar was originally built. This can
+    /// be useful for getting a list of valid top-level rule names to use with
+    /// `Grammar.parse(withInputTokens:startingAtRule:)`.
+    public let abstractProductions: [Symbol : AbstractGrammar]
+
+    /// The actual expression grammar created from the
+    /// `Grammar.abstractProductions` specification.
+    private let actualProductions: [Symbol : Expression]
+
+    /// The designated start symbol for this grammar.
+    private let startSymbol: Symbol
+
     /// A map of token symbols to generated tags. This is useful for producing
     /// input strings of tokens for the PwZ algorithm.
     public private(set) var tokenMap: [Symbol : Tag]
-    /// The root `Expression` of the grammar after initialization. Use this for
-    /// performing derivations over the grammar.
-    public let root: Expression
 
     /**
      Initializes a new grammar from a dictionary mapping production names to
@@ -53,24 +64,26 @@ public struct Grammar {
      - Throws: `GrammarError.NoStartSymbol` if the indicated start symbol is not
                present in the dictionary of abstract productions.
      */
-    public init(fromAbstractProductions abstractProductions: [Symbol : AbstractGrammar],
-                withStartSymbol startSymbol: Symbol = Grammar.startSymbol) throws {
+    public init(fromAbstractProductions newAbstractProductions: [Symbol : AbstractGrammar],
+                withStartSymbol newStartSymbol: Symbol = Grammar.startSymbol) throws {
         // Verify that the start symbol is actually present in the productions.
-        guard abstractProductions.contains(startSymbol) else {
+        guard newAbstractProductions.contains(newStartSymbol) else {
             throw GrammarError.NoStartSymbol
         }
 
         // We perform a reduction over the top-level non-terminals, allocating
         // placeholder `Expression`s for them, which we will later use for
         // constructing the complete grammar.
-        let productions = abstractProductions.keys.reduce(into: [Symbol : Expression]()) {
+        let productions = newAbstractProductions.keys.reduce(into: [Symbol : Expression]()) {
             (productions, symbol) in
             productions[symbol] = Expression(memoizationRecord: Sentinel.of(MemoizationRecord.self),
                                              expressionCase: .Tok(token: Sentinel.of(Token.self)))
         }
 
-        // The root of the grammar is whatever is specified as the start symbol.
-        root = productions[startSymbol]!
+        // Initialize the instance properties.
+        abstractProductions = newAbstractProductions
+        actualProductions = productions
+        startSymbol = newStartSymbol
 
         // Next, we traverse the abstract grammar. From this, we create all of
         // the expressions in the grammar, while also allocating tags for any
@@ -185,14 +198,64 @@ public struct Grammar {
     }
 
     /**
-     Parses the grammar using the given input tokens.
+     Parses the grammar using the given input tokens, starting at the given
+     start symbol.
+
+     - Parameters:
+         - tokens: An array of `Token`s to parse.
+         - ruleName: The `Symbol` representing the top-level production to start
+                     the parse from.
+     - Returns: A list of resulting `Expression`s.
+     - Throws: `GrammarError.InvalidStartSymbol` if given an invalid start
+               symbol. Don't do that. Use `Grammar.abstractProductions` to get a
+               list of valid start symbols.
+     */
+    public func parse(withInputTokens tokens: [Token], startingAtRule ruleName: Symbol) throws -> [Expression] {
+        wipeMemoizationRecords()
+        guard let expression = actualProductions[ruleName] else {
+            throw GrammarError.InvalidStartSymbol(symbol: ruleName)
+        }
+        return PwZ.parse(expression: expression, withInputTokens: tokens)
+    }
+
+    /**
+     Parses the grammar using the given input tokens, starting at the start
+     symbol designated during instance initialization.
 
      - Parameters:
          - tokens: An array of `Token`s to parse.
      - Returns: A list of resulting `Expression`s.
      */
-    public func parse(inputTokens tokens: [Token]) -> [Expression] {
-        return PwZ.parse(expression: root, withInputTokens: tokens)
+    public func parse(withInputTokens tokens: [Token]) -> [Expression] {
+        return try! parse(withInputTokens: tokens, startingAtRule: startSymbol)
+    }
+
+    /**
+     Traverses the expression grammar, resetting all of the `MemoizationRecord`s
+     to an empty state. This is done to prevent issues of stale records
+     interfering with parses.
+
+     FIXME: Specifically, this function was rendered necessary by attempts to
+            parse empty strings on grammars that should accept them. See Issue
+            #1 for more information.
+     */
+    private func wipeMemoizationRecords() {
+        var queue: [Expression] = Array(actualProductions.values)
+        while !queue.isEmpty {
+            let expression = queue.removeFirst()
+            if expression.memoizationRecord === Sentinel.of(MemoizationRecord.self) {
+                continue
+            }
+            expression.memoizationRecord = Sentinel.of(MemoizationRecord.self)
+            switch (expression.expressionCase) {
+            case .Tok:
+                continue
+            case let .Seq(_, expressions):
+                queue.append(contentsOf: expressions)
+            case let .Alt(expressions):
+                queue.append(contentsOf: expressions)
+            }
+        }
     }
 }
 
