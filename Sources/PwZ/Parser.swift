@@ -7,7 +7,7 @@
      - tokens: A list of `Token`s representing the input string to parse.
  - Returns: A list of parse trees.
  */
-public func parse(expression: Expression, withInputTokens tokens: [Token]) -> [Expression] {
+func parse(expression: Expression, withInputTokens tokens: [Token]) -> [Expression] {
     /// Used for keeping track of resume-able `Zipper`s produced from parsing
     /// atomic `Tok` productions.
     var worklist: [Zipper]
