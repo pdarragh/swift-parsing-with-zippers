@@ -43,7 +43,7 @@ extension ReferenceArray: SplitableCollection {
      - expression: The root expression of a grammar to render for printing.
  - Returns: A string representing the given expression.
  */
-func render(expression root: Expression) -> String {
+fileprivate func render(expression root: Expression) -> String {
     // Expressions are assigned reference numbers to handle recursion.
     var expressionNumbers = IdentityDict<Int>()
     var nextExpressionNumber = 0
@@ -194,4 +194,13 @@ func render(expression root: Expression) -> String {
 
     // The result string is built by combining the collected text fragments.
     return texts.joined()
+}
+
+/// We extend the `Expression` to be printable as a string.
+extension Expression: CustomStringConvertible {
+    /// A rendering of the `Expression` to a string. This is lazily computed
+    /// fresh when the `Expression.expressionCase` is updated.
+    public var description: String {
+        return render(expression: self)
+    }
 }

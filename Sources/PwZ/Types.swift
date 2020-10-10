@@ -27,20 +27,16 @@ public typealias Token = (tag: Tag, symbol: Symbol)
  preserve reference semantics because grammars may have duplicate references to
  the same expression multiple times.
  */
-public class Expression: Equatable, CustomStringConvertible {
+public class Expression: Equatable {
     /// Memoization records are pushed into expressions for efficiency.
     var memoizationRecord: MemoizationRecord
     /// The specific case of expression being represented in this `Expression`.
-    var expressionCase: ExpressionCase {
-        // If the internal `ExpressionCase` is changed, the
-        // `Expression.description` becomes invalid.
-        didSet { _description = nil }
-    }
+    var expressionCase: ExpressionCase
 
     /// Initializes a new `Expression` from a `MemoizationRecord` and internal
     /// `ExpressionCase`.
     public init(memoizationRecord memRec: MemoizationRecord,
-         expressionCase expCase: ExpressionCase) {
+                expressionCase expCase: ExpressionCase) {
         self.memoizationRecord = memRec
         self.expressionCase = expCase
     }
@@ -50,17 +46,6 @@ public class Expression: Equatable, CustomStringConvertible {
         return
           lhs.memoizationRecord == rhs.memoizationRecord &&
           lhs.expressionCase == rhs.expressionCase
-    }
-
-    /// A private holder of the actual description, for memoization.
-    private var _description: String? = nil
-    /// A rendering of the `Expression` to a string. This is lazily computed
-    /// fresh when the `Expression.expressionCase` is updated.
-    public var description: String {
-        if _description == nil {
-            _description = render(expression: self)
-        }
-        return _description!
     }
 }
 
