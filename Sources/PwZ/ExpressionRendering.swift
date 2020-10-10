@@ -198,8 +198,8 @@ fileprivate func render(expression root: Expression) -> String {
 
 /// We extend the `Expression` to be printable as a string.
 extension Expression: CustomStringConvertible {
-    /// A rendering of the `Expression` to a string. This is lazily computed
-    /// fresh when the `Expression.expressionCase` is updated.
+    /// A rendering of the `Expression` to a string. Potentially expensive to
+    /// compute, so avoid overuse.
     public var description: String {
         return render(expression: self)
     }
