@@ -41,10 +41,13 @@ public struct Grammar {
 
     /// The actual expression grammar created from the
     /// `Grammar.abstractProductions` specification.
-    private let actualProductions: [Symbol : Expression]
+    public let actualProductions: [Symbol : Expression]
 
     /// The designated start symbol for this grammar.
-    private let startSymbol: Symbol
+    public let startSymbol: Symbol
+
+    /// The designated root of the grammar.
+    public var root: Expression { actualProductions[startSymbol]! }
 
     /// A map of token symbols to generated tags. This is useful for producing
     /// input strings of tokens for the PwZ algorithm.
