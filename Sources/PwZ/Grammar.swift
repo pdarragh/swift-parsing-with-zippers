@@ -186,27 +186,27 @@ public struct Grammar {
      - Throws: `GrammarError.NoTagForSymbol` if any of the given strings do not
                match any terminal symbols in the grammar.
      */
-    public func tokenizeStrings(_ strings: [String]) throws -> [Token] {
-        return try tokenizeStrings(strings).map { try $0.get() }
+    public func tokenizeSymbols(_ symbols: [Symbol]) throws -> [Token] {
+        return try tokenizeSymbols(symbols).map { try $0.get() }
     }
 
     /**
-     Converts a sequence of strings into `Token`s for parsing. The result is a
+     Converts a sequence of `Symbol`s into `Token`s for parsing. The result is a
      list of `Result<Token, GrammarError>` items so individual failing cases can
      be addressed as needed.
 
      - Parameters:
-         - strings: An array of strings representing token symbols.
+         - symbols: An array of `Symbol`s to be tokenized.
      - Returns: An array of potential tokens (or errors, when a string does not
                 correspond to a tag in the grammar).
      */
-    public func tokenizeStrings(_ strings: [String]) -> [Result<Token, GrammarError>] {
-        return strings.map {
-            string in
-            if let tag = tokenMap[string] {
-                return .success((tag, string))
+    public func tokenizeSymbols(_ symbols: [Symbol]) -> [Result<Token, GrammarError>] {
+        return symbols.map {
+            symbol in
+            if let tag = tokenMap[symbol] {
+                return .success((tag, symbol))
             } else {
-                return .failure(GrammarError.NoTagForSymbol(symbol: string))
+                return .failure(GrammarError.NoTagForSymbol(symbol: symbol))
             }
         }
     }
