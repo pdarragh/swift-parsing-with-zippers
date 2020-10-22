@@ -78,7 +78,7 @@ public struct Grammar {
             throw GrammarError.NoStartSymbol(symbol: newStartSymbol)
         }
         // Verify that there are no top-level symbols.
-        newAbstractProductions.forEach {
+        try newAbstractProductions.forEach {
             symbol, subgrammar in
             if case let .Symbol(target) = subgrammar {
                 throw GrammarError.IllegalSymbolAlias(symbol: symbol, target: target)
