@@ -1,12 +1,15 @@
 /// Errors related to the creation of grammars of expressions.
 public enum GrammarError: Error {
     /// Thrown when no start symbol is present in a grammar.
-    case NoStartSymbol
+    case NoStartSymbol(symbol: Symbol)
+    /// Thrown when attempting to initialize a grammar with symbols at the top
+    /// level of expressions.
+    case IllegalSymbolAlias(symbol: Symbol, target: Symbol)
     /// Thrown when attempting to tokenize a symbol that has no matching token
     /// in a given grammar.
-    case NoTagForSymbol(symbol: String)
+    case NoTagForSymbol(symbol: Symbol)
     /// Thrown when attempting to parse a grammar given an invalid start symbol.
-    case InvalidStartSymbol(symbol: String)
+    case InvalidStartSymbol(symbol: Symbol)
 }
 
 /// We extend basic Dictionaries to support query containment for simplicity.
@@ -55,7 +58,7 @@ public struct Grammar {
 
     /**
      Initializes a new grammar from a dictionary mapping production names to
-     productions.
+     productions. The productions cannot be symbols.
 
      - Parameters:
          - abstractProductions: A dictionary mapping non-terminal production
@@ -65,13 +68,21 @@ public struct Grammar {
                         want to have multiple top-level expressions, create a
                         higher-level alternate case that encapsulates them.
      - Throws: `GrammarError.NoStartSymbol` if the indicated start symbol is not
-               present in the dictionary of abstract productions.
+               present in the dictionary of abstract productions or
+               `GrammarError.IllegalSymbolAlias` if there is a top-level symbol.
      */
     public init(fromAbstractProductions newAbstractProductions: [Symbol : AbstractGrammar],
                 withStartSymbol newStartSymbol: Symbol = Grammar.startSymbol) throws {
         // Verify that the start symbol is actually present in the productions.
         guard newAbstractProductions.contains(newStartSymbol) else {
-            throw GrammarError.NoStartSymbol
+            throw GrammarError.NoStartSymbol(symbol: newStartSymbol)
+        }
+        // Verify that there are no top-level symbols.
+        newAbstractProductions.forEach {
+            symbol, subgrammar in
+            if case let .Symbol(target) = subgrammar {
+                throw GrammarError.IllegalSymbolAlias(symbol: symbol, target: target)
+            }
         }
 
         // We perform a reduction over the top-level non-terminals, allocating
@@ -299,6 +310,14 @@ extension Grammar: ExpressibleByDictionaryLiteral {
         // If the start symbol is correctly defined, we proceed by removing the
         // placeholder start symbol from the dictionary.
         abstractProductions.removeValue(forKey: Grammar.startSymbol)
+        // Top-level `Symbol`s are actually not permitted. Instead, we wrap them
+        // in `Concatenation`s.
+        abstractProductions.forEach {
+            symbol, subgrammar in
+            if case .Symbol = subgrammar {
+                abstractProductions[symbol] = .Concatenation([subgrammar])
+            }
+        }
         // Lastly, we call the initializer.
         try! self.init(fromAbstractProductions: abstractProductions,
                        withStartSymbol: startSymbol)
