@@ -229,7 +229,8 @@ public struct Grammar {
         guard let expression = actualProductions[ruleName] else {
             throw GrammarError.InvalidStartSymbol(symbol: ruleName)
         }
-        return PwZ.parse(expression: expression, withInputTokens: tokens)
+        return fullyParse(expression: expression, withRespectTo: tokens)
+        // return PwZ.parse(expression: expression, withInputTokens: tokens)
     }
 
     /**
@@ -253,7 +254,7 @@ public struct Grammar {
             parse empty strings on grammars that should accept them. See Issue
             #1 for more information.
      */
-    private func wipeMemoizationRecords() {
+    public func wipeMemoizationRecords() {
         var queue: [Expression] = Array(actualProductions.values)
         while !queue.isEmpty {
             let expression = queue.removeFirst()

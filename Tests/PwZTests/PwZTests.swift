@@ -183,8 +183,98 @@ final class PwZTests: XCTestCase {
         }
     }
 
+    func _testGrammars() {
+        print("BUILDING GRAMMAR:")
+        let grammar: Grammar =
+          [ Grammar.startSymbol: "e"
+          , "e":
+              [ "e"
+              , "A" ++ "e"
+              , ""
+              ]
+          ]
+        let inputStrings: [String] = ["", "A"]
+        inputStrings.forEach {
+            inputString in
+            print("GRAMMAR:")
+            print("TOKEN MAP: \(grammar.tokenMap)")
+            let inputTokens: [PwZ.Token] = try! grammar.tokenizeSymbols(inputString.map { (c: Character) in String(c) })
+            print("INPUT STRING: \"\(inputString)\"")
+            print("INPUT TOKENS: \(inputTokens)")
+            print("PARSE RESULT:")
+            let trees = grammar.parse(withInputTokens: inputTokens)
+            print(trees)
+            print("")
+        }
+    }
+
+    // func testDeriveGrammar1
+
     static var allTests = [
       ("testDerivations", testDerivations),
       // ("testGrammars", testGrammars)
     ]
 }
+/*
+
+import PwZ
+func extractState(_ parse: Parse) -> IncompleteParseState? {
+  if case let .Incomplete(state) = parse {
+    return state
+  } else {
+    return nil
+  }
+}
+let grammar: Grammar = [ Grammar.startSymbol: "e"
+                       , "e":
+                           [ "A"
+                           , "e" ++ "e"
+                           ]
+                       ]
+
+let tokens: [Token] = [(0, "A1"), (0, "A2"), (0, "A3"), (0, "A4")]
+let seq = constructIncompleteParseSequence(parsingExpression: grammar.root, withRespectTo: tokens)
+grammar.wipeMemoizationRecords()
+let graphs = seq.map { Graph(fromZippers: extractState($0)!.worklist) }
+
+
+graphs.enumerated().forEach { print("Graph \($0)"); print($1); print("") }
+
+
+
+let g = Graph(fromExpressions: [extractState(seq[4])!.tops[0]])
+
+
+
+
+print(g.render(node: g4.tops[0]))
+
+
+
+let pts = seq[5].extractParseTrees()
+let asts = pts.flatMap(produceASTsFromExpression)
+
+asts.forEach { print($0) }
+
+
+let seq0 = constructParseSequence(parsingExpression: grammar.root, withRespectTo: tokens)
+grammar.wipeMemoizationRecords()
+let ext0 = seq0.last!.extractParseTrees()
+let pts0 = ext0.flatMap(produceASTsFromExpression)
+let seq1 = constructParseSequence(parsingExpression: grammar.root, withRespectTo: [])
+grammar.wipeMemoizationRecords()
+let ext1 = seq1.last!.extractParseTrees()
+let pts1 = ext1.flatMap(produceASTsFromExpression)
+let seq2 = constructParseSequence(parsingExpression: grammar.root, withRespectTo: tokens)
+grammar.wipeMemoizationRecords()
+let ext2 = seq2.last!.extractParseTrees()
+let pts2 = ext2.flatMap(produceASTsFromExpression)
+
+let ar0 = grammar.parse(withInputTokens: tokens)
+let ap0 = ar0.flatMap(produceASTsFromExpression)
+let ar1 = grammar.parse(withInputTokens: [])
+let ap1 = ar1.flatMap(produceASTsFromExpression)
+let ar2 = grammar.parse(withInputTokens: tokens)
+let ap2 = ar2.flatMap(produceASTsFromExpression)
+
+ */

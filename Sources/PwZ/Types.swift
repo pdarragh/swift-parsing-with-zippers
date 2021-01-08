@@ -153,3 +153,33 @@ public class MemoizationRecord: Equatable {
  zipper to support alternates (representing non-determinisim) as well as cycles.
  */
 public typealias Zipper = (expression: ExpressionCase, context: MemoizationRecord)
+
+
+/*
+
+[⊤]
+ ▲
+ ╚═[+ ...]
+    ▲
+    ╠═<z1>
+    ║  └►(× "A1")
+    ╚═[+ ...]
+       ▲
+       ╚═[× ...]
+          ▲
+          ╠═<z2>
+          ║  └►(e0)
+          ╚═(e0)
+
+ */
+
+public func render(zippers: [Zipper]) -> String {
+    // ◄───►
+    // ◄┄┄┄►
+    // ═════
+    return ""
+}
+
+public func render(zipper: Zipper) -> String {
+    return render(zippers: [zipper])
+}
