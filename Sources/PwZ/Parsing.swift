@@ -236,9 +236,10 @@ public enum Parse {
             var nextTopExpressions = [Expression]()
             state.worklist.forEach {
                 zipper in
-                print("parsing zipper")
-                print(zipper)
-                print("with respect to: \(token)")
+                // print("parsing zipper")
+                // print(zipper)
+                // print("with respect to: \(token.symbol)")
+                print("parsing with respect to: \(token.symbol)")
                 derive(zipper,
                        withRespectTo: token,
                        atPosition: nextPosition,
@@ -277,6 +278,7 @@ public enum Parse {
     }
 
     public func extractParseTrees() -> [Expression] {
+        print("extracting parse trees")
         switch (self) {
         case .Incomplete:
             return self.finish().extractParseTrees()

@@ -6,14 +6,11 @@ DEBUG_DIR 					:= $(BUILD_DIR)/debug
 RELEASE_DIR		 			:= $(BUILD_DIR)/release
 
 .DEFAULT_GOAL: default
-.PHONY: FORCE
-
-FORCE:
 
 ################################################################################
 # Top-level Tool Targets
 
-.PHONY: default debug release
+.PHONY: default debug release test repl
 
 default: debug
 
@@ -25,6 +22,9 @@ release:
 
 test:
 	swift test
+
+repl:
+	swift run --repl
 
 ################################################################################
 # Documentation Targets

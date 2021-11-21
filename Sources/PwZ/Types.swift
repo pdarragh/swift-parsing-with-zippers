@@ -107,15 +107,15 @@ public indirect enum ContextCase: Equatable {
 public class MemoizationRecord: Equatable {
     /// The position of the first token in the input to which this memoization
     /// record corresponds.
-    let startPosition: Position
+    public let startPosition: Position
     /// The position of the last token in the input to which this memoization
     /// record corresponds.
-    var endPosition: Position
+    public var endPosition: Position
     /// Parent contexts to which this memoization record shall report its
     /// result when needed.
-    var parentContexts: [ContextCase]
+    public var parentContexts: [ContextCase]
     /// The expression resulting from the parse over the indicated region.
-    var resultExpression: Expression {
+    public var resultExpression: Expression {
         get { return _resultExpression! }
         set { self._resultExpression = newValue }
     }

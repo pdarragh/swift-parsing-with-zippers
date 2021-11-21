@@ -161,7 +161,7 @@ final class PwZTests: XCTestCase {
           ]
     }
 
-    func testDerivations() {
+    func _testDerivations() {
         grammarTests.enumerated().forEach {
             testNumber, grammarTest in
             print("Testing derivatives on Grammar \(testNumber + 1)")
@@ -183,36 +183,27 @@ final class PwZTests: XCTestCase {
         }
     }
 
-    func _testGrammars() {
+    func testGrammars() {
         print("BUILDING GRAMMAR:")
         let grammar: Grammar =
           [ Grammar.startSymbol: "e"
           , "e":
-              [ "e"
-              , "A" ++ "e"
-              , ""
+              [ "A"
+              , "e" ++ "e"
               ]
           ]
-        let inputStrings: [String] = ["", "A"]
-        inputStrings.forEach {
-            inputString in
-            print("GRAMMAR:")
-            print("TOKEN MAP: \(grammar.tokenMap)")
-            let inputTokens: [PwZ.Token] = try! grammar.tokenizeSymbols(inputString.map { (c: Character) in String(c) })
-            print("INPUT STRING: \"\(inputString)\"")
-            print("INPUT TOKENS: \(inputTokens)")
-            print("PARSE RESULT:")
-            let trees = grammar.parse(withInputTokens: inputTokens)
-            print(trees)
-            print("")
-        }
+        let inputString = "AAAA"
+        let inputTokens: [PwZ.Token] = try! grammar.tokenizeSymbols(inputString.map { (c: Character) in String(c) })
+        let exps = grammar.parse(withInputTokens: inputTokens)
+        let asts = exps.flatMap(PwZ.produceASTsFromExpression)
+        XCTAssertEqual(asts.count, 5)
     }
 
     // func testDeriveGrammar1
 
     static var allTests = [
-      ("testDerivations", testDerivations),
-      // ("testGrammars", testGrammars)
+//      ("testDerivations", testDerivations),
+       ("testGrammars", testGrammars)
     ]
 }
 /*

@@ -89,7 +89,10 @@ public indirect enum AST: CustomStringConvertible {
 e ::= A
     | e e
 
-import PwZ
+
+:settings set print-decls false
+
+@testable import PwZ
 let grammar: Grammar = [ Grammar.startSymbol: "e"
                        , "e":
                            [ "A"
@@ -97,8 +100,24 @@ let grammar: Grammar = [ Grammar.startSymbol: "e"
                            ]
                        ]
 let tokens: [Token] = grammar.tokenizeSymbols(["A", "A", "A", "A"])
+let seq = constructCompleteParseSequence(parsingExpression: grammar.root, withRespectTo: tokens)
+let g = Graph(fromZippers: seq[2].extractState()!.worklist)
+let ng = NewGraph(fromZipper: seq[2].extractState()!.worklist[0])
+
+let graphs = seq.compactMap { $0.extractState() }.map { Graph(fromZippers: $0.worklist) }
+
+let z: Zipper = seq[1].extractState()!.worklist[0]
+let c = z.context
+let pc = c.parentContexts[0]
+
+let g = Graph(fromZippers: seq[2].extractState()!.worklist)
+print(g)
+
+graphs.forEach { print($0) }
+
 let exps = grammar.parse(withInputTokens: tokens)
 let asts = exps.flatMap(produceASTsFromExpression)
+
 asts.forEach { print($0) }
 
 
